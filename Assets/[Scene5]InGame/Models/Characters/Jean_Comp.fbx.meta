@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: a07aedeb28557fb489ac4a0868d3341e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Jean_Model_150313_jean
+    100004: Jean_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    100006: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    100008: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    100010: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    100012: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    100014: Jean_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    100016: Jean_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    100018: Jean_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    100020: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    100022: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    100024: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    100026: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    100028: Jean_v1_Asset_150313_Born
+    100030: Jean_v1_Asset_150313_Bs
+    100032: Jean_v1_Asset_150313_Cap
+    100034: Jean_v1_Asset_150313_Hair
+    100036: Jean_v1_Asset_150313_Head
+    100038: Jean_v1_Asset_150313_ikHandle1
+    100040: Jean_v1_Asset_150313_ikHandle2
+    100042: Jean_v1_Asset_150313_ikHandle3
+    100044: Jean_v1_Asset_150313_ikHandle4
+    100046: Jean_v1_Asset_150313_joint1
+    100048: Jean_v1_Asset_150313_L_A
+    100050: Jean_v1_Asset_150313_L_A1
+    100052: Jean_v1_Asset_150313_L_A2
+    100054: Jean_v1_Asset_150313_L_E1
+    100056: Jean_v1_Asset_150313_L_E1 1
+    100058: Jean_v1_Asset_150313_L_Eye
+    100060: Jean_v1_Asset_150313_L_Eye1
+    100062: Jean_v1_Asset_150313_L_L
+    100064: Jean_v1_Asset_150313_L_L1
+    100066: Jean_v1_Asset_150313_L_L2
+    100068: Jean_v1_Asset_150313_N_nose
+    100070: Jean_v1_Asset_150313_Neck
+    100072: Jean_v1_Asset_150313_PL
+    100074: Jean_v1_Asset_150313_R_A
+    100076: Jean_v1_Asset_150313_R_A1
+    100078: Jean_v1_Asset_150313_R_A2
+    100080: Jean_v1_Asset_150313_R_R
+    100082: Jean_v1_Asset_150313_R_R1
+    100084: Jean_v1_Asset_150313_R_R2
+    100086: Jean_v1_Asset_150313_Ws
+    400000: //RootNode
+    400002: Jean_Model_150313_jean
+    400004: Jean_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    400006: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    400008: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    400010: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    400012: Jean_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    400014: Jean_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    400016: Jean_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    400018: Jean_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    400020: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    400022: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    400024: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    400026: Jean_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    400028: Jean_v1_Asset_150313_Born
+    400030: Jean_v1_Asset_150313_Bs
+    400032: Jean_v1_Asset_150313_Cap
+    400034: Jean_v1_Asset_150313_Hair
+    400036: Jean_v1_Asset_150313_Head
+    400038: Jean_v1_Asset_150313_ikHandle1
+    400040: Jean_v1_Asset_150313_ikHandle2
+    400042: Jean_v1_Asset_150313_ikHandle3
+    400044: Jean_v1_Asset_150313_ikHandle4
+    400046: Jean_v1_Asset_150313_joint1
+    400048: Jean_v1_Asset_150313_L_A
+    400050: Jean_v1_Asset_150313_L_A1
+    400052: Jean_v1_Asset_150313_L_A2
+    400054: Jean_v1_Asset_150313_L_E1
+    400056: Jean_v1_Asset_150313_L_E1 1
+    400058: Jean_v1_Asset_150313_L_Eye
+    400060: Jean_v1_Asset_150313_L_Eye1
+    400062: Jean_v1_Asset_150313_L_L
+    400064: Jean_v1_Asset_150313_L_L1
+    400066: Jean_v1_Asset_150313_L_L2
+    400068: Jean_v1_Asset_150313_N_nose
+    400070: Jean_v1_Asset_150313_Neck
+    400072: Jean_v1_Asset_150313_PL
+    400074: Jean_v1_Asset_150313_R_A
+    400076: Jean_v1_Asset_150313_R_A1
+    400078: Jean_v1_Asset_150313_R_A2
+    400080: Jean_v1_Asset_150313_R_R
+    400082: Jean_v1_Asset_150313_R_R1
+    400084: Jean_v1_Asset_150313_R_R2
+    400086: Jean_v1_Asset_150313_Ws
+    4300000: Jean_Model_150313_jean
+    7400000: Run
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Jean_Model_150313_jean
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 893337a75ac5ae243abecc8cc864a6be
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Roony_Model_150313_Roony
+    100004: Roony_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    100006: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    100008: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    100010: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    100012: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    100014: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LFV1
+    100016: Roony_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    100018: Roony_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    100020: Roony_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    100022: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    100024: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    100026: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    100028: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    100030: Roony_v1_Asset_150313_Born
+    100032: Roony_v1_Asset_150313_Bs
+    100034: Roony_v1_Asset_150313_Cap
+    100036: Roony_v1_Asset_150313_Cap_con
+    100038: Roony_v1_Asset_150313_Head
+    100040: Roony_v1_Asset_150313_ikHandle1
+    100042: Roony_v1_Asset_150313_ikHandle2
+    100044: Roony_v1_Asset_150313_ikHandle3
+    100046: Roony_v1_Asset_150313_ikHandle4
+    100048: Roony_v1_Asset_150313_ikHandle5
+    100050: Roony_v1_Asset_150313_joint1
+    100052: Roony_v1_Asset_150313_joint2
+    100054: Roony_v1_Asset_150313_joint3
+    100056: Roony_v1_Asset_150313_joint4
+    100058: Roony_v1_Asset_150313_L_A
+    100060: Roony_v1_Asset_150313_L_A1
+    100062: Roony_v1_Asset_150313_L_A2
+    100064: Roony_v1_Asset_150313_L_E1
+    100066: Roony_v1_Asset_150313_L_E1 1
+    100068: Roony_v1_Asset_150313_L_Eye
+    100070: Roony_v1_Asset_150313_L_Eye1
+    100072: Roony_v1_Asset_150313_L_L
+    100074: Roony_v1_Asset_150313_L_L1
+    100076: Roony_v1_Asset_150313_L_L2
+    100078: Roony_v1_Asset_150313_Neck
+    100080: Roony_v1_Asset_150313_Nsu
+    100082: Roony_v1_Asset_150313_PL
+    100084: Roony_v1_Asset_150313_R_A
+    100086: Roony_v1_Asset_150313_R_A1
+    100088: Roony_v1_Asset_150313_R_A2
+    100090: Roony_v1_Asset_150313_R_R
+    100092: Roony_v1_Asset_150313_R_R1
+    100094: Roony_v1_Asset_150313_R_R2
+    100096: Roony_v1_Asset_150313_Ws
+    400000: //RootNode
+    400002: Roony_Model_150313_Roony
+    400004: Roony_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    400006: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    400008: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    400010: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    400012: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    400014: Roony_v1_Asset_150313_Base_Controler_Setting_150312_LFV1
+    400016: Roony_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    400018: Roony_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    400020: Roony_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    400022: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    400024: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    400026: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    400028: Roony_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    400030: Roony_v1_Asset_150313_Born
+    400032: Roony_v1_Asset_150313_Bs
+    400034: Roony_v1_Asset_150313_Cap
+    400036: Roony_v1_Asset_150313_Cap_con
+    400038: Roony_v1_Asset_150313_Head
+    400040: Roony_v1_Asset_150313_ikHandle1
+    400042: Roony_v1_Asset_150313_ikHandle2
+    400044: Roony_v1_Asset_150313_ikHandle3
+    400046: Roony_v1_Asset_150313_ikHandle4
+    400048: Roony_v1_Asset_150313_ikHandle5
+    400050: Roony_v1_Asset_150313_joint1
+    400052: Roony_v1_Asset_150313_joint2
+    400054: Roony_v1_Asset_150313_joint3
+    400056: Roony_v1_Asset_150313_joint4
+    400058: Roony_v1_Asset_150313_L_A
+    400060: Roony_v1_Asset_150313_L_A1
+    400062: Roony_v1_Asset_150313_L_A2
+    400064: Roony_v1_Asset_150313_L_E1
+    400066: Roony_v1_Asset_150313_L_E1 1
+    400068: Roony_v1_Asset_150313_L_Eye
+    400070: Roony_v1_Asset_150313_L_Eye1
+    400072: Roony_v1_Asset_150313_L_L
+    400074: Roony_v1_Asset_150313_L_L1
+    400076: Roony_v1_Asset_150313_L_L2
+    400078: Roony_v1_Asset_150313_Neck
+    400080: Roony_v1_Asset_150313_Nsu
+    400082: Roony_v1_Asset_150313_PL
+    400084: Roony_v1_Asset_150313_R_A
+    400086: Roony_v1_Asset_150313_R_A1
+    400088: Roony_v1_Asset_150313_R_A2
+    400090: Roony_v1_Asset_150313_R_R
+    400092: Roony_v1_Asset_150313_R_R1
+    400094: Roony_v1_Asset_150313_R_R2
+    400096: Roony_v1_Asset_150313_Ws
+    4300000: Roony_Model_150313_Roony
+    7400000: Roony_Run
+    7400002: Roony_Idle
+    7400004: Run
+    7400006: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Roony_Model_150313_Roony
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

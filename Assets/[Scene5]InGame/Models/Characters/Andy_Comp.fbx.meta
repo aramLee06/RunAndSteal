@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 583dc9e0e5bf05c4882acf0e98214cd5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Andy
+    100002: //RootNode
+    100004: Born
+    100006: Bs
+    100008: Cap
+    100010: Controler
+    100012: CST
+    100014: Head
+    100016: ikHandle1
+    100018: ikHandle2
+    100020: ikHandle3
+    100022: ikHandle4
+    100024: L_A
+    100026: L_A 1
+    100028: L_A1
+    100030: L_A1 1
+    100032: L_A2
+    100034: L_A2 1
+    100036: L_A6
+    100038: L_E
+    100040: L_E1
+    100042: L_E1 1
+    100044: L_Eye
+    100046: L_Eye1
+    100048: L_F
+    100050: L_H
+    100052: L_L
+    100054: L_L 1
+    100056: L_L1
+    100058: L_L2
+    100060: L_V
+    100062: LH_V
+    100064: Master
+    100066: NEC
+    100068: Neck
+    100070: PL
+    100072: PLC
+    100074: R_A
+    100076: R_E
+    100078: R_F
+    100080: R_H
+    100082: R_L
+    100084: R_R
+    100086: R_R1
+    100088: R_R2
+    100090: R_V
+    100092: RH_V
+    100094: Ws
+    400000: Andy
+    400002: //RootNode
+    400004: Born
+    400006: Bs
+    400008: Cap
+    400010: Controler
+    400012: CST
+    400014: Head
+    400016: ikHandle1
+    400018: ikHandle2
+    400020: ikHandle3
+    400022: ikHandle4
+    400024: L_A
+    400026: L_A 1
+    400028: L_A1
+    400030: L_A1 1
+    400032: L_A2
+    400034: L_A2 1
+    400036: L_A6
+    400038: L_E
+    400040: L_E1
+    400042: L_E1 1
+    400044: L_Eye
+    400046: L_Eye1
+    400048: L_F
+    400050: L_H
+    400052: L_L
+    400054: L_L 1
+    400056: L_L1
+    400058: L_L2
+    400060: L_V
+    400062: LH_V
+    400064: Master
+    400066: NEC
+    400068: Neck
+    400070: PL
+    400072: PLC
+    400074: R_A
+    400076: R_E
+    400078: R_F
+    400080: R_H
+    400082: R_L
+    400084: R_R
+    400086: R_R1
+    400088: R_R2
+    400090: R_V
+    400092: RH_V
+    400094: Ws
+    4300000: Andy
+    7400000: Run
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Andy
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

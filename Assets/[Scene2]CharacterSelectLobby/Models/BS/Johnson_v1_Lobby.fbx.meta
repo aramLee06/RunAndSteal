@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: b1788cebeec270540a048d315922d2f5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Johnson_PA_Model_150514_Johnson
+    100002: Johnson_PA_Skin_150517_Born
+    100004: Johnson_PA_Skin_150517_Bs
+    100006: Johnson_PA_Skin_150517_Cap
+    100008: Johnson_PA_Skin_150517_Ch
+    100010: Johnson_PA_Skin_150517_Controler
+    100012: Johnson_PA_Skin_150517_Hair
+    100014: Johnson_PA_Skin_150517_Head
+    100016: Johnson_PA_Skin_150517_ikHandle1
+    100018: Johnson_PA_Skin_150517_ikHandle2
+    100020: Johnson_PA_Skin_150517_ikHandle3
+    100022: Johnson_PA_Skin_150517_ikHandle4
+    100024: Johnson_PA_Skin_150517_joint1
+    100026: Johnson_PA_Skin_150517_joint10
+    100028: Johnson_PA_Skin_150517_joint7
+    100030: Johnson_PA_Skin_150517_joint8
+    100032: Johnson_PA_Skin_150517_joint9
+    100034: Johnson_PA_Skin_150517_L_A
+    100036: Johnson_PA_Skin_150517_L_A1
+    100038: Johnson_PA_Skin_150517_L_A2
+    100040: Johnson_PA_Skin_150517_L_E1
+    100042: Johnson_PA_Skin_150517_L_Eye
+    100044: Johnson_PA_Skin_150517_L_L
+    100046: Johnson_PA_Skin_150517_L_L1
+    100048: Johnson_PA_Skin_150517_L_L2
+    100050: Johnson_PA_Skin_150517_LA
+    100052: Johnson_PA_Skin_150517_LAV
+    100054: Johnson_PA_Skin_150517_LE
+    100056: Johnson_PA_Skin_150517_LF
+    100058: Johnson_PA_Skin_150517_LFV
+    100060: Johnson_PA_Skin_150517_Master
+    100062: Johnson_PA_Skin_150517_Nc
+    100064: Johnson_PA_Skin_150517_Neck
+    100066: Johnson_PA_Skin_150517_PL
+    100068: Johnson_PA_Skin_150517_PL 1
+    100070: Johnson_PA_Skin_150517_R_A
+    100072: Johnson_PA_Skin_150517_R_A1
+    100074: Johnson_PA_Skin_150517_R_A2
+    100076: Johnson_PA_Skin_150517_R_E1
+    100078: Johnson_PA_Skin_150517_R_Eye
+    100080: Johnson_PA_Skin_150517_R_R
+    100082: Johnson_PA_Skin_150517_R_R1
+    100084: Johnson_PA_Skin_150517_R_R2
+    100086: Johnson_PA_Skin_150517_RA
+    100088: Johnson_PA_Skin_150517_RAV
+    100090: Johnson_PA_Skin_150517_RE
+    100092: Johnson_PA_Skin_150517_RF
+    100094: Johnson_PA_Skin_150517_RFV
+    100096: Johnson_PA_Skin_150517_Ws
+    100098: //RootNode
+    400000: Johnson_PA_Model_150514_Johnson
+    400002: Johnson_PA_Skin_150517_Born
+    400004: Johnson_PA_Skin_150517_Bs
+    400006: Johnson_PA_Skin_150517_Cap
+    400008: Johnson_PA_Skin_150517_Ch
+    400010: Johnson_PA_Skin_150517_Controler
+    400012: Johnson_PA_Skin_150517_Hair
+    400014: Johnson_PA_Skin_150517_Head
+    400016: Johnson_PA_Skin_150517_ikHandle1
+    400018: Johnson_PA_Skin_150517_ikHandle2
+    400020: Johnson_PA_Skin_150517_ikHandle3
+    400022: Johnson_PA_Skin_150517_ikHandle4
+    400024: Johnson_PA_Skin_150517_joint1
+    400026: Johnson_PA_Skin_150517_joint10
+    400028: Johnson_PA_Skin_150517_joint7
+    400030: Johnson_PA_Skin_150517_joint8
+    400032: Johnson_PA_Skin_150517_joint9
+    400034: Johnson_PA_Skin_150517_L_A
+    400036: Johnson_PA_Skin_150517_L_A1
+    400038: Johnson_PA_Skin_150517_L_A2
+    400040: Johnson_PA_Skin_150517_L_E1
+    400042: Johnson_PA_Skin_150517_L_Eye
+    400044: Johnson_PA_Skin_150517_L_L
+    400046: Johnson_PA_Skin_150517_L_L1
+    400048: Johnson_PA_Skin_150517_L_L2
+    400050: Johnson_PA_Skin_150517_LA
+    400052: Johnson_PA_Skin_150517_LAV
+    400054: Johnson_PA_Skin_150517_LE
+    400056: Johnson_PA_Skin_150517_LF
+    400058: Johnson_PA_Skin_150517_LFV
+    400060: Johnson_PA_Skin_150517_Master
+    400062: Johnson_PA_Skin_150517_Nc
+    400064: Johnson_PA_Skin_150517_Neck
+    400066: Johnson_PA_Skin_150517_PL
+    400068: Johnson_PA_Skin_150517_PL 1
+    400070: Johnson_PA_Skin_150517_R_A
+    400072: Johnson_PA_Skin_150517_R_A1
+    400074: Johnson_PA_Skin_150517_R_A2
+    400076: Johnson_PA_Skin_150517_R_E1
+    400078: Johnson_PA_Skin_150517_R_Eye
+    400080: Johnson_PA_Skin_150517_R_R
+    400082: Johnson_PA_Skin_150517_R_R1
+    400084: Johnson_PA_Skin_150517_R_R2
+    400086: Johnson_PA_Skin_150517_RA
+    400088: Johnson_PA_Skin_150517_RAV
+    400090: Johnson_PA_Skin_150517_RE
+    400092: Johnson_PA_Skin_150517_RF
+    400094: Johnson_PA_Skin_150517_RFV
+    400096: Johnson_PA_Skin_150517_Ws
+    400098: //RootNode
+    4300000: Johnson_PA_Model_150514_Johnson
+    7400000: Johnson
+    9500000: //RootNode
+    13700000: Johnson_PA_Model_150514_Johnson
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Johnson
+      takeName: Johnson
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Johnson_PA_Model_150514_Johnson
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_L_L
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_L_L/Johnson_PA_Skin_150517_L_L1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_L_L/Johnson_PA_Skin_150517_L_L1/Johnson_PA_Skin_150517_L_L2
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_L_L/Johnson_PA_Skin_150517_L_L1/Johnson_PA_Skin_150517_L_L2/Johnson_PA_Skin_150517_joint9
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_R_R
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_R_R/Johnson_PA_Skin_150517_R_R1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_R_R/Johnson_PA_Skin_150517_R_R1/Johnson_PA_Skin_150517_R_R2
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_R_R/Johnson_PA_Skin_150517_R_R1/Johnson_PA_Skin_150517_R_R2/Johnson_PA_Skin_150517_joint10
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_L_A
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_L_A/Johnson_PA_Skin_150517_L_A1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_L_A/Johnson_PA_Skin_150517_L_A1/Johnson_PA_Skin_150517_L_A2
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_joint7
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_joint7/Johnson_PA_Skin_150517_joint8
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_L_Eye
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_L_Eye/Johnson_PA_Skin_150517_L_E1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_R_Eye
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_Neck/Johnson_PA_Skin_150517_Head/Johnson_PA_Skin_150517_Cap/Johnson_PA_Skin_150517_joint1/Johnson_PA_Skin_150517_R_Eye/Johnson_PA_Skin_150517_R_E1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_R_A
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_R_A/Johnson_PA_Skin_150517_R_A1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Born/Johnson_PA_Skin_150517_PL/Johnson_PA_Skin_150517_Ws/Johnson_PA_Skin_150517_Bs/Johnson_PA_Skin_150517_R_A/Johnson_PA_Skin_150517_R_A1/Johnson_PA_Skin_150517_R_A2
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_LF
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_LA
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_LAV
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_Nc
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_Nc/Johnson_PA_Skin_150517_Hair
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_Nc/Johnson_PA_Skin_150517_LE
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_Nc/Johnson_PA_Skin_150517_RE
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_RA
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_Ch/Johnson_PA_Skin_150517_RAV
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_LFV
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_PL
+          1/Johnson_PA_Skin_150517_RFV
+        weight: 1
+      - path: Johnson_PA_Skin_150517_Controler/Johnson_PA_Skin_150517_Master/Johnson_PA_Skin_150517_RF
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

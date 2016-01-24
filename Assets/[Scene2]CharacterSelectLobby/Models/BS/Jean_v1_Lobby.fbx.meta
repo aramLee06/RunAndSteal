@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: bb1331e4d43c94e42bde7669fab61eae
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Jean_PA_Model_150514_Jean
+    100002: Jean_PA_Skin_150517_Born
+    100004: Jean_PA_Skin_150517_Bs
+    100006: Jean_PA_Skin_150517_Cap
+    100008: Jean_PA_Skin_150517_Controler
+    100010: Jean_PA_Skin_150517_CS
+    100012: Jean_PA_Skin_150517_Hair
+    100014: Jean_PA_Skin_150517_Head
+    100016: Jean_PA_Skin_150517_ikHandle1
+    100018: Jean_PA_Skin_150517_ikHandle2
+    100020: Jean_PA_Skin_150517_ikHandle3
+    100022: Jean_PA_Skin_150517_ikHandle4
+    100024: Jean_PA_Skin_150517_joint2
+    100026: Jean_PA_Skin_150517_joint2 1
+    100028: Jean_PA_Skin_150517_L_A
+    100030: Jean_PA_Skin_150517_L_A1
+    100032: Jean_PA_Skin_150517_L_A2
+    100034: Jean_PA_Skin_150517_L_E1
+    100036: Jean_PA_Skin_150517_L_Eye
+    100038: Jean_PA_Skin_150517_L_L
+    100040: Jean_PA_Skin_150517_L_L1
+    100042: Jean_PA_Skin_150517_L_L2
+    100044: Jean_PA_Skin_150517_LA
+    100046: Jean_PA_Skin_150517_LAV
+    100048: Jean_PA_Skin_150517_LE
+    100050: Jean_PA_Skin_150517_LF
+    100052: Jean_PA_Skin_150517_LFV
+    100054: Jean_PA_Skin_150517_Master
+    100056: Jean_PA_Skin_150517_Mus
+    100058: Jean_PA_Skin_150517_mus
+    100060: Jean_PA_Skin_150517_Neck
+    100062: Jean_PA_Skin_150517_PL
+    100064: Jean_PA_Skin_150517_PL 1
+    100066: Jean_PA_Skin_150517_R_A
+    100068: Jean_PA_Skin_150517_R_A1
+    100070: Jean_PA_Skin_150517_R_A2
+    100072: Jean_PA_Skin_150517_R_E1
+    100074: Jean_PA_Skin_150517_R_Eye
+    100076: Jean_PA_Skin_150517_R_R
+    100078: Jean_PA_Skin_150517_R_R1
+    100080: Jean_PA_Skin_150517_R_R2
+    100082: Jean_PA_Skin_150517_RA
+    100084: Jean_PA_Skin_150517_RAV
+    100086: Jean_PA_Skin_150517_RE
+    100088: Jean_PA_Skin_150517_RF
+    100090: Jean_PA_Skin_150517_RFV
+    100092: Jean_PA_Skin_150517_Ws
+    100094: //RootNode
+    400000: Jean_PA_Model_150514_Jean
+    400002: Jean_PA_Skin_150517_Born
+    400004: Jean_PA_Skin_150517_Bs
+    400006: Jean_PA_Skin_150517_Cap
+    400008: Jean_PA_Skin_150517_Controler
+    400010: Jean_PA_Skin_150517_CS
+    400012: Jean_PA_Skin_150517_Hair
+    400014: Jean_PA_Skin_150517_Head
+    400016: Jean_PA_Skin_150517_ikHandle1
+    400018: Jean_PA_Skin_150517_ikHandle2
+    400020: Jean_PA_Skin_150517_ikHandle3
+    400022: Jean_PA_Skin_150517_ikHandle4
+    400024: Jean_PA_Skin_150517_joint2
+    400026: Jean_PA_Skin_150517_joint2 1
+    400028: Jean_PA_Skin_150517_L_A
+    400030: Jean_PA_Skin_150517_L_A1
+    400032: Jean_PA_Skin_150517_L_A2
+    400034: Jean_PA_Skin_150517_L_E1
+    400036: Jean_PA_Skin_150517_L_Eye
+    400038: Jean_PA_Skin_150517_L_L
+    400040: Jean_PA_Skin_150517_L_L1
+    400042: Jean_PA_Skin_150517_L_L2
+    400044: Jean_PA_Skin_150517_LA
+    400046: Jean_PA_Skin_150517_LAV
+    400048: Jean_PA_Skin_150517_LE
+    400050: Jean_PA_Skin_150517_LF
+    400052: Jean_PA_Skin_150517_LFV
+    400054: Jean_PA_Skin_150517_Master
+    400056: Jean_PA_Skin_150517_Mus
+    400058: Jean_PA_Skin_150517_mus
+    400060: Jean_PA_Skin_150517_Neck
+    400062: Jean_PA_Skin_150517_PL
+    400064: Jean_PA_Skin_150517_PL 1
+    400066: Jean_PA_Skin_150517_R_A
+    400068: Jean_PA_Skin_150517_R_A1
+    400070: Jean_PA_Skin_150517_R_A2
+    400072: Jean_PA_Skin_150517_R_E1
+    400074: Jean_PA_Skin_150517_R_Eye
+    400076: Jean_PA_Skin_150517_R_R
+    400078: Jean_PA_Skin_150517_R_R1
+    400080: Jean_PA_Skin_150517_R_R2
+    400082: Jean_PA_Skin_150517_RA
+    400084: Jean_PA_Skin_150517_RAV
+    400086: Jean_PA_Skin_150517_RE
+    400088: Jean_PA_Skin_150517_RF
+    400090: Jean_PA_Skin_150517_RFV
+    400092: Jean_PA_Skin_150517_Ws
+    400094: //RootNode
+    4300000: Jean_PA_Model_150514_Jean
+    7400000: Jean
+    9500000: //RootNode
+    13700000: Jean_PA_Model_150514_Jean
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Jean
+      takeName: Jean
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jean_PA_Model_150514_Jean
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_L_L
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_L_L/Jean_PA_Skin_150517_L_L1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_L_L/Jean_PA_Skin_150517_L_L1/Jean_PA_Skin_150517_L_L2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_L_L/Jean_PA_Skin_150517_L_L1/Jean_PA_Skin_150517_L_L2/Jean_PA_Skin_150517_joint2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_R_R
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_R_R/Jean_PA_Skin_150517_R_R1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_R_R/Jean_PA_Skin_150517_R_R1/Jean_PA_Skin_150517_R_R2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_R_R/Jean_PA_Skin_150517_R_R1/Jean_PA_Skin_150517_R_R2/Jean_PA_Skin_150517_joint2
+          1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_L_A
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_L_A/Jean_PA_Skin_150517_L_A1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_L_A/Jean_PA_Skin_150517_L_A1/Jean_PA_Skin_150517_L_A2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_Head
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_Head/Jean_PA_Skin_150517_Cap
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_L_Eye
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_L_Eye/Jean_PA_Skin_150517_L_E1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_mus
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_R_Eye
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_Neck/Jean_PA_Skin_150517_R_Eye/Jean_PA_Skin_150517_R_E1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_R_A
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_R_A/Jean_PA_Skin_150517_R_A1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Born/Jean_PA_Skin_150517_PL/Jean_PA_Skin_150517_Ws/Jean_PA_Skin_150517_Bs/Jean_PA_Skin_150517_R_A/Jean_PA_Skin_150517_R_A1/Jean_PA_Skin_150517_R_A2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_LF
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_LF/Jean_PA_Skin_150517_LFV
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_Hair
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_LA
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_LAV
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_LE
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_Mus
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_RA
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_RAV
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_PL
+          1/Jean_PA_Skin_150517_CS/Jean_PA_Skin_150517_RE
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_RF
+        weight: 1
+      - path: Jean_PA_Skin_150517_Controler/Jean_PA_Skin_150517_Master/Jean_PA_Skin_150517_RF/Jean_PA_Skin_150517_RFV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

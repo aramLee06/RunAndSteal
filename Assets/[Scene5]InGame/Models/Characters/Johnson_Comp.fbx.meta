@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: bef7d247039f0924d85210ef4b3ffcb2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Johnson_Model_150313_Johnson
+    100004: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    100006: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    100008: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    100010: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    100012: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    100014: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LR1
+    100016: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    100018: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    100020: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    100022: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    100024: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    100026: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    100028: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    100030: Johnson_v1_Asset_150313_Born
+    100032: Johnson_v1_Asset_150313_Bs
+    100034: Johnson_v1_Asset_150313_Cap
+    100036: Johnson_v1_Asset_150313_Head
+    100038: Johnson_v1_Asset_150313_ikHandle1
+    100040: Johnson_v1_Asset_150313_ikHandle2
+    100042: Johnson_v1_Asset_150313_ikHandle3
+    100044: Johnson_v1_Asset_150313_ikHandle4
+    100046: Johnson_v1_Asset_150313_joint1
+    100048: Johnson_v1_Asset_150313_joint7
+    100050: Johnson_v1_Asset_150313_joint8
+    100052: Johnson_v1_Asset_150313_L_A
+    100054: Johnson_v1_Asset_150313_L_A1
+    100056: Johnson_v1_Asset_150313_L_A2
+    100058: Johnson_v1_Asset_150313_L_E1
+    100060: Johnson_v1_Asset_150313_L_E1 1
+    100062: Johnson_v1_Asset_150313_L_Eye
+    100064: Johnson_v1_Asset_150313_L_Eye1
+    100066: Johnson_v1_Asset_150313_L_L
+    100068: Johnson_v1_Asset_150313_L_L1
+    100070: Johnson_v1_Asset_150313_L_L2
+    100072: Johnson_v1_Asset_150313_locator1
+    100074: Johnson_v1_Asset_150313_locator2
+    100076: Johnson_v1_Asset_150313_Neck
+    100078: Johnson_v1_Asset_150313_Nhair
+    100080: Johnson_v1_Asset_150313_PL
+    100082: Johnson_v1_Asset_150313_R_A
+    100084: Johnson_v1_Asset_150313_R_A1
+    100086: Johnson_v1_Asset_150313_R_A2
+    100088: Johnson_v1_Asset_150313_R_R
+    100090: Johnson_v1_Asset_150313_R_R1
+    100092: Johnson_v1_Asset_150313_R_R2
+    100094: Johnson_v1_Asset_150313_Ws
+    400000: //RootNode
+    400002: Johnson_Model_150313_Johnson
+    400004: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    400006: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    400008: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    400010: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    400012: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    400014: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_LR1
+    400016: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    400018: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    400020: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    400022: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    400024: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    400026: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    400028: Johnson_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    400030: Johnson_v1_Asset_150313_Born
+    400032: Johnson_v1_Asset_150313_Bs
+    400034: Johnson_v1_Asset_150313_Cap
+    400036: Johnson_v1_Asset_150313_Head
+    400038: Johnson_v1_Asset_150313_ikHandle1
+    400040: Johnson_v1_Asset_150313_ikHandle2
+    400042: Johnson_v1_Asset_150313_ikHandle3
+    400044: Johnson_v1_Asset_150313_ikHandle4
+    400046: Johnson_v1_Asset_150313_joint1
+    400048: Johnson_v1_Asset_150313_joint7
+    400050: Johnson_v1_Asset_150313_joint8
+    400052: Johnson_v1_Asset_150313_L_A
+    400054: Johnson_v1_Asset_150313_L_A1
+    400056: Johnson_v1_Asset_150313_L_A2
+    400058: Johnson_v1_Asset_150313_L_E1
+    400060: Johnson_v1_Asset_150313_L_E1 1
+    400062: Johnson_v1_Asset_150313_L_Eye
+    400064: Johnson_v1_Asset_150313_L_Eye1
+    400066: Johnson_v1_Asset_150313_L_L
+    400068: Johnson_v1_Asset_150313_L_L1
+    400070: Johnson_v1_Asset_150313_L_L2
+    400072: Johnson_v1_Asset_150313_locator1
+    400074: Johnson_v1_Asset_150313_locator2
+    400076: Johnson_v1_Asset_150313_Neck
+    400078: Johnson_v1_Asset_150313_Nhair
+    400080: Johnson_v1_Asset_150313_PL
+    400082: Johnson_v1_Asset_150313_R_A
+    400084: Johnson_v1_Asset_150313_R_A1
+    400086: Johnson_v1_Asset_150313_R_A2
+    400088: Johnson_v1_Asset_150313_R_R
+    400090: Johnson_v1_Asset_150313_R_R1
+    400092: Johnson_v1_Asset_150313_R_R2
+    400094: Johnson_v1_Asset_150313_Ws
+    4300000: Johnson_Model_150313_Johnson
+    7400000: Run
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Johnson_Model_150313_Johnson
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

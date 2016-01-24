@@ -1,0 +1,290 @@
+fileFormatVersion: 2
+guid: 5196d67d989018447bf49bb84bea41d2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Andy_PA_Model_150514_Andy
+    100002: Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs
+    100004: Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap
+    100006: Andy_PA_Skin_150517_Base_Born_Setting_150312_Head
+    100008: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint1
+    100010: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint7
+    100012: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint8
+    100014: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A
+    100016: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A1
+    100018: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A2
+    100020: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1
+    100022: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1 1
+    100024: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye
+    100026: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye1
+    100028: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L
+    100030: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L1
+    100032: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L2
+    100034: Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck
+    100036: Andy_PA_Skin_150517_Base_Born_Setting_150312_PL
+    100038: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A
+    100040: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A1
+    100042: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A2
+    100044: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R
+    100046: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R1
+    100048: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R2
+    100050: Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws
+    100052: Andy_PA_Skin_150517_Born
+    100054: Andy_PA_Skin_150517_Controler
+    100056: Andy_PA_Skin_150517_CS
+    100058: Andy_PA_Skin_150517_ikHandle1
+    100060: Andy_PA_Skin_150517_ikHandle2
+    100062: Andy_PA_Skin_150517_ikHandle3
+    100064: Andy_PA_Skin_150517_ikHandle4
+    100066: Andy_PA_Skin_150517_joint1
+    100068: Andy_PA_Skin_150517_joint2
+    100070: Andy_PA_Skin_150517_Lac
+    100072: Andy_PA_Skin_150517_LAV
+    100074: Andy_PA_Skin_150517_Lbc
+    100076: Andy_PA_Skin_150517_LF
+    100078: Andy_PA_Skin_150517_LFV
+    100080: Andy_PA_Skin_150517_Master
+    100082: Andy_PA_Skin_150517_NC
+    100084: Andy_PA_Skin_150517_PL
+    100086: Andy_PA_Skin_150517_Rac
+    100088: Andy_PA_Skin_150517_RAV
+    100090: Andy_PA_Skin_150517_RBc
+    100092: Andy_PA_Skin_150517_RF
+    100094: Andy_PA_Skin_150517_RFV
+    100096: Andy_PA_Skin_150517_RR
+    100098: //RootNode
+    400000: Andy_PA_Model_150514_Andy
+    400002: Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs
+    400004: Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap
+    400006: Andy_PA_Skin_150517_Base_Born_Setting_150312_Head
+    400008: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint1
+    400010: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint7
+    400012: Andy_PA_Skin_150517_Base_Born_Setting_150312_joint8
+    400014: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A
+    400016: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A1
+    400018: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A2
+    400020: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1
+    400022: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1 1
+    400024: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye
+    400026: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye1
+    400028: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L
+    400030: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L1
+    400032: Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L2
+    400034: Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck
+    400036: Andy_PA_Skin_150517_Base_Born_Setting_150312_PL
+    400038: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A
+    400040: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A1
+    400042: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A2
+    400044: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R
+    400046: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R1
+    400048: Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R2
+    400050: Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws
+    400052: Andy_PA_Skin_150517_Born
+    400054: Andy_PA_Skin_150517_Controler
+    400056: Andy_PA_Skin_150517_CS
+    400058: Andy_PA_Skin_150517_ikHandle1
+    400060: Andy_PA_Skin_150517_ikHandle2
+    400062: Andy_PA_Skin_150517_ikHandle3
+    400064: Andy_PA_Skin_150517_ikHandle4
+    400066: Andy_PA_Skin_150517_joint1
+    400068: Andy_PA_Skin_150517_joint2
+    400070: Andy_PA_Skin_150517_Lac
+    400072: Andy_PA_Skin_150517_LAV
+    400074: Andy_PA_Skin_150517_Lbc
+    400076: Andy_PA_Skin_150517_LF
+    400078: Andy_PA_Skin_150517_LFV
+    400080: Andy_PA_Skin_150517_Master
+    400082: Andy_PA_Skin_150517_NC
+    400084: Andy_PA_Skin_150517_PL
+    400086: Andy_PA_Skin_150517_Rac
+    400088: Andy_PA_Skin_150517_RAV
+    400090: Andy_PA_Skin_150517_RBc
+    400092: Andy_PA_Skin_150517_RF
+    400094: Andy_PA_Skin_150517_RFV
+    400096: Andy_PA_Skin_150517_RR
+    400098: //RootNode
+    4300000: Andy_PA_Model_150514_Andy
+    7400000: Andy
+    9500000: //RootNode
+    13700000: Andy_PA_Model_150514_Andy
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Andy
+      takeName: Andy
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Andy_PA_Model_150514_Andy
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L1/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L1/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_L2/Andy_PA_Skin_150517_joint1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R1/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R1/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_R2/Andy_PA_Skin_150517_joint2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A1/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_A2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint1/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint7
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint1/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint7/Andy_PA_Skin_150517_Base_Born_Setting_150312_joint8
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_Neck/Andy_PA_Skin_150517_Base_Born_Setting_150312_Head/Andy_PA_Skin_150517_Base_Born_Setting_150312_Cap/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_Eye1/Andy_PA_Skin_150517_Base_Born_Setting_150312_L_E1
+          1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Born/Andy_PA_Skin_150517_Base_Born_Setting_150312_PL/Andy_PA_Skin_150517_Base_Born_Setting_150312_Ws/Andy_PA_Skin_150517_Base_Born_Setting_150312_Bs/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A1/Andy_PA_Skin_150517_Base_Born_Setting_150312_R_A2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_LF
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_Lac
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_LAV
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_NC
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_NC/Andy_PA_Skin_150517_Lbc
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_NC/Andy_PA_Skin_150517_RBc
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_NC/Andy_PA_Skin_150517_RR
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_Rac
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_CS/Andy_PA_Skin_150517_RAV
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_LFV
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_PL/Andy_PA_Skin_150517_RFV
+        weight: 1
+      - path: Andy_PA_Skin_150517_Controler/Andy_PA_Skin_150517_Master/Andy_PA_Skin_150517_RF
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

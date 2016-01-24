@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: 3b4eb7fb27541e7488a174921797633f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Roony_PA_Model_150514_Roony
+    100002: Roony_PA_Skin_150517_Born
+    100004: Roony_PA_Skin_150517_Bs
+    100006: Roony_PA_Skin_150517_Cap
+    100008: Roony_PA_Skin_150517_Cap 1
+    100010: Roony_PA_Skin_150517_Controler
+    100012: Roony_PA_Skin_150517_CS
+    100014: Roony_PA_Skin_150517_Head
+    100016: Roony_PA_Skin_150517_ikHandle1
+    100018: Roony_PA_Skin_150517_ikHandle2
+    100020: Roony_PA_Skin_150517_ikHandle3
+    100022: Roony_PA_Skin_150517_ikHandle4
+    100024: Roony_PA_Skin_150517_joint1
+    100026: Roony_PA_Skin_150517_joint2
+    100028: Roony_PA_Skin_150517_joint3
+    100030: Roony_PA_Skin_150517_joint4
+    100032: Roony_PA_Skin_150517_L_A
+    100034: Roony_PA_Skin_150517_L_A1
+    100036: Roony_PA_Skin_150517_L_A2
+    100038: Roony_PA_Skin_150517_L_E1
+    100040: Roony_PA_Skin_150517_L_E1 1
+    100042: Roony_PA_Skin_150517_L_Eye
+    100044: Roony_PA_Skin_150517_L_Eye1
+    100046: Roony_PA_Skin_150517_L_L
+    100048: Roony_PA_Skin_150517_L_L1
+    100050: Roony_PA_Skin_150517_L_L2
+    100052: Roony_PA_Skin_150517_LA
+    100054: Roony_PA_Skin_150517_LAV
+    100056: Roony_PA_Skin_150517_LE
+    100058: Roony_PA_Skin_150517_LF
+    100060: Roony_PA_Skin_150517_LFV
+    100062: Roony_PA_Skin_150517_Master
+    100064: Roony_PA_Skin_150517_NC
+    100066: Roony_PA_Skin_150517_Neck
+    100068: Roony_PA_Skin_150517_PL
+    100070: Roony_PA_Skin_150517_PL 1
+    100072: Roony_PA_Skin_150517_R_A
+    100074: Roony_PA_Skin_150517_R_A1
+    100076: Roony_PA_Skin_150517_R_A2
+    100078: Roony_PA_Skin_150517_R_R
+    100080: Roony_PA_Skin_150517_R_R1
+    100082: Roony_PA_Skin_150517_R_R2
+    100084: Roony_PA_Skin_150517_RA
+    100086: Roony_PA_Skin_150517_RAV
+    100088: Roony_PA_Skin_150517_RE
+    100090: Roony_PA_Skin_150517_RF
+    100092: Roony_PA_Skin_150517_RFV
+    100094: Roony_PA_Skin_150517_Ws
+    100096: //RootNode
+    400000: Roony_PA_Model_150514_Roony
+    400002: Roony_PA_Skin_150517_Born
+    400004: Roony_PA_Skin_150517_Bs
+    400006: Roony_PA_Skin_150517_Cap
+    400008: Roony_PA_Skin_150517_Cap 1
+    400010: Roony_PA_Skin_150517_Controler
+    400012: Roony_PA_Skin_150517_CS
+    400014: Roony_PA_Skin_150517_Head
+    400016: Roony_PA_Skin_150517_ikHandle1
+    400018: Roony_PA_Skin_150517_ikHandle2
+    400020: Roony_PA_Skin_150517_ikHandle3
+    400022: Roony_PA_Skin_150517_ikHandle4
+    400024: Roony_PA_Skin_150517_joint1
+    400026: Roony_PA_Skin_150517_joint2
+    400028: Roony_PA_Skin_150517_joint3
+    400030: Roony_PA_Skin_150517_joint4
+    400032: Roony_PA_Skin_150517_L_A
+    400034: Roony_PA_Skin_150517_L_A1
+    400036: Roony_PA_Skin_150517_L_A2
+    400038: Roony_PA_Skin_150517_L_E1
+    400040: Roony_PA_Skin_150517_L_E1 1
+    400042: Roony_PA_Skin_150517_L_Eye
+    400044: Roony_PA_Skin_150517_L_Eye1
+    400046: Roony_PA_Skin_150517_L_L
+    400048: Roony_PA_Skin_150517_L_L1
+    400050: Roony_PA_Skin_150517_L_L2
+    400052: Roony_PA_Skin_150517_LA
+    400054: Roony_PA_Skin_150517_LAV
+    400056: Roony_PA_Skin_150517_LE
+    400058: Roony_PA_Skin_150517_LF
+    400060: Roony_PA_Skin_150517_LFV
+    400062: Roony_PA_Skin_150517_Master
+    400064: Roony_PA_Skin_150517_NC
+    400066: Roony_PA_Skin_150517_Neck
+    400068: Roony_PA_Skin_150517_PL
+    400070: Roony_PA_Skin_150517_PL 1
+    400072: Roony_PA_Skin_150517_R_A
+    400074: Roony_PA_Skin_150517_R_A1
+    400076: Roony_PA_Skin_150517_R_A2
+    400078: Roony_PA_Skin_150517_R_R
+    400080: Roony_PA_Skin_150517_R_R1
+    400082: Roony_PA_Skin_150517_R_R2
+    400084: Roony_PA_Skin_150517_RA
+    400086: Roony_PA_Skin_150517_RAV
+    400088: Roony_PA_Skin_150517_RE
+    400090: Roony_PA_Skin_150517_RF
+    400092: Roony_PA_Skin_150517_RFV
+    400094: Roony_PA_Skin_150517_Ws
+    400096: //RootNode
+    4300000: Roony_PA_Model_150514_Roony
+    7400000: Roony
+    9500000: //RootNode
+    13700000: Roony_PA_Model_150514_Roony
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Roony
+      takeName: Roony
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Roony_PA_Model_150514_Roony
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_L_L
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_L_L/Roony_PA_Skin_150517_L_L1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_L_L/Roony_PA_Skin_150517_L_L1/Roony_PA_Skin_150517_L_L2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_L_L/Roony_PA_Skin_150517_L_L1/Roony_PA_Skin_150517_L_L2/Roony_PA_Skin_150517_joint4
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_R_R
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_R_R/Roony_PA_Skin_150517_R_R1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_R_R/Roony_PA_Skin_150517_R_R1/Roony_PA_Skin_150517_R_R2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_R_R/Roony_PA_Skin_150517_R_R1/Roony_PA_Skin_150517_R_R2/Roony_PA_Skin_150517_joint3
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_L_A
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_L_A/Roony_PA_Skin_150517_L_A1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_L_A/Roony_PA_Skin_150517_L_A1/Roony_PA_Skin_150517_L_A2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_joint1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_joint1/Roony_PA_Skin_150517_joint2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_L_Eye
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_L_Eye/Roony_PA_Skin_150517_L_E1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_L_Eye1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_Neck/Roony_PA_Skin_150517_Head/Roony_PA_Skin_150517_Cap
+          1/Roony_PA_Skin_150517_L_Eye1/Roony_PA_Skin_150517_L_E1 1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_R_A
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_R_A/Roony_PA_Skin_150517_R_A1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Born/Roony_PA_Skin_150517_PL/Roony_PA_Skin_150517_Ws/Roony_PA_Skin_150517_Bs/Roony_PA_Skin_150517_R_A/Roony_PA_Skin_150517_R_A1/Roony_PA_Skin_150517_R_A2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_LF
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_LF/Roony_PA_Skin_150517_LFV
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_LA
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_LAV
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_NC
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_NC/Roony_PA_Skin_150517_Cap
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_NC/Roony_PA_Skin_150517_LE
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_NC/Roony_PA_Skin_150517_RE
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_RA
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_PL
+          1/Roony_PA_Skin_150517_CS/Roony_PA_Skin_150517_RAV
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_RF
+        weight: 1
+      - path: Roony_PA_Skin_150517_Controler/Roony_PA_Skin_150517_Master/Roony_PA_Skin_150517_RF/Roony_PA_Skin_150517_RFV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

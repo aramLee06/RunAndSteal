@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 5f0bde5e1ba10cd4e834a59212db16f0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Frank_PA_Model_150514_Frank
+    100002: Frank_PA_Skin_150517_Born
+    100004: Frank_PA_Skin_150517_Bs
+    100006: Frank_PA_Skin_150517_Cap
+    100008: Frank_PA_Skin_150517_Controler
+    100010: Frank_PA_Skin_150517_CS
+    100012: Frank_PA_Skin_150517_Head
+    100014: Frank_PA_Skin_150517_ikHandle1
+    100016: Frank_PA_Skin_150517_ikHandle2
+    100018: Frank_PA_Skin_150517_ikHandle3
+    100020: Frank_PA_Skin_150517_ikHandle4
+    100022: Frank_PA_Skin_150517_joint1
+    100024: Frank_PA_Skin_150517_joint2
+    100026: Frank_PA_Skin_150517_joint3
+    100028: Frank_PA_Skin_150517_joint4
+    100030: Frank_PA_Skin_150517_joint5
+    100032: Frank_PA_Skin_150517_joint5 1
+    100034: Frank_PA_Skin_150517_joint6
+    100036: Frank_PA_Skin_150517_joint7
+    100038: Frank_PA_Skin_150517_joint8
+    100040: Frank_PA_Skin_150517_L_A
+    100042: Frank_PA_Skin_150517_L_A1
+    100044: Frank_PA_Skin_150517_L_A2
+    100046: Frank_PA_Skin_150517_L_E1
+    100048: Frank_PA_Skin_150517_L_Eye
+    100050: Frank_PA_Skin_150517_L_L
+    100052: Frank_PA_Skin_150517_L_L1
+    100054: Frank_PA_Skin_150517_L_L2
+    100056: Frank_PA_Skin_150517_La
+    100058: Frank_PA_Skin_150517_LAV
+    100060: Frank_PA_Skin_150517_Lb
+    100062: Frank_PA_Skin_150517_LE
+    100064: Frank_PA_Skin_150517_LE1
+    100066: Frank_PA_Skin_150517_LE2
+    100068: Frank_PA_Skin_150517_LF
+    100070: Frank_PA_Skin_150517_LFV
+    100072: Frank_PA_Skin_150517_Master
+    100074: Frank_PA_Skin_150517_Mus
+    100076: Frank_PA_Skin_150517_Musc
+    100078: Frank_PA_Skin_150517_NC
+    100080: Frank_PA_Skin_150517_Neck
+    100082: Frank_PA_Skin_150517_PL
+    100084: Frank_PA_Skin_150517_PL 1
+    100086: Frank_PA_Skin_150517_R_A
+    100088: Frank_PA_Skin_150517_R_A1
+    100090: Frank_PA_Skin_150517_R_A2
+    100092: Frank_PA_Skin_150517_R_E1
+    100094: Frank_PA_Skin_150517_R_Eye
+    100096: Frank_PA_Skin_150517_R_R
+    100098: Frank_PA_Skin_150517_R_R1
+    100100: Frank_PA_Skin_150517_R_R2
+    100102: Frank_PA_Skin_150517_Ra
+    100104: Frank_PA_Skin_150517_RAV
+    100106: Frank_PA_Skin_150517_Rb
+    100108: Frank_PA_Skin_150517_RF
+    100110: Frank_PA_Skin_150517_RFV
+    100112: Frank_PA_Skin_150517_Ws
+    100114: //RootNode
+    400000: Frank_PA_Model_150514_Frank
+    400002: Frank_PA_Skin_150517_Born
+    400004: Frank_PA_Skin_150517_Bs
+    400006: Frank_PA_Skin_150517_Cap
+    400008: Frank_PA_Skin_150517_Controler
+    400010: Frank_PA_Skin_150517_CS
+    400012: Frank_PA_Skin_150517_Head
+    400014: Frank_PA_Skin_150517_ikHandle1
+    400016: Frank_PA_Skin_150517_ikHandle2
+    400018: Frank_PA_Skin_150517_ikHandle3
+    400020: Frank_PA_Skin_150517_ikHandle4
+    400022: Frank_PA_Skin_150517_joint1
+    400024: Frank_PA_Skin_150517_joint2
+    400026: Frank_PA_Skin_150517_joint3
+    400028: Frank_PA_Skin_150517_joint4
+    400030: Frank_PA_Skin_150517_joint5
+    400032: Frank_PA_Skin_150517_joint5 1
+    400034: Frank_PA_Skin_150517_joint6
+    400036: Frank_PA_Skin_150517_joint7
+    400038: Frank_PA_Skin_150517_joint8
+    400040: Frank_PA_Skin_150517_L_A
+    400042: Frank_PA_Skin_150517_L_A1
+    400044: Frank_PA_Skin_150517_L_A2
+    400046: Frank_PA_Skin_150517_L_E1
+    400048: Frank_PA_Skin_150517_L_Eye
+    400050: Frank_PA_Skin_150517_L_L
+    400052: Frank_PA_Skin_150517_L_L1
+    400054: Frank_PA_Skin_150517_L_L2
+    400056: Frank_PA_Skin_150517_La
+    400058: Frank_PA_Skin_150517_LAV
+    400060: Frank_PA_Skin_150517_Lb
+    400062: Frank_PA_Skin_150517_LE
+    400064: Frank_PA_Skin_150517_LE1
+    400066: Frank_PA_Skin_150517_LE2
+    400068: Frank_PA_Skin_150517_LF
+    400070: Frank_PA_Skin_150517_LFV
+    400072: Frank_PA_Skin_150517_Master
+    400074: Frank_PA_Skin_150517_Mus
+    400076: Frank_PA_Skin_150517_Musc
+    400078: Frank_PA_Skin_150517_NC
+    400080: Frank_PA_Skin_150517_Neck
+    400082: Frank_PA_Skin_150517_PL
+    400084: Frank_PA_Skin_150517_PL 1
+    400086: Frank_PA_Skin_150517_R_A
+    400088: Frank_PA_Skin_150517_R_A1
+    400090: Frank_PA_Skin_150517_R_A2
+    400092: Frank_PA_Skin_150517_R_E1
+    400094: Frank_PA_Skin_150517_R_Eye
+    400096: Frank_PA_Skin_150517_R_R
+    400098: Frank_PA_Skin_150517_R_R1
+    400100: Frank_PA_Skin_150517_R_R2
+    400102: Frank_PA_Skin_150517_Ra
+    400104: Frank_PA_Skin_150517_RAV
+    400106: Frank_PA_Skin_150517_Rb
+    400108: Frank_PA_Skin_150517_RF
+    400110: Frank_PA_Skin_150517_RFV
+    400112: Frank_PA_Skin_150517_Ws
+    400114: //RootNode
+    4300000: Frank_PA_Model_150514_Frank
+    7400000: Frank
+    9500000: //RootNode
+    13700000: Frank_PA_Model_150514_Frank
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Frank
+      takeName: Frank
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Frank_PA_Model_150514_Frank
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_L_L
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_L_L/Frank_PA_Skin_150517_L_L1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_L_L/Frank_PA_Skin_150517_L_L1/Frank_PA_Skin_150517_L_L2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_L_L/Frank_PA_Skin_150517_L_L1/Frank_PA_Skin_150517_L_L2/Frank_PA_Skin_150517_joint7
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_R_R
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_R_R/Frank_PA_Skin_150517_R_R1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_R_R/Frank_PA_Skin_150517_R_R1/Frank_PA_Skin_150517_R_R2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_R_R/Frank_PA_Skin_150517_R_R1/Frank_PA_Skin_150517_R_R2/Frank_PA_Skin_150517_joint8
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_L_A
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_L_A/Frank_PA_Skin_150517_L_A1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_L_A/Frank_PA_Skin_150517_L_A1/Frank_PA_Skin_150517_L_A2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint2/Frank_PA_Skin_150517_joint3
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint4
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint4/Frank_PA_Skin_150517_joint5
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint6
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_joint1/Frank_PA_Skin_150517_joint6/Frank_PA_Skin_150517_joint5
+          1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_L_Eye
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_L_Eye/Frank_PA_Skin_150517_L_E1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_R_Eye
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Cap/Frank_PA_Skin_150517_R_Eye/Frank_PA_Skin_150517_R_E1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_Neck/Frank_PA_Skin_150517_Head/Frank_PA_Skin_150517_Mus
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_R_A
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_R_A/Frank_PA_Skin_150517_R_A1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Born/Frank_PA_Skin_150517_PL/Frank_PA_Skin_150517_Ws/Frank_PA_Skin_150517_Bs/Frank_PA_Skin_150517_R_A/Frank_PA_Skin_150517_R_A1/Frank_PA_Skin_150517_R_A2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_LF
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_LF/Frank_PA_Skin_150517_LFV
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_La
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_La/Frank_PA_Skin_150517_LAV
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_Lb
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_LE
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_LE1
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_LE2
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_Musc
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_NC/Frank_PA_Skin_150517_Rb
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_Ra
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_PL
+          1/Frank_PA_Skin_150517_CS/Frank_PA_Skin_150517_Ra/Frank_PA_Skin_150517_RAV
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_RF
+        weight: 1
+      - path: Frank_PA_Skin_150517_Controler/Frank_PA_Skin_150517_Master/Frank_PA_Skin_150517_RF/Frank_PA_Skin_150517_RFV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

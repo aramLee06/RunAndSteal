@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 53ed5c4df52e3754ea2b7c7425ef4533
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Johnny_Model_150313_Johnny
+    100004: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    100006: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    100008: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    100010: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LAV1
+    100012: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    100014: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    100016: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    100018: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    100020: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    100022: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    100024: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    100026: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    100028: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    100030: Johnny_v1_Asset_150313_Born
+    100032: Johnny_v1_Asset_150313_Bs
+    100034: Johnny_v1_Asset_150313_Cap
+    100036: Johnny_v1_Asset_150313_Head
+    100038: Johnny_v1_Asset_150313_ikHandle1
+    100040: Johnny_v1_Asset_150313_ikHandle2
+    100042: Johnny_v1_Asset_150313_ikHandle3
+    100044: Johnny_v1_Asset_150313_ikHandle4
+    100046: Johnny_v1_Asset_150313_ikHandle5
+    100048: Johnny_v1_Asset_150313_joint1
+    100050: Johnny_v1_Asset_150313_joint7
+    100052: Johnny_v1_Asset_150313_joint8
+    100054: Johnny_v1_Asset_150313_L_A
+    100056: Johnny_v1_Asset_150313_L_A1
+    100058: Johnny_v1_Asset_150313_L_A2
+    100060: Johnny_v1_Asset_150313_L_E1
+    100062: Johnny_v1_Asset_150313_L_E1 1
+    100064: Johnny_v1_Asset_150313_L_Eye
+    100066: Johnny_v1_Asset_150313_L_Eye1
+    100068: Johnny_v1_Asset_150313_L_L
+    100070: Johnny_v1_Asset_150313_L_L1
+    100072: Johnny_v1_Asset_150313_L_L2
+    100074: Johnny_v1_Asset_150313_N_Hair
+    100076: Johnny_v1_Asset_150313_N_nose
+    100078: Johnny_v1_Asset_150313_Neck
+    100080: Johnny_v1_Asset_150313_nurbsCircle1
+    100082: Johnny_v1_Asset_150313_nurbsCircle2
+    100084: Johnny_v1_Asset_150313_nurbsCircle3
+    100086: Johnny_v1_Asset_150313_PL
+    100088: Johnny_v1_Asset_150313_R_A
+    100090: Johnny_v1_Asset_150313_R_A1
+    100092: Johnny_v1_Asset_150313_R_A2
+    100094: Johnny_v1_Asset_150313_R_R
+    100096: Johnny_v1_Asset_150313_R_R1
+    100098: Johnny_v1_Asset_150313_R_R2
+    100100: Johnny_v1_Asset_150313_Ws
+    400000: //RootNode
+    400002: Johnny_Model_150313_Johnny
+    400004: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_CS
+    400006: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LA
+    400008: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LAV
+    400010: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LAV1
+    400012: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LF
+    400014: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_LFV
+    400016: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_Master
+    400018: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_NC
+    400020: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_PL
+    400022: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RA
+    400024: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RAV
+    400026: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RF
+    400028: Johnny_v1_Asset_150313_Base_Controler_Setting_150312_RFV
+    400030: Johnny_v1_Asset_150313_Born
+    400032: Johnny_v1_Asset_150313_Bs
+    400034: Johnny_v1_Asset_150313_Cap
+    400036: Johnny_v1_Asset_150313_Head
+    400038: Johnny_v1_Asset_150313_ikHandle1
+    400040: Johnny_v1_Asset_150313_ikHandle2
+    400042: Johnny_v1_Asset_150313_ikHandle3
+    400044: Johnny_v1_Asset_150313_ikHandle4
+    400046: Johnny_v1_Asset_150313_ikHandle5
+    400048: Johnny_v1_Asset_150313_joint1
+    400050: Johnny_v1_Asset_150313_joint7
+    400052: Johnny_v1_Asset_150313_joint8
+    400054: Johnny_v1_Asset_150313_L_A
+    400056: Johnny_v1_Asset_150313_L_A1
+    400058: Johnny_v1_Asset_150313_L_A2
+    400060: Johnny_v1_Asset_150313_L_E1
+    400062: Johnny_v1_Asset_150313_L_E1 1
+    400064: Johnny_v1_Asset_150313_L_Eye
+    400066: Johnny_v1_Asset_150313_L_Eye1
+    400068: Johnny_v1_Asset_150313_L_L
+    400070: Johnny_v1_Asset_150313_L_L1
+    400072: Johnny_v1_Asset_150313_L_L2
+    400074: Johnny_v1_Asset_150313_N_Hair
+    400076: Johnny_v1_Asset_150313_N_nose
+    400078: Johnny_v1_Asset_150313_Neck
+    400080: Johnny_v1_Asset_150313_nurbsCircle1
+    400082: Johnny_v1_Asset_150313_nurbsCircle2
+    400084: Johnny_v1_Asset_150313_nurbsCircle3
+    400086: Johnny_v1_Asset_150313_PL
+    400088: Johnny_v1_Asset_150313_R_A
+    400090: Johnny_v1_Asset_150313_R_A1
+    400092: Johnny_v1_Asset_150313_R_A2
+    400094: Johnny_v1_Asset_150313_R_R
+    400096: Johnny_v1_Asset_150313_R_R1
+    400098: Johnny_v1_Asset_150313_R_R2
+    400100: Johnny_v1_Asset_150313_Ws
+    4300000: Johnny_Model_150313_Johnny
+    7400000: Run
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Johnny_Model_150313_Johnny
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

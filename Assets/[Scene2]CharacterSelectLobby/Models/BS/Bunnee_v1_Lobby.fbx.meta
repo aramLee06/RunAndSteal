@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 497240ae54569754d9052a82d75e37e9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bunnee_PA_Model_150514_Bunnee
+    100002: Bunnee_PA_Skin_150517_Born
+    100004: Bunnee_PA_Skin_150517_CH
+    100006: Bunnee_PA_Skin_150517_Controler
+    100008: Bunnee_PA_Skin_150517_CS
+    100010: Bunnee_PA_Skin_150517_face
+    100012: Bunnee_PA_Skin_150517_hair
+    100014: Bunnee_PA_Skin_150517_head
+    100016: Bunnee_PA_Skin_150517_ikHandle1
+    100018: Bunnee_PA_Skin_150517_ikHandle2
+    100020: Bunnee_PA_Skin_150517_ikHandle3
+    100022: Bunnee_PA_Skin_150517_ikHandle4
+    100024: Bunnee_PA_Skin_150517_ikHandle5
+    100026: Bunnee_PA_Skin_150517_ikHandle6
+    100028: Bunnee_PA_Skin_150517_joint1
+    100030: Bunnee_PA_Skin_150517_joint1 1
+    100032: Bunnee_PA_Skin_150517_La
+    100034: Bunnee_PA_Skin_150517_La 1
+    100036: Bunnee_PA_Skin_150517_la1
+    100038: Bunnee_PA_Skin_150517_la1 1
+    100040: Bunnee_PA_Skin_150517_la2
+    100042: Bunnee_PA_Skin_150517_la2 1
+    100044: Bunnee_PA_Skin_150517_LAV
+    100046: Bunnee_PA_Skin_150517_Lb
+    100048: Bunnee_PA_Skin_150517_Le
+    100050: Bunnee_PA_Skin_150517_le1
+    100052: Bunnee_PA_Skin_150517_le1 1
+    100054: Bunnee_PA_Skin_150517_Lear
+    100056: Bunnee_PA_Skin_150517_lear1
+    100058: Bunnee_PA_Skin_150517_lear1 1
+    100060: Bunnee_PA_Skin_150517_lear2
+    100062: Bunnee_PA_Skin_150517_lear2 1
+    100064: Bunnee_PA_Skin_150517_LF
+    100066: Bunnee_PA_Skin_150517_Lf
+    100068: Bunnee_PA_Skin_150517_lf1
+    100070: Bunnee_PA_Skin_150517_lf1 1
+    100072: Bunnee_PA_Skin_150517_lf2
+    100074: Bunnee_PA_Skin_150517_lf2 1
+    100076: Bunnee_PA_Skin_150517_lf3
+    100078: Bunnee_PA_Skin_150517_lf3 1
+    100080: Bunnee_PA_Skin_150517_LFV
+    100082: Bunnee_PA_Skin_150517_LR
+    100084: Bunnee_PA_Skin_150517_LRv
+    100086: Bunnee_PA_Skin_150517_Master
+    100088: Bunnee_PA_Skin_150517_NC
+    100090: Bunnee_PA_Skin_150517_NC 1
+    100092: Bunnee_PA_Skin_150517_PL
+    100094: Bunnee_PA_Skin_150517_PL 1
+    100096: Bunnee_PA_Skin_150517_Ra
+    100098: Bunnee_PA_Skin_150517_Ra 1
+    100100: Bunnee_PA_Skin_150517_RAV
+    100102: Bunnee_PA_Skin_150517_Rb
+    100104: Bunnee_PA_Skin_150517_Re
+    100106: Bunnee_PA_Skin_150517_Rear
+    100108: Bunnee_PA_Skin_150517_RF
+    100110: Bunnee_PA_Skin_150517_Rf
+    100112: Bunnee_PA_Skin_150517_RFV
+    100114: Bunnee_PA_Skin_150517_RR
+    100116: Bunnee_PA_Skin_150517_RRv
+    100118: Bunnee_PA_Skin_150517_TA
+    100120: Bunnee_PA_Skin_150517_Ta
+    100122: Bunnee_PA_Skin_150517_ta1
+    100124: Bunnee_PA_Skin_150517_WS
+    100126: //RootNode
+    400000: Bunnee_PA_Model_150514_Bunnee
+    400002: Bunnee_PA_Skin_150517_Born
+    400004: Bunnee_PA_Skin_150517_CH
+    400006: Bunnee_PA_Skin_150517_Controler
+    400008: Bunnee_PA_Skin_150517_CS
+    400010: Bunnee_PA_Skin_150517_face
+    400012: Bunnee_PA_Skin_150517_hair
+    400014: Bunnee_PA_Skin_150517_head
+    400016: Bunnee_PA_Skin_150517_ikHandle1
+    400018: Bunnee_PA_Skin_150517_ikHandle2
+    400020: Bunnee_PA_Skin_150517_ikHandle3
+    400022: Bunnee_PA_Skin_150517_ikHandle4
+    400024: Bunnee_PA_Skin_150517_ikHandle5
+    400026: Bunnee_PA_Skin_150517_ikHandle6
+    400028: Bunnee_PA_Skin_150517_joint1
+    400030: Bunnee_PA_Skin_150517_joint1 1
+    400032: Bunnee_PA_Skin_150517_La
+    400034: Bunnee_PA_Skin_150517_La 1
+    400036: Bunnee_PA_Skin_150517_la1
+    400038: Bunnee_PA_Skin_150517_la1 1
+    400040: Bunnee_PA_Skin_150517_la2
+    400042: Bunnee_PA_Skin_150517_la2 1
+    400044: Bunnee_PA_Skin_150517_LAV
+    400046: Bunnee_PA_Skin_150517_Lb
+    400048: Bunnee_PA_Skin_150517_Le
+    400050: Bunnee_PA_Skin_150517_le1
+    400052: Bunnee_PA_Skin_150517_le1 1
+    400054: Bunnee_PA_Skin_150517_Lear
+    400056: Bunnee_PA_Skin_150517_lear1
+    400058: Bunnee_PA_Skin_150517_lear1 1
+    400060: Bunnee_PA_Skin_150517_lear2
+    400062: Bunnee_PA_Skin_150517_lear2 1
+    400064: Bunnee_PA_Skin_150517_LF
+    400066: Bunnee_PA_Skin_150517_Lf
+    400068: Bunnee_PA_Skin_150517_lf1
+    400070: Bunnee_PA_Skin_150517_lf1 1
+    400072: Bunnee_PA_Skin_150517_lf2
+    400074: Bunnee_PA_Skin_150517_lf2 1
+    400076: Bunnee_PA_Skin_150517_lf3
+    400078: Bunnee_PA_Skin_150517_lf3 1
+    400080: Bunnee_PA_Skin_150517_LFV
+    400082: Bunnee_PA_Skin_150517_LR
+    400084: Bunnee_PA_Skin_150517_LRv
+    400086: Bunnee_PA_Skin_150517_Master
+    400088: Bunnee_PA_Skin_150517_NC
+    400090: Bunnee_PA_Skin_150517_NC 1
+    400092: Bunnee_PA_Skin_150517_PL
+    400094: Bunnee_PA_Skin_150517_PL 1
+    400096: Bunnee_PA_Skin_150517_Ra
+    400098: Bunnee_PA_Skin_150517_Ra 1
+    400100: Bunnee_PA_Skin_150517_RAV
+    400102: Bunnee_PA_Skin_150517_Rb
+    400104: Bunnee_PA_Skin_150517_Re
+    400106: Bunnee_PA_Skin_150517_Rear
+    400108: Bunnee_PA_Skin_150517_RF
+    400110: Bunnee_PA_Skin_150517_Rf
+    400112: Bunnee_PA_Skin_150517_RFV
+    400114: Bunnee_PA_Skin_150517_RR
+    400116: Bunnee_PA_Skin_150517_RRv
+    400118: Bunnee_PA_Skin_150517_TA
+    400120: Bunnee_PA_Skin_150517_Ta
+    400122: Bunnee_PA_Skin_150517_ta1
+    400124: Bunnee_PA_Skin_150517_WS
+    400126: //RootNode
+    4300000: Bunnee_PA_Model_150514_Bunnee
+    7400000: Bunnee
+    9500000: //RootNode
+    13700000: Bunnee_PA_Model_150514_Bunnee
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bunnee
+      takeName: Bunnee
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bunnee_PA_Model_150514_Bunnee
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Lf
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Lf/Bunnee_PA_Skin_150517_lf1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Lf/Bunnee_PA_Skin_150517_lf1/Bunnee_PA_Skin_150517_lf2
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Lf/Bunnee_PA_Skin_150517_lf1/Bunnee_PA_Skin_150517_lf2/Bunnee_PA_Skin_150517_lf3
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Rf
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Rf/Bunnee_PA_Skin_150517_lf1
+          1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Rf/Bunnee_PA_Skin_150517_lf1
+          1/Bunnee_PA_Skin_150517_lf2 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Rf/Bunnee_PA_Skin_150517_lf1
+          1/Bunnee_PA_Skin_150517_lf2 1/Bunnee_PA_Skin_150517_lf3 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Ta
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_Ta/Bunnee_PA_Skin_150517_ta1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_La
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_La/Bunnee_PA_Skin_150517_la1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_La/Bunnee_PA_Skin_150517_la1/Bunnee_PA_Skin_150517_la2
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Lear
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Lear/Bunnee_PA_Skin_150517_lear1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Lear/Bunnee_PA_Skin_150517_lear1/Bunnee_PA_Skin_150517_lear2
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Lear/Bunnee_PA_Skin_150517_lear1/Bunnee_PA_Skin_150517_lear2/Bunnee_PA_Skin_150517_joint1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Rear
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Rear/Bunnee_PA_Skin_150517_lear1
+          1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Rear/Bunnee_PA_Skin_150517_lear1
+          1/Bunnee_PA_Skin_150517_lear2 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_hair/Bunnee_PA_Skin_150517_Rear/Bunnee_PA_Skin_150517_lear1
+          1/Bunnee_PA_Skin_150517_lear2 1/Bunnee_PA_Skin_150517_joint1 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_Le
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_Le/Bunnee_PA_Skin_150517_le1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_Re
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_NC/Bunnee_PA_Skin_150517_head/Bunnee_PA_Skin_150517_face/Bunnee_PA_Skin_150517_Re/Bunnee_PA_Skin_150517_le1
+          1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_Ra
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_Ra/Bunnee_PA_Skin_150517_la1
+          1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Born/Bunnee_PA_Skin_150517_PL/Bunnee_PA_Skin_150517_WS/Bunnee_PA_Skin_150517_CH/Bunnee_PA_Skin_150517_Ra/Bunnee_PA_Skin_150517_la1
+          1/Bunnee_PA_Skin_150517_la2 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle2
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle3
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle4
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle5
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_ikHandle6
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_LF
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_LF/Bunnee_PA_Skin_150517_LFV
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_La 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_LAV
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_Lb
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_LR
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_LR/Bunnee_PA_Skin_150517_LRv
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_Rb
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_RR
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_NC 1/Bunnee_PA_Skin_150517_RR/Bunnee_PA_Skin_150517_RRv
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_Ra 1
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_CS/Bunnee_PA_Skin_150517_RAV
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_PL
+          1/Bunnee_PA_Skin_150517_TA
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_RF
+        weight: 1
+      - path: Bunnee_PA_Skin_150517_Controler/Bunnee_PA_Skin_150517_Master/Bunnee_PA_Skin_150517_RF/Bunnee_PA_Skin_150517_RFV
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

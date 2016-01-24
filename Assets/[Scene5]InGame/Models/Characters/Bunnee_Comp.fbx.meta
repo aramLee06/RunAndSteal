@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 5f57309a33e407442970be95213c839d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Born
+    100002: Bs
+    100004: Bunnee
+    100006: //RootNode
+    100008: Cap
+    100010: Controler
+    100012: CS
+    100014: Head
+    100016: ikHandle1
+    100018: ikHandle2
+    100020: ikHandle3
+    100022: ikHandle4
+    100024: ikHandle5
+    100026: ikHandle6
+    100028: joint1
+    100030: joint6
+    100032: L_A
+    100034: L_A1
+    100036: L_A2
+    100038: L_E1
+    100040: L_E1 1
+    100042: L_ear
+    100044: L_ear1
+    100046: L_ear2
+    100048: L_Eye
+    100050: L_Eye1
+    100052: L_L
+    100054: L_L1
+    100056: L_L2
+    100058: LA
+    100060: LA1
+    100062: LAV
+    100064: LE
+    100066: LEV
+    100068: LF
+    100070: LF 1
+    100072: LFV
+    100074: LR
+    100076: LR1
+    100078: Master
+    100080: NC
+    100082: Neck
+    100084: PL
+    100086: PL 1
+    100088: R_A
+    100090: R_A1
+    100092: R_A2
+    100094: R_ear
+    100096: R_ear1
+    100098: R_ear2
+    100100: R_R
+    100102: R_R1
+    100104: R_R2
+    100106: RA
+    100108: RA1
+    100110: RAV
+    100112: RE
+    100114: REV
+    100116: RF
+    100118: RF 1
+    100120: RFV
+    100122: RR
+    100124: RR1
+    100126: TA
+    100128: Tail
+    100130: Ws
+    400000: Born
+    400002: Bs
+    400004: Bunnee
+    400006: //RootNode
+    400008: Cap
+    400010: Controler
+    400012: CS
+    400014: Head
+    400016: ikHandle1
+    400018: ikHandle2
+    400020: ikHandle3
+    400022: ikHandle4
+    400024: ikHandle5
+    400026: ikHandle6
+    400028: joint1
+    400030: joint6
+    400032: L_A
+    400034: L_A1
+    400036: L_A2
+    400038: L_E1
+    400040: L_E1 1
+    400042: L_ear
+    400044: L_ear1
+    400046: L_ear2
+    400048: L_Eye
+    400050: L_Eye1
+    400052: L_L
+    400054: L_L1
+    400056: L_L2
+    400058: LA
+    400060: LA1
+    400062: LAV
+    400064: LE
+    400066: LEV
+    400068: LF
+    400070: LF 1
+    400072: LFV
+    400074: LR
+    400076: LR1
+    400078: Master
+    400080: NC
+    400082: Neck
+    400084: PL
+    400086: PL 1
+    400088: R_A
+    400090: R_A1
+    400092: R_A2
+    400094: R_ear
+    400096: R_ear1
+    400098: R_ear2
+    400100: R_R
+    400102: R_R1
+    400104: R_R2
+    400106: RA
+    400108: RA1
+    400110: RAV
+    400112: RE
+    400114: REV
+    400116: RF
+    400118: RF 1
+    400120: RFV
+    400122: RR
+    400124: RR1
+    400126: TA
+    400128: Tail
+    400130: Ws
+    4300000: Bunnee
+    7400000: Run
+    7400002: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Bunnee
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

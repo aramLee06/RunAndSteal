@@ -422,7 +422,7 @@ public class LobbyHost : MonoBehaviour
 
         msg.Trim();
         words = msg.Split(splitchar.ToCharArray(), System.StringSplitOptions.None);
-
+		Debug.Log ("Recevied Data msg : " + msg);
 
         if (words[0] == "Exit")
         {
@@ -434,8 +434,9 @@ public class LobbyHost : MonoBehaviour
 
         }
 
-        if (Application.loadedLevelName == "LobbyHost")
+		if (Application.loadedLevelName.Equals("LobbyHost"))
         {
+			
             switch (words[0])
             {
 				case "PREMIUM":
@@ -519,7 +520,7 @@ public class LobbyHost : MonoBehaviour
     {
         if (hostController != null)
         {
-            hostController.SendExit();
+            //hostController.SendExit();
             hostController.Clear();
             UXConnectController.SetRoomNumber(-1);
 

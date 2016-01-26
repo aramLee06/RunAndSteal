@@ -108,18 +108,14 @@ public class PopupManager_RaS : MonoBehaviour
 
     public static void CloseGameAndClear()
     {
-        Debug.Log("A");
         if (PopupManager_RaS.Instance == null)
             return;
 
-        Debug.Log("A");
         GameObject.Destroy(PopupManager_RaS.Instance.gameObject);
         PopupManager_RaS.Instance = null;
 
-        Debug.Log("A");
         GameObject hostGO = GameObject.Find("LobbyClient");
 
-        Debug.Log("A");
         if (PopupManager_RaS.IsFree)
         {
             Debug.Log("A");
@@ -128,12 +124,10 @@ public class PopupManager_RaS : MonoBehaviour
         }
         else
         {
-            Debug.Log("A");
             if (hostGO != null)
                 hostGO.GetComponent<LobbyClient>().Clear();
 
-            Debug.Log("A");
-            Application.LoadLevel("5_ControlPad");
+			Application.Quit ();
         }
     }
     #endregion

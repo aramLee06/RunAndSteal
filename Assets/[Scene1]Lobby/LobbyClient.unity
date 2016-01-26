@@ -577,6 +577,10 @@ Prefab:
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11464900, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+      propertyPath: inapp
+      value: 
+      objectReference: {fileID: 2063795188}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
   m_IsPrefabParent: 0
@@ -749,11 +753,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11461880, guid: d8ab41afc903d4f079a56faedab44d3e, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11472100, guid: d8ab41afc903d4f079a56faedab44d3e, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11472100, guid: d8ab41afc903d4f079a56faedab44d3e, type: 2}
       propertyPath: m_SpriteState.m_PressedSprite
@@ -763,3 +767,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8ab41afc903d4f079a56faedab44d3e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2063795188 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11491284, guid: d8ab41afc903d4f079a56faedab44d3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2063795187}
+  m_Script: {fileID: 11500000, guid: 72d155049d0804e04b2eea13e8157247, type: 3}

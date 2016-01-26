@@ -18,7 +18,7 @@ public class LobbyClient : MonoBehaviour
 
 	UXAndroidManager androidManager;
 
-	PremiumVersionStore inapp;
+	public PremiumVersionStore inapp;
 
 	void Awake ()
 	{
@@ -49,8 +49,6 @@ public class LobbyClient : MonoBehaviour
 
 		userCode = -1;
 		launcherCode = -1;
-
-		inapp = GameObject.Find ("InAppPurchase").GetComponent<PremiumVersionStore> ();
 
 		bool result = clientController.SetCode (userCode, launcherCode);
 		result = true;
@@ -164,6 +162,7 @@ public class LobbyClient : MonoBehaviour
 		Debug.Log("OnJoinSucceed > isHost : " + isHost);
 		clientController.SetPlayerState (UXUser.LobbyState.Wait);
 		playerID = player.GetIndex();
+		Debug.Log ("ISPREMIUM : " + inapp.IsPremiumVersion ());
 		if (inapp.IsPremiumVersion ()) {
 			SendToHost ("PREMIUM,");
 		}

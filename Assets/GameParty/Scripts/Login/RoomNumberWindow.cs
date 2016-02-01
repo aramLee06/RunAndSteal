@@ -26,6 +26,8 @@ public class RoomNumberWindow : MonoBehaviour {
 	UXClientController clientController;
 	CommonLang commonLang;
 
+	public static int latest_errCode = -1;
+
 	public Text noti;
 
 	void Start () {
@@ -41,7 +43,7 @@ public class RoomNumberWindow : MonoBehaviour {
 		clientController = UXClientController.Instance;
 
 		commonLang = CommonLang.instance;
-		Debug.Log (commonLang.langList.Count);
+		//Debug.Log (commonLang.langList.Count);
 		noti.text = commonLang.langList[1];
 
 		clientController.OnConnected += OnConnected;
@@ -63,6 +65,11 @@ public class RoomNumberWindow : MonoBehaviour {
 			clientController.Join("none");
 		}
 
+		if(latest_errCode != -1)
+		{
+			OnJoinFailed (latest_errCode);
+			latest_errCode = -1;
+		}
 	}
 	
 	void Update () {
@@ -82,7 +89,7 @@ public class RoomNumberWindow : MonoBehaviour {
 			}
 		}
 
-		if(isCon = true){
+		if(isCon == true){
 			isCon = false;
 			serverConnect.SetActive(false);
 			//Debug.Log (commonLang.langList.Count);

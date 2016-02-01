@@ -97,7 +97,7 @@ PlayerSettings:
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: f085f985ca48f984895039317cc5eabb
-  AndroidBundleVersionCode: 31
+  AndroidBundleVersionCode: 40
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 1
   androidSplashScreen: {fileID: 2800000, guid: 27809294f1fb0f445af0134164040db3, type: 3}
-  AndroidKeystoreName: /Users/LostCode/Desktop/gameparty.keystore
+  AndroidKeystoreName: C:/Users/Administrator/Downloads/gameparty.keystore
   AndroidKeyaliasName: csp media
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

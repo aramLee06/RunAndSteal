@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666666
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &166882431 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 156986, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+  m_PrefabInternal: {fileID: 1831860577}
 --- !u!1 &420534322
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +174,7 @@ GameObject:
   - 223: {fileID: 497714764}
   - 114: {fileID: 497714763}
   - 114: {fileID: 497714762}
+  - 114: {fileID: 497714766}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -252,10 +257,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &497714766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497714761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505c46f01b74f254c81d6e3eb2a1e9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cspLobby: {fileID: 761651061}
+  playerNumber: {fileID: 166882431}
+  playerNumberSprite:
+  - {fileID: 21300000, guid: 587920c3de93dbc4fb1eab76d02df53b, type: 3}
+  - {fileID: 21300000, guid: 7841d2285724fe74b847eb83a9a69134, type: 3}
+  - {fileID: 21300000, guid: 246d50bbe0de6684084c92248426ccd6, type: 3}
+  - {fileID: 21300000, guid: ac5a60819867eea4a89c2c579c49f25e, type: 3}
+  - {fileID: 21300000, guid: e6edebf09415a62498fb90043a16b953, type: 3}
+  - {fileID: 21300000, guid: 717361eb05eadf446bc029a112a630db, type: 3}
+  inapp: {fileID: 2063795188}
 --- !u!4 &700702722 stripped
 Transform:
   m_PrefabParentObject: {fileID: 497538, guid: d8ab41afc903d4f079a56faedab44d3e, type: 2}
   m_PrefabInternal: {fileID: 2063795187}
+--- !u!114 &761651061 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11464900, guid: 5068adbaaa1c62942b70a469d9191998,
+    type: 2}
+  m_PrefabInternal: {fileID: 1831860577}
+  m_Script: {fileID: 11500000, guid: 8beffe65640ba431db04b9bc2f734438, type: 3}
 --- !u!1 &1011768532
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +546,14 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354863789}
+--- !u!1 &1624586419 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 128296, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+  m_PrefabInternal: {fileID: 1831860577}
+--- !u!1 &1650972714 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 128294, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+  m_PrefabInternal: {fileID: 1831860577}
 --- !u!1001 &1831860577
 Prefab:
   m_ObjectHideFlags: 0
@@ -581,6 +621,14 @@ Prefab:
       propertyPath: inapp
       value: 
       objectReference: {fileID: 2063795188}
+    - target: {fileID: 11464900, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+      propertyPath: readyButton
+      value: 
+      objectReference: {fileID: 1650972714}
+    - target: {fileID: 11464900, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
+      propertyPath: cancelButton
+      value: 
+      objectReference: {fileID: 1624586419}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5068adbaaa1c62942b70a469d9191998, type: 2}
   m_IsPrefabParent: 0

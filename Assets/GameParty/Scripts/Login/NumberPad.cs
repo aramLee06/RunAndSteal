@@ -63,7 +63,8 @@ public class NumberPad : MonoBehaviour {
 
 				UXConnectController.SetRoomNumber(int.Parse (inputNumber));
 
-				clientController.Join("none");
+				// clientController.Join("none");
+				Application.LoadLevel("LobbyClient");
 				
 				return;
 			} else {

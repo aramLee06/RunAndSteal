@@ -736,7 +736,10 @@ namespace UXLib {
 							string name = user.GetName ();
 							
 							userController.RemoveByName(user.GetName ());
-							
+
+							UXPlayerController player = UXPlayerController.Instance;
+							player.SetIndex(i);
+
 							var array = N["user_list"];
 							
 							if (array != null) {

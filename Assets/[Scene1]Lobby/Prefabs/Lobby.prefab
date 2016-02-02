@@ -884,7 +884,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beffe65640ba431db04b9bc2f734438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inapp: {fileID: 0}
   blackOut: {fileID: 145792}
+  playerNumber: {fileID: 0}
+  playerNumberSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   readyButton: {fileID: 0}
   cancelButton: {fileID: 0}
   readyButtonSound: {fileID: 8300000, guid: f7aa800d407df4a4eb2eef0cadd53ad2, type: 3}

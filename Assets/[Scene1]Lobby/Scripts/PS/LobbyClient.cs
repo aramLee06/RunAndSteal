@@ -323,6 +323,7 @@ public class LobbyClient : MonoBehaviour
             PopupManager_RaS.Instance.CloseGame();
         }
 
+		/*
 		if (Application.loadedLevelName == "LobbyClient") {
 			switch(words[0])
 			{
@@ -334,6 +335,7 @@ public class LobbyClient : MonoBehaviour
 					break;
 			}
 		}
+		*/
 
 		GameObject phoneScreen = GameObject.Find ("PS"); 
 		if(phoneScreen == null)
@@ -418,11 +420,14 @@ public class LobbyClient : MonoBehaviour
 		case "MyRank":
 			myRank = System.Convert.ToInt32(words[1]);
 			break;
+		/*
 		case "Replay":
+			Debug.Log("Recived");
 			m_ClientController.SendEndGame();
 			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
 			break;
+		*/
 		}
 	}
     
@@ -572,10 +577,11 @@ public class LobbyClient : MonoBehaviour
 	public void PlayerIndexChanged (int index)
 	{
 		Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
-
 		if(index >= 0)
 		{
 			playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[index];
 		}
 	}
+
+
 }

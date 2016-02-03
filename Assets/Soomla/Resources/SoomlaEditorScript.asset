@@ -26,7 +26,7 @@ MonoBehaviour:
     - name: Soomla.Store.GPlayBP
       value: True
     - name: Soomla.Store.AmazonBP
-      value: 
+      value: False
     - name: Soomla.Store.NoneBP
       value: 
     - name: Soomla.Store.AndroidPublicKey

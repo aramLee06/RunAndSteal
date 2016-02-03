@@ -420,14 +420,11 @@ public class LobbyClient : MonoBehaviour
 		case "MyRank":
 			myRank = System.Convert.ToInt32(words[1]);
 			break;
-		/*
 		case "Replay":
-			Debug.Log("Recived");
 			m_ClientController.SendEndGame();
 			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
 			break;
-		*/
 		}
 	}
     
@@ -555,7 +552,6 @@ public class LobbyClient : MonoBehaviour
 	{
 		SendAll("Replay");
 
-		Debug.Log("Replay");
 		m_ClientController.SendEndGame();
 		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");

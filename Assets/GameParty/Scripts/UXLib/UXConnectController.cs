@@ -670,6 +670,8 @@ namespace UXLib {
 		
 		protected int ProcessConnectError(int result) {
 			isJoined = false;
+
+			/*
 			int errCode = JE_FAIL;
 				
 			if (result == UXErrorCode.RS_ERROR_MAX_USER) {
@@ -679,6 +681,8 @@ namespace UXLib {
 			} 
 			
 			return errCode;
+			*/
+			return result;
 		}
 		
 		protected void ProcessReceivedMessage(string data) {

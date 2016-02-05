@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 1
   androidSplashScreen: {fileID: 2800000, guid: 27809294f1fb0f445af0134164040db3, type: 3}
-  AndroidKeystoreName: C:/Users/Administrator/Downloads/gameparty.keystore
+  AndroidKeystoreName: C:/Users/Public/Documents/rAnds/gameparty.keystore
   AndroidKeyaliasName: csp media
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

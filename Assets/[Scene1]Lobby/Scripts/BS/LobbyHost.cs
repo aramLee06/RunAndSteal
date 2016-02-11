@@ -116,6 +116,9 @@ public class LobbyHost : MonoBehaviour
         //==========================================
         hostController.OnHostDisconnected += hostController_OnHostDisconnected;
 
+		hostController.OnJoinPremiumUser += OnJoinPremiumUser;
+		hostController.OnLeavePremiumUser += OnLeavePremiumUser;
+
         hostController.SetAutoStart(2, 1);
         if (result == false)
         {
@@ -161,6 +164,30 @@ public class LobbyHost : MonoBehaviour
         blackOut.SetActive(false);
 
         iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, -10), 4.0f);
+    }
+
+    void OnLeavePremiumUser ()
+    {
+		hostController.SetMaxUser (2);
+		/*
+		GameObject freeLabel = GameObject.Find ("FreeVersionText");
+		if (freeLabel != null) {
+			freeLabel.SetActive (true);
+		}
+		*/
+		f2pLabel.SetActive (true);
+    }
+
+    void OnJoinPremiumUser ()
+    {
+		hostController.SetMaxUser (6);
+		/*
+		GameObject freeLabel = GameObject.Find ("FreeVersionText");
+		if (freeLabel != null) {
+			freeLabel.SetActive (false);
+		}
+		*/
+		f2pLabel.SetActive (true);
     }
 
     void hostController_OnHostDisconnected()
@@ -436,7 +463,7 @@ public class LobbyHost : MonoBehaviour
 
 		if (Application.loadedLevelName.Equals("LobbyHost"))
         {
-			
+			/*
             switch (words[0])
             {
 				case "PREMIUM":
@@ -447,6 +474,12 @@ public class LobbyHost : MonoBehaviour
                     //GameObject.Find("QR_Back_Host").transform.localScale = Vector2.zero;
                     break;
             }
+            */
+			if (UXHostController.room.IsPremium) {
+				f2pLabel.SetActive (false);
+			} else {
+				f2pLabel.SetActive (true);
+			}
         }
 
         GameObject bigScreen = GameObject.Find("BS");
@@ -555,6 +588,8 @@ public class LobbyHost : MonoBehaviour
             hostController.OnReceived -= OnReceived;
             //==========================================
             hostController.OnHostDisconnected -= hostController_OnHostDisconnected;
+			hostController.OnJoinPremiumUser -= OnJoinPremiumUser;
+			hostController.OnLeavePremiumUser -= OnLeavePremiumUser;
         }
     }
     void OnGUI()

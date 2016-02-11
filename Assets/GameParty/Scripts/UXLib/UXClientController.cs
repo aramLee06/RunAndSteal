@@ -15,7 +15,7 @@ using SimpleJSON;
 
 namespace UXLib {
 	public class UXClientController : UXConnectController {
-		
+
 		/** Called when join was successful */
 		public event OnJoinSucceededHandler OnJoinSucceeded;
 
@@ -58,17 +58,17 @@ namespace UXLib {
 		}
 		
 		/** Send join message */
-		public override void Join(string data) {
+		public override void Join(string data) { //data는쓰레기 호출할때도 "none"
 			Debug.Log ("Join");
 			UXPlayerController playerController = UXPlayerController.Instance;
 			
 			int userCode = playerController.GetCode();
 			string name = playerController.GetName ();
 			
-			string msg = "{\"cmd\":\"join\",\"type\":\"user\",\"l_code\":\"" + launcherCode + "\",\"u_code\":\"" + userCode + "\",\"name\":\""+ name + "\",\"max_user\":\"0\"}" + DATA_DELIMITER;
-			//string msg = "{\"cmd\":\"join\",\"type\":\"user\",\"l_code\":\"88763\",\"u_code\":\"345\",\"name\":\"\",\"max_user\":\"0\"}";
+			string msg = "{\"cmd\":\"join\",\"type\":\"user\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\",\"name\":\""+ name + "\",\"max_user\":\"0\", \"package_name\" : \"" + data + "\"}" + DATA_DELIMITER;
+
 			Debug.Log (msg);
-			Send(msg);
+			Send(msg);//{"cmd":"join","type":"user","l_code":"launcherCode","u_code":"userCode","name":"name","max_user":"0"}232
 		}
 
 		/** Set player's lobby state 
@@ -86,8 +86,8 @@ namespace UXLib {
 				stateString = "wait";	
 			}
 			
-			string sendString = "{\"cmd\":\"change_lobby_state\",\"u_code\":\""+ player.GetCode () + "\",\"l_code\":\""+ GetRoomNumber() + "\",\"state\":\""+ stateString + "\"}" + UXConnectController.DATA_DELIMITER;
-			Send (sendString);
+			string sendString = "{\"cmd\":\"change_lobby_state\",\"u_code\":\""+ player.GetCode () + "\",\"l_code\":\""+ GetRoomNumber() + "\",\"state\":\""+ stateString + "\"}" + UXConnectController.DATA_DELIMITER; //<-?
+			Send (sendString);//{"cmd":change_lobby_state","u_code":player.GetCode()","l_code":"GetRoomNumber()","state":stateString"}232
 		}
 		
 		/** Set user code and room number 
@@ -121,7 +121,7 @@ namespace UXLib {
 
 		void ProcessReceivedMessage(string data) {
 			
-			if (string.IsNullOrEmpty(data) == true || data.Length <= 0){
+			if (string.IsNullOrEmpty(data) == true || data.Length <= 0){//data가 비어있따면
 				return;
 			}
 			
@@ -158,7 +158,7 @@ namespace UXLib {
 				if (OnJoinSucceeded != null) {
 					OnJoinSucceeded(isHostJoined);
 				}
-			}  else {
+			}  else { //cmd != join_result
 				base.ProcessReceivedMessage(data);
 				Debug.Log ("ProcessReceivedMessage : " + data);
 			}

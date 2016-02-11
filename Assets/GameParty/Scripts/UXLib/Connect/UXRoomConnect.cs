@@ -21,6 +21,15 @@ namespace UXLib.Connect {
 			All
 		};
 
+		private static UXRoomConnect instance = null;
+		public static UXRoomConnect Instance{
+			get {
+				if (instance == null)
+					instance = new UXRoomConnect ();
+				return instance;
+			}
+		}
+
 		public int clientIndex;
 //		UXClientSocket roomSocket;
 		UXClientSocketNew roomSocket;
@@ -36,7 +45,7 @@ namespace UXLib.Connect {
 		public delegate void OnServerConnectedHandler();
 		public delegate void OnServerConnectFailedHandler();
 		public delegate void OnServerDisconnectedHandler();
-		public delegate void OnReceivedHandler(string msg);
+		public delegate void OnReceivedHandler(byte[] msg);
 		public delegate void OnServerErrorHandler(int err, string msg);
 
 		public event OnReceivedHandler OnReceived; 
@@ -92,10 +101,12 @@ namespace UXLib.Connect {
 
 		public bool SocketOpen(string ip, int port){
 			Debug.Log ("SocketOpen");
-			return roomSocket.Open (ip, port);
+			if(!IsConnected())
+				return roomSocket.Open (ip, port);
+			return true;
 		}
 		
-		public void OnMessageReceived(string msg) {
+		public void OnMessageReceived(byte[] msg) {
 			if (OnReceived != null) {
 				OnReceived(msg);
 			}

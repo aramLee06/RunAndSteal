@@ -18,7 +18,7 @@ namespace UXLib.User {
 		string imageURL;
 		float networkSpeed;
 		bool isConnected;
-		
+		UXUserController userList;
 		LobbyState lobbyState;
 		
 		public UXUser(string name, int ucode) : base(name) {
@@ -34,7 +34,18 @@ namespace UXLib.User {
 		public bool IsConnected() {
 			return isConnected;
 		}
-		
+
+		private bool isPremium = false;
+		public bool IsPremium 
+		{
+			get{
+				return isPremium;
+			}
+			set{
+				this.isPremium = value;
+			}
+		} 
+
 		public string GetImageURL() { return imageURL; }
 		public LobbyState GetLobbyState() { return lobbyState; }
 		public void SetLobbyState(LobbyState state) {
@@ -50,10 +61,10 @@ namespace UXLib.User {
 		}
 		
 		public bool GetProfileFromServer() {
-			if (code == -1) {
+			if (code == -1) { //host면
 				return false;
 			}
-			
+			//pad면
 			string recData = UXRestConnect.Request("users/?ucode=" + code, UXRestConnect.REST_METHOD_GET, null);
 			
 			var N = JSON.Parse(recData);

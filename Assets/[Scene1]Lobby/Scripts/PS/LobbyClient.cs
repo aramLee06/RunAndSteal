@@ -558,14 +558,18 @@ public class LobbyClient : MonoBehaviour
 	}
 
 	public void OnPurchaseSuccess(){
-		SendToHost ("PREMIUM,");
+		//////////////SendToHost ("PREMIUM,");
+		UXPlayerController player = UXPlayerController.Instance;
+		player.IsPremium = true;
 	}
 
 	public void AfterJoin ()
 	{
 		if (inapp.IsPremiumVersion())
 		{
-			SendToHost("PREMIUM,");
+			////////////SendToHost("PREMIUM,");
+			UXPlayerController player = UXPlayerController.Instance;
+			player.IsPremium = true;
 		}
 		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
 	}

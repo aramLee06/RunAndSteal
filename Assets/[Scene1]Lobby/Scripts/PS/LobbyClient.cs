@@ -148,7 +148,7 @@ public class LobbyClient : MonoBehaviour
     void Update()
     {
         m_ClientController.Run();
-
+		i_PlayerID = UXRoom.Instance.Player.GetIndex ();
 		if(i_PlayerID >= 0)
 		{
             playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[i_PlayerID];

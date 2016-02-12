@@ -19,12 +19,13 @@ namespace UXLib
     public abstract class UXConnectController : UXObject
     {
 
-        public static string ROOM_SERVER_IP = "192.168.0.81";
-
+        //public static string ROOM_SERVER_IP = "192.168.0.81";
+		public static string ROOM_SERVER_IP = "112.74.40.64";
 
         public const int ROOM_SERVER_PORT = 4000;// 7000;
 
-        public static string BASE_REST_URL = "http://192.168.0.81:3000"; //중국 ^0^
+        //public static string BASE_REST_URL = "http://192.168.0.81:3000";
+		public static string BASE_REST_URL = "http://112.74.40.64:3000"; //중국 ^0^
 
 
         /**<join event*/
@@ -207,8 +208,10 @@ namespace UXLib
             {
                 case ServerList.CN:
                     {
-                        ROOM_SERVER_IP = "192.168.0.81";//"112.74.40.64";
-                        BASE_REST_URL = "http://192.168.0.81:3000";// 6000";
+                        //ROOM_SERVER_IP = "192.168.0.81";//"112.74.40.64";
+                        //BASE_REST_URL = "http://192.168.0.81:3000";// 6000";
+						ROOM_SERVER_IP = "112.74.40.64";//"112.74.40.64";
+						BASE_REST_URL = "http://112.74.40.64:3000";// 6000";
                     }
                     break;
                 case ServerList.SG:
@@ -743,7 +746,7 @@ namespace UXLib
 				int ackBlockCount = 0;
                 while (offset < data.Length)
                 {
-					Debug.Log (offset + ", " + data.Length + ", " + data [offset]);
+					//Debug.Log (offset + ", " + data.Length + ", " + data [offset]);
                     byte command = data[offset++];
                     byte len = data[offset++];
 
@@ -755,7 +758,7 @@ namespace UXLib
 
                     List<byte> msg = new List<byte>();
 
-                    Debug.Log(command);
+                    //Debug.Log(command);
 
                     msg.Add(command);
                     msg.Add(len);
@@ -766,7 +769,7 @@ namespace UXLib
                     }
 
                     var N = UXProtocol.Instance.ParserFactory(command).Parse(msg.ToArray());
-                    Debug.Log(N.ToString());
+                    //Debug.Log(N.ToString());
                     receiveQueue.Add(N.ToString());
                 }
             }

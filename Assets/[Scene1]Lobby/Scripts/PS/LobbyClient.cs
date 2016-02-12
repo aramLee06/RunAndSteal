@@ -213,7 +213,6 @@ public class LobbyClient : MonoBehaviour
 		}
 		*/
 
-		Debug.Log("OnJoinSucceeded : " + i_PlayerID);
 		AfterJoin();
 	}
 
@@ -222,7 +221,7 @@ public class LobbyClient : MonoBehaviour
 	void OnUserAdded(int userIndex, int userCode) 
 	{
 		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " , PlayerID : " + i_PlayerID);
+		//Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " , PlayerID : " + i_PlayerID);
 	}
 	
 	void OnUserRemoved(string name, int code)
@@ -508,10 +507,12 @@ public class LobbyClient : MonoBehaviour
 		m_ClientController.SendDataTo(m_PlayerController, msg);
 	}
 
+	/*
 	public UXUser.LobbyState GetLobbyState()
 	{
 		return m_PlayerController.GetLobbyState();
 	}
+	*/
 
 	// Phone Screen UI
 	public GameObject blackOut = null;

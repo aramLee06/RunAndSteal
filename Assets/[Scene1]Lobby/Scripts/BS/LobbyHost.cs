@@ -169,6 +169,7 @@ public class LobbyHost : MonoBehaviour
     void OnLeavePremiumUser ()
     {
 		hostController.SetMaxUser (2);
+		Debug.Log("OnLeavePremiumUser");
 		/*
 		GameObject freeLabel = GameObject.Find ("FreeVersionText");
 		if (freeLabel != null) {
@@ -187,7 +188,8 @@ public class LobbyHost : MonoBehaviour
 			freeLabel.SetActive (false);
 		}
 		*/
-		f2pLabel.SetActive (true);
+		Debug.Log("OnJoinPremiumUser");
+		f2pLabel.SetActive (false);
     }
 
     void hostController_OnHostDisconnected()
@@ -240,6 +242,13 @@ public class LobbyHost : MonoBehaviour
         {
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
+
+		if (UXHostController.room.IsPremium) {
+			f2pLabel.SetActive(false);
+		} else {
+			f2pLabel.SetActive(true);
+		}
+
     }
 
     void OnApplicationFocus(bool state)

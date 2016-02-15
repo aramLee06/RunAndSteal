@@ -294,7 +294,7 @@ public class LobbyHost : MonoBehaviour
     {
         UXLog.SetLogMessage("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
         Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
-
+		hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
     }
 

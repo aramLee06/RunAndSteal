@@ -183,9 +183,6 @@ public class LobbyClient : MonoBehaviour
 
 	void OnConnectFailed()
 	{
-		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log("OnConnectFailed : " + i_PlayerID);
-		AfterJoin();
 	}
 
 	void OnJoinFailed(int errCode)
@@ -577,7 +574,7 @@ public class LobbyClient : MonoBehaviour
 
 	public void PlayerIndexChanged (int index)
 	{
-		Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
+		//Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
 		if(index >= 0)
 		{
 			playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[index];

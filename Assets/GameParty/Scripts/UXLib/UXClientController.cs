@@ -137,7 +137,7 @@ namespace UXLib {
 					int errCode = ProcessConnectError(result);
 					
 					if (OnJoinFailed != null) {
-						OnJoinFailed(errCode);
+						OnJoinFailed(result);
 					}
 					return;
 				

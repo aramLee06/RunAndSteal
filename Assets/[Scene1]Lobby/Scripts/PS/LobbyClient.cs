@@ -224,6 +224,8 @@ public class LobbyClient : MonoBehaviour
 	void OnUserRemoved(string name, int code)
 	{
 		i_PlayerID = m_PlayerController.GetIndex();
+		// Reset State of Ready Button
+		m_PlayerController.SetLobbyState(UXUser.LobbyState.Wait);
 		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 

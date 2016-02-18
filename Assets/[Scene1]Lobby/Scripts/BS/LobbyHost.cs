@@ -44,7 +44,7 @@ public class LobbyHost : MonoBehaviour
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         Screen.SetResolution(1920, 1080, true);
 
-        Debug.Log("22222222222222222222222222" + BS_LogoViewer.BuildType.ToString());
+        Debug.Log("LobbyHost Start : " + BS_LogoViewer.BuildType.ToString());
 
 		screenLog (BS_LogoViewer.BuildType.ToString ());
 
@@ -81,8 +81,6 @@ public class LobbyHost : MonoBehaviour
 			#endif
 			roomNumberTxt.text = UXHostController.GetRoomNumberString () + "";
         }
-
-        Debug.Log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + BS_LogoViewer.BuildType.ToString());
 
         hostController.OnConnected += OnConnected;
         hostController.OnConnectFailed += OnConnected;
@@ -170,26 +168,20 @@ public class LobbyHost : MonoBehaviour
     {
 		hostController.SetMaxUser (2);
 		Debug.Log("OnLeavePremiumUser");
-		/*
-		GameObject freeLabel = GameObject.Find ("FreeVersionText");
+
+		GameObject freeLabel = GameObject.Find ("Free Play");
 		if (freeLabel != null) {
 			freeLabel.SetActive (true);
 		}
-		*/
-		f2pLabel.SetActive (true);
     }
 
     void OnJoinPremiumUser ()
     {
 		hostController.SetMaxUser (6);
-		/*
-		GameObject freeLabel = GameObject.Find ("FreeVersionText");
+		GameObject freeLabel = GameObject.Find ("Free Play");
 		if (freeLabel != null) {
 			freeLabel.SetActive (false);
 		}
-		*/
-		Debug.Log("OnJoinPremiumUser");
-		f2pLabel.SetActive (false);
     }
 
     void hostController_OnHostDisconnected()
@@ -243,12 +235,16 @@ public class LobbyHost : MonoBehaviour
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
 
-		if (UXHostController.room.IsPremium) {
-			f2pLabel.SetActive(false);
-		} else {
-			f2pLabel.SetActive(true);
-		}
+		GameObject freeLabel = GameObject.Find ("Free Play");
 
+		if (freeLabel != null) {
+			Debug.Log ("255 :                    " + UXHostController.room.IsPremium.ToString ());
+			if (UXHostController.room.IsPremium) {
+				freeLabel.SetActive (false);
+			} else {
+				freeLabel.SetActive (true);
+			}
+		} 
     }
 
     void OnApplicationFocus(bool state)
@@ -484,10 +480,15 @@ public class LobbyHost : MonoBehaviour
                     break;
             }
             */
-			if (UXHostController.room.IsPremium) {
-				f2pLabel.SetActive (false);
-			} else {
-				f2pLabel.SetActive (true);
+			GameObject freeLabel = GameObject.Find ("Free Play");
+
+			if (freeLabel != null) {
+				Debug.Log ("495 :                    " + UXHostController.room.IsPremium.ToString());
+				if (UXHostController.room.IsPremium) {
+					freeLabel.SetActive (false);
+				} else {
+					freeLabel.SetActive (true);
+				}
 			}
         }
 
@@ -620,7 +621,7 @@ public class LobbyHost : MonoBehaviour
     private bool isTutorialWatched = false;
 
     public UILabel roomNumberLabel = null;
-    public GameObject f2pLabel = null;
+    public GameObject f2pLabel;
 
     private bool[] connectedUser = new bool[6];
     private int roomMasterIndex = 0;

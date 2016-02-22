@@ -238,13 +238,12 @@ public class LobbyHost : MonoBehaviour
 		GameObject freeLabel = GameObject.Find ("Free Play");
 
 		if (freeLabel != null) {
-			Debug.Log ("255 :                    " + UXHostController.room.IsPremium.ToString ());
 			if (UXHostController.room.IsPremium) {
 				freeLabel.SetActive (false);
 			} else {
 				freeLabel.SetActive (true);
 			}
-		} 
+		}
     }
 
     void OnApplicationFocus(bool state)

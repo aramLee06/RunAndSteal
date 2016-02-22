@@ -27,7 +27,7 @@ public class BS_LogoViewer : MonoBehaviour
     IEnumerator Start()
     {
         BuildType = buildType;
-        Debug.Log("FIFIFIFIFIFIFIFI" + BuildType.ToString());
+		Debug.Log("BS_LogoViewer Start() : " + BuildType.ToString());
 
         switch (buildType)
         {

@@ -604,7 +604,8 @@ namespace UXLib
         */
         public void SendDataToCode(int target, string msg)
         {//sendDataToUser2
-            string sendString = "{\"cmd\":\"send_target\",\"target\":[\"" + target + "\"],\"data\":";
+            //string sendString = "{\"cmd\":\"send_target\",\"target\":[\"" + target + "\"],\"data\":";
+			string sendString = "{\"cmd\":\"send_target\",\"target\":[" + target + "],\"data\":";
             sendString += GetSendDataFormat(msg);
             sendString += "}" + DATA_DELIMITER;
             //{"cmd":"send_target","target":["target"],"data":GetSendDataFormat(msg)}232
@@ -805,6 +806,13 @@ namespace UXLib
                 OnError(err, msg);
             }
         }
+
+		protected string ParseUser(string user)
+		{
+			string[] fixedUser = user.Split ('.');
+
+			return fixedUser[fixedUser.Length-1];
+		}
 			
         protected List<UXUser> ParseUserList(JSONArray users)
         {
@@ -848,7 +856,7 @@ namespace UXLib
                 return;
             }
 
-            Debug.Log("data : " + data);
+			Debug.Log("UXConnectController ProcessReceivedMessage data : " + data);
 
             var N = JSON.Parse(data);
             string command = N["cmd"];
@@ -858,24 +866,13 @@ namespace UXLib
 					ackSender.ReceiveResult ();
 				}
 			} else if (command == "user_add") {
-				Debug.Log ("UserAdd : ");
-				/* int code = N["u_code"].AsInt;
-                string name = N["name"];
-
-                UXUser userObj = new UXUser(name, code);
-                userObj.SetConnected(true);
-                userObj.GetProfileFromServer(); //user name, image url저장
-
-                UXUserController userController = UXUserController.Instance;
-                userController.Add((UXObject)userObj); //사람 넣기
-*/
 				int code = N ["u_code"].AsInt;
-				string name = N ["name"];
-
+				string name = ParseUser(N ["name"]);
 				UXUser userObj = new UXUser (name, code);
+
+				Debug.Log ("UserAdd : " + name);
 				  
 				room.AddUser (userObj);
-
              
 				var array = N ["user_list"];
 
@@ -884,8 +881,6 @@ namespace UXLib
 
 					room.UpdateUserList (list);
 				}
-
-
 
 				if (OnUserAdded != null) {
 					int userIndex = GetUserIndexFromCode (code);
@@ -897,21 +892,6 @@ namespace UXLib
 				int code = N ["u_code"].AsInt;
 				room.RemoveUser (GetUserIndexFromCode (code));
 
-				/*UXUserController userController = UXUserController.Instance;
-                List<UXObject> userList = userController.GetList();
-
-                for (int i = 0; i < userList.Count; i++)
-                {
-                    UXUser user = (UXUser)userList[i]; //누군지 찾는거
-
-                    if (user.GetCode() == code)
-                    {
-                        if (isGameStarted == false) // In lobby
-                        { 
-                            string name = user.GetName();
-
-                            userController.RemoveByName(user.GetName()); //왜 name안씀...??
-*/
 				var array = N ["user_list"];
 
 				if (array != null) {
@@ -924,22 +904,8 @@ namespace UXLib
 					int userIndex = GetUserIndexFromCode (code);
 					OnUserRemoved (name, code);
 				}
-				// }
 
-				/*else
-                        {//게임중에 나감
-                            user.SetConnected(false);
-
-                            if (OnUserLeaved != null)
-                            {
-                                OnUserLeaved(i);
-                            }
-                        }
-
-                        break;
-                    }
-               	}*/
-			} else if (command == "update_user_index_result") { //호출하는 부분이 없어서 안쓰는듯
+			} else if (command == "update_user_index_result") { // 사용되고 있음
 				int index = N ["index"].AsInt;
 
 				UXPlayerController player = UXPlayerController.Instance;

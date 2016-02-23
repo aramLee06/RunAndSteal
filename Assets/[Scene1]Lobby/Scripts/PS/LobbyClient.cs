@@ -546,11 +546,10 @@ public class LobbyClient : MonoBehaviour
 	public void Replay()
 	{
 		SendAll("Replay");
-		/*
+
 		m_ClientController.SendEndGame();
 		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");
-		*/	//여긴 필요없써 !!
 	}
 
 	public void OnPurchaseSuccess(){

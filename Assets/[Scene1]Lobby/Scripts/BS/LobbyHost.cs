@@ -167,10 +167,7 @@ public class LobbyHost : MonoBehaviour
 
     void OnLeavePremiumUser ()
 	{
-		Debug.Log("OnLeavePremiumUser");
-		if (UXHostController.room.IsPremium) {
-			return;
-		}
+		/*
 
 		hostController.SetMaxUser (2);
 
@@ -178,6 +175,7 @@ public class LobbyHost : MonoBehaviour
 			freeLabel = GameObject.Find ("Free Play");
 		}
 			freeLabel.SetActive (true);
+		*/
     }
 
     void OnJoinPremiumUser ()
@@ -204,7 +202,7 @@ public class LobbyHost : MonoBehaviour
         if (isGameStart == false)
         {
 			maxPlayer = hostController.GetMaxUser();
-            for (int i = 0; i < maxPlayer; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (i < playerCount)
                 {
@@ -244,10 +242,12 @@ public class LobbyHost : MonoBehaviour
 			freeLabel = GameObject.Find ("Free Play");
 		}
 
-		if (UXHostController.room.IsPremium) {
-			freeLabel.SetActive (false);
-		} else {
-			freeLabel.SetActive (true);
+		if(freeLabel != null) {
+			if (UXHostController.room.IsPremium) {
+				freeLabel.SetActive (false);
+			} else {
+				freeLabel.SetActive (true);
+			}
 		}
     }
 
@@ -296,7 +296,25 @@ public class LobbyHost : MonoBehaviour
         Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
 		hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
+
+		CheckPremiumUser ();
     }
+
+	void CheckPremiumUser() {
+		
+		if (UXHostController.room.IsPremium) {
+			hostController.SetMaxUser (6);
+			if (freeLabel != null) {
+				freeLabel.SetActive (false);
+			}
+		} else {
+			hostController.SetMaxUser (2);
+			if (freeLabel != null) {
+				freeLabel.SetActive (true);
+			}
+		}
+
+	}
 
     void OnUserLeaved(int userIndex)
     {

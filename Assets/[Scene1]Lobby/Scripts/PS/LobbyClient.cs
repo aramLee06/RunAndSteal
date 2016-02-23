@@ -29,6 +29,7 @@ public class LobbyClient : MonoBehaviour
 	private UXAndroidManager m_AndroidManager;
 
 	public PremiumVersionStore inapp;
+	public GameObject backDrop;
 
 	// 현재 플레이어 ID
 	private int _i_PlayerID;
@@ -66,33 +67,18 @@ public class LobbyClient : MonoBehaviour
 	{
 		Screen.orientation = ScreenOrientation.Portrait;
 		Screen.SetResolution(720, 1280, true);
-		
-		blackOut.SetActive(true);
+
+		//blackOut.SetActive(true);
 
 		m_ClientController = UXClientController.Instance;
 		m_PlayerController = UXPlayerController.Instance;
-
-		/*
-		userCode = -1;
-		launcherCode = -1;
-
-		bool result = m_ClientController.SetCode (userCode, launcherCode);
-		result = true;
-		if (result == false) {
-			PopupManager_RaS.IsFreeSetter (true);
-			Application.LoadLevel ("1_Login");
-			return;
-		} else {
-			PopupManager_RaS.IsFreeSetter(false);
-		}
-		*/
 
 		PopupManager_RaS.IsFreeSetter(false); // TOOD : PopupManager 공통 모듈로 바꿔야함
 
 		userCode = m_PlayerController.GetCode(); // 유저 코드 가져옴
 		roomNumber = UXConnectController.GetRoomNumber(); // 방 번호 가져옴
 
-		blackOut.SetActive(false);
+		//blackOut.SetActive(false);
 		
 		//userCode = m_PlayerController.GetCode ();
 		//launcherCode = UXClientController.GetRoomNumber();
@@ -514,7 +500,7 @@ public class LobbyClient : MonoBehaviour
 	*/
 
 	// Phone Screen UI
-	public GameObject blackOut = null;
+	//public GameObject blackOut = null;
 
 	public GameObject playerNumber = null;
 	public Sprite[] playerNumberSprite = new Sprite[6];
@@ -565,6 +551,7 @@ public class LobbyClient : MonoBehaviour
 
 	public void AfterJoin ()
 	{
+		Debug.Log ( "AfterJoin " + inapp.IsPremiumVersion());
 		if (inapp.IsPremiumVersion())
 		{
 			////////////SendToHost("PREMIUM,");
@@ -572,6 +559,10 @@ public class LobbyClient : MonoBehaviour
 			player.IsPremium = true;
 		}
 		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
+
+		Destroy (backDrop);
+		//blackOut.SetActive(false);
+		//readyButton.SetActive (true);
 	}
 
 	public void PlayerIndexChanged (int index)

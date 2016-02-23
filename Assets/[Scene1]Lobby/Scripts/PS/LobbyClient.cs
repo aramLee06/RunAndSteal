@@ -267,6 +267,13 @@ public class LobbyClient : MonoBehaviour
 		}
 
 		cancelButton.SetActive(false);
+
+		GameObject backdrop2 = GameObject.Find ("BackDrop");
+		if (backdrop2 != null) {
+			backdrop2.SetActive (false);
+		}
+
+		//backDrop.SetActive(false);
 	}
 	
 	void OnExit() {}
@@ -405,9 +412,11 @@ public class LobbyClient : MonoBehaviour
 			myRank = System.Convert.ToInt32(words[1]);
 			break;
 		case "Replay":
+			
 			m_ClientController.SendEndGame();
 			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
+
 			break;
 		}
 	}
@@ -537,10 +546,11 @@ public class LobbyClient : MonoBehaviour
 	public void Replay()
 	{
 		SendAll("Replay");
-
+		/*
 		m_ClientController.SendEndGame();
 		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");
+		*/	//여긴 필요없써 !!
 	}
 
 	public void OnPurchaseSuccess(){
@@ -560,6 +570,7 @@ public class LobbyClient : MonoBehaviour
 		}
 		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
 
+		//backDrop.SetActive (false);
 		Destroy (backDrop);
 		//blackOut.SetActive(false);
 		//readyButton.SetActive (true);

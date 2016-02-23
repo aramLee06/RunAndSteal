@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list: {fileID: 1803229036}
-  FirstSceneName: 1_Login
+  FirstSceneName: 
 --- !u!114 &60633126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,7 +1397,7 @@ Transform:
   m_GameObject: {fileID: 800835420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.004716981, y: 0.004716981, z: 0.004716981}
+  m_LocalScale: {x: 0.004338395, y: 0.004338395, z: 0.004338395}
   m_Children:
   - {fileID: 256565429}
   - {fileID: 1766170683}
@@ -2410,6 +2410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNumberTxt: {fileID: 458924513}
   logText: {fileID: 246475754}
+  freeLabel: {fileID: 246475752}
   roomNumberLabel: {fileID: 1939868628}
   f2pLabel: {fileID: 246475752}
   blackOut: {fileID: 1911542333}

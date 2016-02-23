@@ -23,19 +23,19 @@ EditorBuildSettings:
     path: Assets/[Scene5]InGame/InGamePS.unity
   - enabled: 1
     path: Assets/[Scene6]Result/ResultPS.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/SPLASH/BS_LogoViewer.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene1]Lobby/LobbyHost.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene2]CharacterSelectLobby/CharacterSelectLobbyBS.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene3]Tutorial/TutorialBS_Android.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene4]GameLoading/GameLoadingBS.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene3]Tutorial/TutorialBS_PC.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene5]InGame/InGameBS.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/[Scene6]Result/ResultBS.unity

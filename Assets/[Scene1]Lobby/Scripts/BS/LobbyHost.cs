@@ -16,6 +16,7 @@ public class LobbyHost : MonoBehaviour
 
 	public Text roomNumberTxt;
 	public Text logText;
+	public GameObject freeLabel;
 
     void Awake()
     {
@@ -165,23 +166,27 @@ public class LobbyHost : MonoBehaviour
     }
 
     void OnLeavePremiumUser ()
-    {
-		hostController.SetMaxUser (2);
+	{
 		Debug.Log("OnLeavePremiumUser");
-
-		GameObject freeLabel = GameObject.Find ("Free Play");
-		if (freeLabel != null) {
-			freeLabel.SetActive (true);
+		if (UXHostController.room.IsPremium) {
+			return;
 		}
+
+		hostController.SetMaxUser (2);
+
+		if (freeLabel == null) {
+			freeLabel = GameObject.Find ("Free Play");
+		}
+			freeLabel.SetActive (true);
     }
 
     void OnJoinPremiumUser ()
     {
 		hostController.SetMaxUser (6);
-		GameObject freeLabel = GameObject.Find ("Free Play");
-		if (freeLabel != null) {
-			freeLabel.SetActive (false);
+		if (freeLabel == null) {
+			freeLabel = GameObject.Find ("Free Play");
 		}
+		freeLabel.SetActive (false);
     }
 
     void hostController_OnHostDisconnected()
@@ -235,14 +240,14 @@ public class LobbyHost : MonoBehaviour
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
 
-		GameObject freeLabel = GameObject.Find ("Free Play");
+		if (freeLabel == null) {
+			freeLabel = GameObject.Find ("Free Play");
+		}
 
-		if (freeLabel != null) {
-			if (UXHostController.room.IsPremium) {
-				freeLabel.SetActive (false);
-			} else {
-				freeLabel.SetActive (true);
-			}
+		if (UXHostController.room.IsPremium) {
+			freeLabel.SetActive (false);
+		} else {
+			freeLabel.SetActive (true);
 		}
     }
 
@@ -479,15 +484,14 @@ public class LobbyHost : MonoBehaviour
                     break;
             }
             */
-			GameObject freeLabel = GameObject.Find ("Free Play");
+			if (freeLabel == null) {
+				freeLabel = GameObject.Find ("Free Play");
+			} 
 
-			if (freeLabel != null) {
-				Debug.Log ("495 :                    " + UXHostController.room.IsPremium.ToString());
-				if (UXHostController.room.IsPremium) {
-					freeLabel.SetActive (false);
-				} else {
-					freeLabel.SetActive (true);
-				}
+			if (UXHostController.room.IsPremium) {
+				freeLabel.SetActive (false);
+			} else {
+				freeLabel.SetActive (true);
 			}
         }
 

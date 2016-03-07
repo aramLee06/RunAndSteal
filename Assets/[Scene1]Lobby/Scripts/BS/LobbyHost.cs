@@ -6,7 +6,6 @@ using UXLib.Base;
 using UXLib.Connect;
 using UXLib.User;
 using UXLib.Util;
-//using System.Threading;
 using UnityEngine.UI;
 
 public class LobbyHost : MonoBehaviour
@@ -31,13 +30,6 @@ public class LobbyHost : MonoBehaviour
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-		/*
-		#if UNITY_ANDROID && !UNITY_EDITOR
-		GameObject go = GameObject.Find ("AndroidManager");
-		androidManager = go.GetComponent<UXAndroidManager>();
-		androidManager.LockWifi();
-		#endif
-		*/
     }
 
     void Start()
@@ -48,8 +40,6 @@ public class LobbyHost : MonoBehaviour
         Debug.Log("LobbyHost Start : " + BS_LogoViewer.BuildType.ToString());
 
 		screenLog (BS_LogoViewer.BuildType.ToString ());
-
-        //blackOut.SetActive(true);
 
         hostController = UXHostController.Instance;
 		screenLog ("IsConnect : " + hostController.IsConnected ());
@@ -68,7 +58,6 @@ public class LobbyHost : MonoBehaviour
         {
 			Debug.Log ("Create Room");
             hostController.CreateRoom();
-//            roomNumberLabel.text = UXHostController.GetRoomNumberString();
 			Debug.Log ("Room NUM : " + UXHostController.GetRoomNumberString ());
 			roomNumberTxt.text = UXHostController.GetRoomNumberString () + "";
 			screenLog ("ROOM INFO : " + UXConnectController.ROOM_SERVER_IP + ", " + UXConnectController.ROOM_SERVER_PORT);
@@ -130,14 +119,6 @@ public class LobbyHost : MonoBehaviour
         }
         else
         {
-			#if UNITY_ANDROID && !UNITY_EDITOR
-            //int countryCode = androidManager.GetCountryCode();
-            //PlayerPrefs.SetInt("ServerList", countryCode);
-            //Debug.Log("------------------code:" + countryCode);
-			#endif
-
-//			hostController.SetMaxUser(6); // for premium
-//			f2pLabel.SetActive(false);
 			hostController.SetMaxUser(2); // for GOOGLE
 			f2pLabel.SetActive(true);
         }
@@ -165,18 +146,7 @@ public class LobbyHost : MonoBehaviour
         iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, -10), 4.0f);
     }
 
-    void OnLeavePremiumUser ()
-	{
-		/*
-
-		hostController.SetMaxUser (2);
-
-		if (freeLabel == null) {
-			freeLabel = GameObject.Find ("Free Play");
-		}
-			freeLabel.SetActive (true);
-		*/
-    }
+    void OnLeavePremiumUser () {}
 
     void OnJoinPremiumUser ()
     {
@@ -251,9 +221,7 @@ public class LobbyHost : MonoBehaviour
 		}
     }
 
-    void OnApplicationFocus(bool state)
-    {
-    }
+    void OnApplicationFocus(bool state) {}
 
     void OnConnected()
     {
@@ -480,11 +448,11 @@ public class LobbyHost : MonoBehaviour
 
         if (words[0] == "Exit")
         {
-            SendAll("Exit");
+            //SendAll("Exit");
 
-            Debug.Break();
-            hostController.SendEndGame();
-            Application.Quit();
+            //Debug.Break();
+            //hostController.SendEndGame();
+            //Application.Quit();
 
         }
 

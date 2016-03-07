@@ -215,7 +215,7 @@ public class LobbyClient : MonoBehaviour
 		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 
-	void OnUserLeaved(int userIndex) {
+	void OnUserLeaved(int userIndex) { // 이거슨 안 쓰이는 거지
 		i_PlayerID = userIndex;
 	}
 	
@@ -311,7 +311,7 @@ public class LobbyClient : MonoBehaviour
 
         if (words[0] == "Exit")
         {
-            PopupManager_RaS.Instance.CloseGame();
+            //PopupManager_RaS.Instance.CloseGame();
         }
 
 		/*

@@ -60,17 +60,19 @@ namespace UXLib.User {
 			List<UXObject> preObjList = new List<UXObject> (objectList);
 			objectList.Clear ();
 
-			for (int i = 0; i < list.Count; i++) {
-				UXUser user = list[i];
-				if (i < preListCnt) {
-					UXUser preUser = (UXUser)preObjList [i];
-					user.IsPremium = preUser.IsPremium;
-				} else {
-					user.IsPremium = false;
+			foreach (UXUser user in list) {
+				user.IsPremium = false;
+				foreach (UXObject preObj in preObjList){				
+					UXUser preUser = (UXUser)preObj;
+					if (user.GetCode () == preUser.GetCode ()) {
+						user.IsPremium = preUser.IsPremium;
+					}
 				}
+
 				objectList.Add (user);
 			}
 		}
+
 		
 	}
 }

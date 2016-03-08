@@ -12,9 +12,9 @@ namespace UXLib.Connect.Protocol.Parser.Command
         {
             JSONNode data = base.baseParse(UXProtocol.Command_Parse.change_lobby_state_result, array);
             //length, count,, u_code, time
-            data["u_code"].AsInt = BitConverter.ToInt16(array, 2);
+            data["u_code"].AsInt = BitConverter.ToInt32(array, 2);
 
-            int state = array[4];
+            int state = array[6];
 
             if (state == 0)
             {

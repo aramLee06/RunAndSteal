@@ -58,14 +58,14 @@ namespace UXLib {
 		}
 		
 		/** Send join message */
-		public override void Join(string data) { //data는쓰레기 호출할때도 "none"
+		public override void Join(string packageName) { //data는쓰레기 호출할때도 "none"
 			Debug.Log ("Join");
 			UXPlayerController playerController = UXPlayerController.Instance;
 			
 			int userCode = playerController.GetCode();
 			string name = playerController.GetName ();
 			
-			string msg = "{\"cmd\":\"join\",\"type\":\"user\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\",\"name\":\""+ name + "\",\"max_user\":\"0\", \"package_name\" : \"" + data + "\"}" + DATA_DELIMITER;
+			string msg = "{\"cmd\":\"join\",\"type\":\"user\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\",\"name\":\""+ name + "\",\"max_user\":\"0\", \"package_name\" : \"" + packageName + "\"}" + DATA_DELIMITER;
 
 			Debug.Log (msg);
 			Send(msg);//{"cmd":"join","type":"user","l_code":"launcherCode","u_code":"userCode","name":"name","max_user":"0"}232
@@ -86,7 +86,7 @@ namespace UXLib {
 				stateString = "wait";	
 			}
 			
-			string sendString = "{\"cmd\":\"change_lobby_state\",\"u_code\":\""+ player.GetCode () + "\",\"l_code\":\""+ GetRoomNumber() + "\",\"state\":\""+ stateString + "\"}" + UXConnectController.DATA_DELIMITER; //<-?
+			string sendString = "{\"cmd\":\"change_lobby_state\",\"u_code\":\""+ player.GetCode () + "\",\"l_code\":\""+ room.RoomNumber + "\",\"state\":\""+ stateString + "\"}" + UXConnectController.DATA_DELIMITER; //<-?
 			Send (sendString);//{"cmd":change_lobby_state","u_code":player.GetCode()","l_code":"GetRoomNumber()","state":stateString"}232
 		}
 		

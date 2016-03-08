@@ -61,6 +61,7 @@ namespace UXLib.User {
 		}
 		
 		public bool GetProfileFromServer() {
+			/**
 			if (code == -1) { //host면
 				return false;
 			}
@@ -77,6 +78,7 @@ namespace UXLib.User {
 			} else {
 				return false;
 			}
+			**/
 			
 			return true;
 		}

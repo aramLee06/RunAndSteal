@@ -34,7 +34,7 @@ namespace UXLib.User {
 			set{
 				this.isPremium = value;
 				if (isPremium) {
-					string sendString = "{\"cmd\":\"premium_user\",\"u_code\":\"" + GetCode () + "\",\"l_code\":\"" + "00000" + "\"}" + DATA_DELIMITER;
+					string sendString = "{\"cmd\":\"premium_user\",\"u_code\":\"" + GetCode () + "\",\"l_code\":\"" + UXConnectController.room.RoomNumber+ "\"}" + DATA_DELIMITER;
 					roomConnect.Send (sendString);
 				}
 			}
@@ -85,33 +85,15 @@ namespace UXLib.User {
 		string deviceNumber = SystemInfo.deviceUniqueIdentifier;
 
 		public int GetUserCodeFromServer() {
-			JSONClass json = new JSONClass();
-			json.Add ("mac", deviceNumber);
-			
-			string recData = UXRestConnect.Request("users/token", UXRestConnect.REST_METHOD_POST, json.ToString()); 
-			if (recData == null) {
-				return UXRestConnect.RESULT_ERROR;
-			}
-			
-			lastReceivedData = recData;
-			
-			var N = JSON.Parse(recData);
-			int rec = N["gp_ack"].AsInt;
-			
-			bool result	= (rec == UXRoomConnect.ACK_RESULT_OK);
-			
-			if (result == true) { 
+			string recData = UXRestConnect.Request("user/uuid", UXRestConnect.REST_METHOD_GET, ""); 
+			Debug.Log (recData);
 
-				code = N["u_code"].AsInt;
-				token = N["token"];
-				
-				isUserLogin = true;
-				return UXRestConnect.RESULT_TRUE;
-			} 
+			var N = JSON.Parse(recData);
+			code = N["uuid"].AsInt;
 			
-			isUserLogin = false;
+			isUserLogin = true;
 			
-			return UXRestConnect.RESULT_FALSE;
+			return UXRestConnect.RESULT_TRUE;
 		}
 
 		/** Not used */

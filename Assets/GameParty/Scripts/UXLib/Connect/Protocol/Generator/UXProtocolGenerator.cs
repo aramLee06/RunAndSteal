@@ -5,6 +5,8 @@ using System.Text;
 
 using SimpleJSON;
 
+using UnityEngine;
+
 using UXLib.Connect.Protocol.Generator.Command;
 
 namespace UXLib.Connect.Protocol.Generator
@@ -80,7 +82,7 @@ namespace UXLib.Connect.Protocol.Generator
             // 여기서 cmd, l_code, u_code 추가 
             byteList.Add((byte)command);
             AddByte16(data["l_code"].AsInt == 0 ? -1 : data["l_code"].AsInt);
-            AddByte16(data["u_code"].AsInt == 0 ? -1 : data["u_code"].AsInt);    
+            AddByte32(data["u_code"].AsInt == 0 ? -1 : data["u_code"].AsInt);    
 
         }
 
@@ -99,13 +101,23 @@ namespace UXLib.Connect.Protocol.Generator
             }
         }
 
+		protected void AddByte32(int val)
+		{
+			byte[] bytes = BitConverter.GetBytes(val);
+			foreach (byte v in bytes)
+			{
+				byteList.Add(v);
+			}
+		}
+
         protected void AddByteString(string str)
         {
-            byte[] bytes = new UTF8Encoding().GetBytes(str);
-            foreach (byte v in bytes)
-            {
-                byteList.Add(v);
-            }
+			byte[] bytes = Encoding.UTF8.GetBytes(str);
+			for (int i = 0; i < bytes.Length; i++) 
+			{
+				byte v = bytes [i];
+				byteList.Add(v);
+			}
         }
 
         public abstract byte[] Generate(JSONNode data);

@@ -60,7 +60,7 @@ public class RoomNumberWindow : MonoBehaviour {
 		
 		if(string.IsNullOrEmpty(qrString) == false){
 			UXConnectController.SetRoomNumber(int.Parse(qrString));
-			clientController.Join("none");
+			clientController.Join("com.cspmedia.runandsteal");
 		}
 
 		if(latest_errCode != -1)
@@ -91,8 +91,6 @@ public class RoomNumberWindow : MonoBehaviour {
 		if(isCon == true){
 			isCon = false;
 			serverConnect.SetActive(false);
-			//Debug.Log (commonLang.langList.Count);
-			//noti.text = commonLang.langList[9];
 		}
 
 	}

@@ -16,13 +16,13 @@ namespace UXLib.Connect.Protocol.Generator.Command
             string _data = data["data"];
             var target = data["target"];
 
-            int length = 1+_data.Length +(2* target.Count);
+            int length = 1+_data.Length +(4* target.Count);
             AddByte8((byte)length);
 
             AddByte8((byte)target.Count);//target_len
             for (int i = 0, len = target.Count; i < len; i++)
             {
-                AddByte16(target[i].AsInt);
+                AddByte32(target[i].AsInt);
             }
             AddByteString(_data);
 

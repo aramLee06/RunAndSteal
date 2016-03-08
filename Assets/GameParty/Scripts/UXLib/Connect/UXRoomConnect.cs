@@ -92,6 +92,8 @@ namespace UXLib.Connect {
 		}
 		
 		public bool IsConnected() {
+
+			Debug.Log ("IsConnect?? " + roomSocket);
 			if (roomSocket == null) {
 				return false;
 			}

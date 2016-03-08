@@ -98,16 +98,10 @@ namespace UXLib.User {
 
 
 		/*** REST를 통해 방을 생성함. ***/ 
-		public bool CreateRoom(){ 
-			// TODO : TV Game 인지 검사하는 코드 필요
+		public bool CreateRoom(string package, int maxClient){ 
 			UXConnectController.SetMode (UXConnectController.Mode.Host);
-			// TODO : Host Controller 참조
-			JSONClass json = new JSONClass();
 
-			json.Add ("id", REQUEST_ROOM_NUMBER); //"grb"
-			json.Add ("pw", "");
-
-			string recData = UXRestConnect.Request("launchers/token", UXRestConnect.REST_METHOD_POST, json.ToString()); //launchers/token:방만드는애
+			string recData = UXRestConnect.Request("room/create?package=" + package + "&max_client=" + maxClient, UXRestConnect.REST_METHOD_GET, ""); //room/create:방만드는애
 
 			if (recData == null) {
 				return false;
@@ -115,13 +109,10 @@ namespace UXLib.User {
 
 			var N = JSON.Parse(recData);
 
-			int rec = N["gp_ack"].AsInt;
-			bool result	= (rec == UXRoomConnect.ACK_RESULT_OK);
-			if (result == true) {
-				RoomNumber = N["l_code"];
-			}
-			Debug.Log (RoomNumber);
-			return result;
+			RoomNumber = N["roomNumber"];
+			player.SetCode (N ["uuid"].AsInt);
+
+			return true;
 		}
 
 

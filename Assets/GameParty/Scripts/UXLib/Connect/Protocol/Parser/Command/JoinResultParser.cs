@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UXLib.User;
 using SimpleJSON;
 
 namespace UXLib.Connect.Protocol.Parser.Command
@@ -16,16 +17,16 @@ namespace UXLib.Connect.Protocol.Parser.Command
 
             data["ack"].AsInt = BitConverter.ToInt16(array, 2);
             data["is_host"].AsBool = array[3] == 0 ? false : true;
-            int u_code = BitConverter.ToInt16(array, 5); ;
+            //int u_code = BitConverter.ToInt32(array, 5); ;
 
-            int list_len = array[7];
+            int list_len = array[4];
 
             data["user_list"] = new JSONArray();
             for (int i = 0; i < list_len; i++)
             {
-                int code = BitConverter.ToInt16(array, 8 + (i * 2));
+                int code = BitConverter.ToInt32(array, 5 + (i * 4));
                 data["user_list"][i] = code + "." + "Player " + (i + 1);
-                if (u_code == code)
+				if (UXPlayerController.Instance.GetCode() == code)
                 {
                     data["user"] = data["user_list"][i];
                 }
@@ -33,7 +34,7 @@ namespace UXLib.Connect.Protocol.Parser.Command
 
             if (data["user_list"].AsArray.Count == 0)
             {
-                data["user"] = u_code + ".Player 1";
+				data["user"] = UXPlayerController.Instance.GetCode() + ".Player 1";
             }
 
             return data;

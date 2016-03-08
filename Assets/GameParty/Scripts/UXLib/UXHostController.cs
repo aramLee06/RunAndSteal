@@ -107,8 +107,8 @@ namespace UXLib {
 		}
 		
 		/* Send join message to server */
-		public override void Join(string data) {
-			string msg = "{\"cmd\":\"join\",\"type\":\"host\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"-1\",\"name\":\"host\",\"max_user\":\"" + room.MaxUser + "\",\"package_name\":\"" + data + "\"}" + DATA_DELIMITER;
+		public override void Join(string package_name) {
+			string msg = "{\"cmd\":\"join\",\"type\":\"host\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + player.GetCode() + "\",\"package_name\":\"" + package_name + "\", \"max_user\" : " + room.MaxUser + "}"; 
 			Send(msg); //{"cmd":"join","type":"host","l_code":"launcherCode","u_code":"-1","name":"host","max_user":"maxUser",package_name":"data"}232
             Debug.Log("Send : "+msg);
 		}
@@ -117,8 +117,8 @@ namespace UXLib {
 			@param ready - ready user number 
 			@param total - total user number 
 		*/	
-		void SendUpdateReadyCount(int ready, int total) { 
-			string sendString = "{\"cmd\":\"update_ready_count\",\"l_code\":\"" + launcherCode + "\",\"ready\":\"" + ready + "\",\"total\":\"" + total + "\"}" + UXConnectController.DATA_DELIMITER;  //????
+		void SendUpdateReadyCount(int ready, int total) {  
+			string sendString = "{\"cmd\":\"update_ready_count\",\"u_code\":\"" + player.GetCode() + "\",\"l_code\":\"" + room.RoomNumber + "\",\"ready\":\"" + ready + "\",\"total\":\"" + total + "\"}" + UXConnectController.DATA_DELIMITER;  //????
 			Send (sendString);//{"cmd":"update_ready_count","l_code":"launcherCode","ready":"ready","total":"total"}
             Debug.Log("Send : " + sendString);
 		}
@@ -154,7 +154,7 @@ namespace UXLib {
 					for (int i = 0; i < list.Count; i++) {
 						UXUser u = list [i];
 						u.SetConnected (true);  //isConnected = ture;로
-						u.GetProfileFromServer (); //host면 x ,pad면 name, image url (정보가져오기)
+						//u.GetProfileFromServer (); //host면 x ,pad면 name, image url (정보가져오기)
 					}
 					
 					UXUserController.Instance.CopyList (list);
@@ -319,7 +319,7 @@ namespace UXLib {
 		/** Create room
 			@return True if it was crated successfully, false otherwise
 		*/
-		public bool CreateRoom() { //방만든다.
+		public bool CreateRoom(string packageName, int maxClient) { //방만든다.
 			/**
 			JSONClass json = new JSONClass();
 			
@@ -342,7 +342,7 @@ namespace UXLib {
 			return result;
 			**/
 
-			return room.CreateRoom ();
+			return room.CreateRoom (packageName, maxClient);
 		}
 		
 		bool CheckUserState() {

@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 public class LobbyHost : MonoBehaviour
 {
+	// Game 
+	public static string GAME_PACKAGE_NAME = "com.cspmedia.runandsteal";
+
     UXHostController hostController;
     UXAndroidManager androidManager;
 
@@ -56,8 +59,7 @@ public class LobbyHost : MonoBehaviour
 
         if (result == false)
         {
-			Debug.Log ("Create Room");
-            hostController.CreateRoom();
+			hostController.CreateRoom(GAME_PACKAGE_NAME, hostController.GetMaxUser());
 			Debug.Log ("Room NUM : " + UXHostController.GetRoomNumberString ());
 			roomNumberTxt.text = UXHostController.GetRoomNumberString () + "";
 			screenLog ("ROOM INFO : " + UXConnectController.ROOM_SERVER_IP + ", " + UXConnectController.ROOM_SERVER_PORT);
@@ -114,8 +116,6 @@ public class LobbyHost : MonoBehaviour
             hostController.SetMaxUser(2); // for GOOGLE
             f2pLabel.SetActive(true);
 
-//            hostController.SetMaxUser(6); // for MHT
-//            f2pLabel.SetActive(false);
         }
         else
         {
@@ -132,6 +132,7 @@ public class LobbyHost : MonoBehaviour
             playerNumber[i].SetActive(false);
         }
 
+		Debug.Log ("LobbyHost :: " + selectedPlayerCharacter.Length);
         for (int i = 0; i < selectedPlayerCharacter.Length; i++)
         {
             selectedPlayerCharacter[i] = (int)CHARACTER_TYPE.CHARACTER_NONE;
@@ -150,11 +151,13 @@ public class LobbyHost : MonoBehaviour
 
     void OnJoinPremiumUser ()
     {
+		Debug.Log ("OnJoinPremiumUser");
 		hostController.SetMaxUser (6);
-		if (freeLabel == null) {
-			freeLabel = GameObject.Find ("Free Play");
+		if (freeLabel != null) {
+			//freeLabel = GameObject.Find ("Free Play");
+			freeLabel.SetActive (false);
 		}
-		freeLabel.SetActive (false);
+
     }
 
     void hostController_OnHostDisconnected()
@@ -221,21 +224,12 @@ public class LobbyHost : MonoBehaviour
 		}
     }
 
-    void OnApplicationFocus(bool state) {}
-
     void OnConnected()
     {
-        UXLog.SetLogMessage("OnServerConnected:-------" + " == 1");
-        Debug.Log("OnServerConnected:-------" + " == 1");
-
-        hostController.Join("com.cspmedia.runandsteal.ps");
+		hostController.Join(GAME_PACKAGE_NAME);
     }
 
-    void OnJoinFailed(int errCode)
-    {
-        UXLog.SetLogMessage("OnJoinFailed > " + errCode + " == 2");
-        Debug.Log("OnJoinFailed > " + errCode + " == 2");
-    }
+    void OnJoinFailed(int errCode) {}
 
     void OnJoinSucceeded(bool isHost)
     {
@@ -246,15 +240,10 @@ public class LobbyHost : MonoBehaviour
         playerCount = hostController.GetConnectUserCount();
     }
 
-    void OnDisconnected()
-    {
-    }
+    void OnDisconnected() {}
 
     void OnUserAdded(int userIndex, int userCode)
     {
-        UXLog.SetLogMessage("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " == 5");
-        Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " == 5");
-
         playerCount = hostController.GetConnectUserCount();
     }
 
@@ -444,7 +433,6 @@ public class LobbyHost : MonoBehaviour
 
         msg.Trim();
         words = msg.Split(splitchar.ToCharArray(), System.StringSplitOptions.None);
-		Debug.Log ("Recevied Data msg : " + msg);
 
         if (words[0] == "Exit")
         {

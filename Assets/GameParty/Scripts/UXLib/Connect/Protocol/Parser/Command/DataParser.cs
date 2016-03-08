@@ -13,14 +13,14 @@ namespace UXLib.Connect.Protocol.Parser.Command
         {
             JSONNode data = base.baseParse(UXProtocol.Command_Parse.data, array);
 
-            int sender = BitConverter.ToInt16(array, 2);
+            int sender = BitConverter.ToInt32(array, 2);
             data["sender"].AsInt = sender;
 
-            int dataLen = array[4];
+            int dataLen = array[6];
 
             Debug.Log(dataLen);
 
-            string msg = new UTF8Encoding().GetString(array, 5, dataLen);
+            string msg = new UTF8Encoding().GetString(array, 7, dataLen);
 
             data["data"] = msg;
             

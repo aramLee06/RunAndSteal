@@ -11,7 +11,7 @@ using UXLib.UI;
 public class LobbyClient : MonoBehaviour
 {
 
-	// TODO :  게임 기본 패키지 이름, 게임별로 맞게 변경 필요함
+	// Game Package Name
 	public static string GAME_PACKAGE_NAME = "com.cspmedia.runandsteal";
 
 	//int userCode;

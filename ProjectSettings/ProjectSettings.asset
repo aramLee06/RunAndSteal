@@ -5,12 +5,12 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: CSP Media
-  productName: RunAndSteal (TV Game)
+  productName: RunAndSteal (Game Pad)
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 0
@@ -89,7 +89,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.cspmedia.runandsteal.game
+  bundleIdentifier: com.cspmedia.runandsteal.pad
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
@@ -97,7 +97,7 @@ PlayerSettings:
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: f085f985ca48f984895039317cc5eabb
-  AndroidBundleVersionCode: 42
+  AndroidBundleVersionCode: 45
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 1
   androidSplashScreen: {fileID: 2800000, guid: 27809294f1fb0f445af0134164040db3, type: 3}
-  AndroidKeystoreName: /Users/jay/Downloads/gameparty.keystore
+  AndroidKeystoreName: /Users/ARL/Development/gameparty.keystore
   AndroidKeyaliasName: csp media
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -174,7 +174,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 6af1d4c9c9e034e3e8820c0322471e42, type: 3}
+      m_Icon: {fileID: 2800000, guid: df58d91e88861419d82818af912b6613, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching:

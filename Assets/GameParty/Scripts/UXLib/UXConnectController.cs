@@ -20,12 +20,12 @@ namespace UXLib
     {
 
         //public static string ROOM_SERVER_IP = "192.168.0.81";
-		public static string ROOM_SERVER_IP = "112.74.40.64";
+		public static string ROOM_SERVER_IP = "211.253.26.54";
 
-        public const int ROOM_SERVER_PORT = 4000;// 7000;
+        public const int ROOM_SERVER_PORT = 5000;// 7000;
 
         //public static string BASE_REST_URL = "http://192.168.0.81:3000";
-		public static string BASE_REST_URL = "http://112.74.40.64:3000"; //중국 ^0^
+		public static string BASE_REST_URL = "http://211.253.26.54:3010"; //중국 ^0^
 
 
         /**<join event*/
@@ -210,8 +210,8 @@ namespace UXLib
                     {
                         //ROOM_SERVER_IP = "192.168.0.81";//"112.74.40.64";
                         //BASE_REST_URL = "http://192.168.0.81:3000";// 6000";
-						ROOM_SERVER_IP = "112.74.40.64";//"112.74.40.64";
-						BASE_REST_URL = "http://112.74.40.64:3000";// 6000";
+					ROOM_SERVER_IP = "211.253.26.54";//"112.74.40.64";
+					BASE_REST_URL = "http://211.253.26.54:3010";// 6000";
                     }
                     break;
                 case ServerList.SG:
@@ -323,7 +323,7 @@ namespace UXLib
             }
 
           	return string.Format("{0:D5}", launcherCode); // 25 ->"00025"*/
-			return room.RoomNumber;
+			return string.Format("{0:D5}", room.RoomNumber);
         }
 
         /** Return room number */
@@ -498,7 +498,8 @@ namespace UXLib
         */
         public void SendStartGame()
         {
-            string sendString = "{\"cmd\":\"start_game\",\"l_code\":\"" + launcherCode + "\"}" + DATA_DELIMITER;
+			int userCode = player.GetCode();
+			string sendString = "{\"cmd\":\"start_game\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
             Send(sendString);    //{"cmd:"start_game",l_code":"launcherCode"}232
         }
 
@@ -507,7 +508,8 @@ namespace UXLib
         */
         public void SendRestartGame()
         {
-            string sendString = "{\"cmd\":\"restart_game\",\"l_code\":\"" + launcherCode + "\"}" + DATA_DELIMITER;
+			int userCode = player.GetCode();
+			string sendString = "{\"cmd\":\"restart_game\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
             Send(sendString);    //{"cmd":"restart_game","l_code":"launcherCode"}232
         }
 
@@ -516,7 +518,8 @@ namespace UXLib
         */
         public void SendResultGame()
         {//안쓴다
-            string sendString = "{\"cmd\":\"result_game\",\"l_code\":\"" + launcherCode + "\"}" + DATA_DELIMITER;
+			int userCode = player.GetCode();
+			string sendString = "{\"cmd\":\"result_game\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
             Send(sendString);    //{"cmd":"result_game","l_code":"launcherCode"}232
         }
 
@@ -525,7 +528,8 @@ namespace UXLib
         */
         public void SendEndGame()
         {
-            string sendString = "{\"cmd\":\"end_game\",\"l_code\":\"" + launcherCode + "\"}" + DATA_DELIMITER;
+			int userCode = player.GetCode();
+			string sendString = "{\"cmd\":\"end_game\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
             Send(sendString);    //{"cmd":"end_game","l_code":"launcherCode"}232
         }
 
@@ -543,7 +547,7 @@ namespace UXLib
                 userCode = UXPlayerController.Instance.GetCode();
             }
 
-            string sendString = "{\"cmd\":\"exit\",\"type\":\"" + type + "\",\"l_code\":\"" + launcherCode + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
+			string sendString = "{\"cmd\":\"exit\",\"type\":\"" + type + "\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
             Send(sendString);  //{"cmd":"exit","type":"type","l_code":launcherCode","u_code":userCode",}232
         }
 
@@ -552,13 +556,13 @@ namespace UXLib
             @param idx changed index
         */
         public void SendUserIndex(int userCode, int idx)
-        { //안쓰이는듯
+        { 
             if (connectMode == Mode.Client)
             {
                 return;
             }
 
-            string msg = "{\"cmd\":\"update_user_index\",\"u_code\":\"" + userCode + "\",\"l_code\":\"" + launcherCode + "\",\"index\":\"" + idx + "\"}" + DATA_DELIMITER;
+			string msg = "{\"cmd\":\"update_user_index\",\"u_code\":\"" + userCode + "\",\"l_code\":\"" + room.RoomNumber + "\",\"index\":\"" + idx + "\"}" + DATA_DELIMITER;
             Send(msg); //{"cmd":"update_user_index","u_code":"userCode","l_code":"launcherCode","index":"idx"}232
         }
 
@@ -567,7 +571,8 @@ namespace UXLib
         */
         public void SendData(string msg)
         {
-            string sendString = "{\"cmd\":\"broadcast\",\"data\":";
+			int userCode = player.GetCode ();
+			string sendString = "{\"cmd\":\"broadcast\",\"u_code\":\"" + userCode + "\",\"l_code\":\"" + room.RoomNumber + "\",\"data\":";
             sendString += GetSendDataFormat(msg);
             sendString += "}" + DATA_DELIMITER;
 
@@ -605,7 +610,8 @@ namespace UXLib
         public void SendDataToCode(int target, string msg)
         {//sendDataToUser2
             //string sendString = "{\"cmd\":\"send_target\",\"target\":[\"" + target + "\"],\"data\":";
-			string sendString = "{\"cmd\":\"send_target\",\"target\":[" + target + "],\"data\":";
+			int userCode = player.GetCode();
+			string sendString = "{\"cmd\":\"send_target\",\"u_code\":\"" + userCode + "\",\"l_code\":\"" + room.RoomNumber + "\",\"target\":[" + target + "],\"data\":";
             sendString += GetSendDataFormat(msg);
             sendString += "}" + DATA_DELIMITER;
             //{"cmd":"send_target","target":["target"],"data":GetSendDataFormat(msg)}232
@@ -617,7 +623,8 @@ namespace UXLib
         */
         public void SendDataToHost(string msg)
         {
-            string sendString = "{\"cmd\":\"send_host\",\"data\":";
+			int userCode = player.GetCode ();
+			string sendString = "{\"cmd\":\"send_host\",\"u_code\":\"" + userCode + "\",\"l_code\":\"" + room.RoomNumber + "\",\"data\":";
             sendString += GetSendDataFormat(msg);
             sendString += "}" + DATA_DELIMITER;
             connect.Send(sendString);    //{"cmd":"send_host","data":GetSendDataFormat(msg)"}
@@ -669,7 +676,7 @@ namespace UXLib
         {
            UXPlayerController player = UXPlayerController.Instance;
 
-            string msg = "{\"cmd\":\"get_user_list\",\"l_code\":\"" + launcherCode + "\"}" + DATA_DELIMITER;
+			string msg = "{\"cmd\":\"get_user_list\",\"u_code\":\"" + player.GetCode() + "\",\"l_code\":\"" + room.RoomNumber + "\"}" + DATA_DELIMITER;
             Send(msg);//{"cmd":"get_user_list","l_code":"launcherCode"}232
 			Debug.Log("RefreshUserListFromServer!!");
         }
@@ -770,7 +777,6 @@ namespace UXLib
                     }
 
                     var N = UXProtocol.Instance.ParserFactory(command).Parse(msg.ToArray());
-                    //Debug.Log(N.ToString());
                     receiveQueue.Add(N.ToString());
                 }
             }
@@ -1003,6 +1009,7 @@ namespace UXLib
 					}
 				}
 			
+				/*
 				if (connectMode == UXConnectController.Mode.Client) { //PAD면
 					UXPlayerController playerController = UXPlayerController.Instance;
 					for (int i = 0; i < userController.GetCount (); i++) {
@@ -1020,6 +1027,7 @@ namespace UXLib
 						}
 					}
 				}
+				*/
 
 			} else if (command == "update_ready_count_result") {
 				int ready = N ["ready"].AsInt;

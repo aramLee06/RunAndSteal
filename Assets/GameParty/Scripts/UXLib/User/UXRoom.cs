@@ -109,7 +109,7 @@ namespace UXLib.User {
 
 			var N = JSON.Parse(recData);
 
-			RoomNumber = N["roomNumber"];
+			RoomNumber = int.Parse( N["roomNumber"]).ToString("00000");
 			player.SetCode (N ["uuid"].AsInt);
 
 			return true;

@@ -151,10 +151,8 @@ public class LobbyHost : MonoBehaviour
 
     void OnJoinPremiumUser ()
     {
-		Debug.Log ("OnJoinPremiumUser");
 		hostController.SetMaxUser (6);
 		if (freeLabel != null) {
-			//freeLabel = GameObject.Find ("Free Play");
 			freeLabel.SetActive (false);
 		}
 
@@ -211,9 +209,6 @@ public class LobbyHost : MonoBehaviour
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
 
-		if (freeLabel == null) {
-			freeLabel = GameObject.Find ("Free Play");
-		}
 
 		if(freeLabel != null) {
 			if (UXHostController.room.IsPremium) {
@@ -446,18 +441,7 @@ public class LobbyHost : MonoBehaviour
 
 		if (Application.loadedLevelName.Equals("LobbyHost"))
         {
-			/*
-            switch (words[0])
-            {
-				case "PREMIUM":
-					hostController.SetMaxUser (6);
-					f2pLabel.SetActive (false);
-                    break;
-                case "QROff":
-                    //GameObject.Find("QR_Back_Host").transform.localScale = Vector2.zero;
-                    break;
-            }
-            */
+			
 			if (freeLabel == null) {
 				freeLabel = GameObject.Find ("Free Play");
 			} 
@@ -585,9 +569,6 @@ public class LobbyHost : MonoBehaviour
         GUI.skin.label.fontSize = 20;
         GUI.skin.button.fontSize = 40;
 
-        // GUI.Label(new Rect(20, 0, 1600, 800), ":"+ UXLog.GetLogMessage());
-
-        // GUI.Label(new Rect(20, 100, 1600, 800), hostController.GetRoomNumberString());
     }
 
     /********** for game **********/

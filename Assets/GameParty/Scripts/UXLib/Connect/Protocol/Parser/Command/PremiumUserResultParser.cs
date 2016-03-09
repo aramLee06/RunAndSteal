@@ -12,7 +12,7 @@ namespace UXLib.Connect.Protocol.Parser.Command
         {
             JSONNode data = base.baseParse(UXProtocol.Command_Parse.premium_user_result, array);
             //u_code
-            data["u_code"].AsInt = BitConverter.ToInt16(array, 2);
+            data["u_code"].AsInt = BitConverter.ToInt32(array, 2);
             return data;
         }
     }

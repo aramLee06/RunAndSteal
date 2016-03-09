@@ -894,8 +894,8 @@ namespace UXLib
 
 				}
 			} else if (command == "user_del") {
-				Debug.Log ("UserDel: ");
 				int code = N ["u_code"].AsInt;
+				int userIndex = GetUserIndexFromCode (code);
 				room.RemoveUser (GetUserIndexFromCode (code));
 
 				var array = N ["user_list"];
@@ -907,7 +907,6 @@ namespace UXLib
 				}
 
 				if (OnUserRemoved != null) {
-					int userIndex = GetUserIndexFromCode (code);
 					OnUserRemoved (name, code);
 				}
 

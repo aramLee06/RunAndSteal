@@ -17,7 +17,7 @@ namespace UXLib.Connect.Protocol.Parser.Command
 			data ["user_list"] = new JSONArray ();
             for (int i = 0; i < list_len; i++)
             {
-                int code = BitConverter.ToInt16(array, 3 + (i * 2));
+                int code = BitConverter.ToInt32(array, 3 + (i * 4));
                 data["user_list"][i] = code + "." + "Player " + (i + 1);
             }
 

@@ -107,6 +107,7 @@ namespace UXLib
         public delegate void OnUserListReceivedHandler(List<UXUser> list);
         public delegate void OnAckFailedHandler();
         public delegate void OnHostDisconnectedHandler();
+		public delegate void OnGetRemovedIndexHandeler(int idx);
 
         /** Called when user connect to server */
         public event OnConnectedHandler OnConnected;
@@ -185,7 +186,10 @@ namespace UXLib
         public event OnAckFailedHandler OnAckFailed; //x
 
         /** */
-        public event OnHostDisconnectedHandler OnHostDisconnected;
+		public event OnHostDisconnectedHandler OnHostDisconnected;
+
+		/** removed User's Index */
+		public event OnGetRemovedIndexHandeler OnGetRemovedIndex;
 
         public UXConnectController()
             : base("UXConnectController")
@@ -591,7 +595,24 @@ namespace UXLib
             {
                 SendDataToCode(user.GetCode(), msg);
             }
-        }
+		}
+
+		/** Send data to specific user
+            @param userIndex int[] Type
+            @param msg sending data
+            @see UXUser
+        */
+		public void SendDataTo(int[] userIndex, string msg)
+		{
+			List<int> uCodeList = new List<int> ();
+
+			foreach (int index in userIndex) {
+				UXUser user = (UXUser)UXUserController.Instance.GetAt(index);
+				uCodeList.Add (user.GetCode());
+			}
+
+			SendDataToCode(uCodeList.ToArray(), msg);
+		}
 
         /** Send data to specific user
             @param user UXUser Type
@@ -896,7 +917,13 @@ namespace UXLib
 			} else if (command == "user_del") {
 				int code = N ["u_code"].AsInt;
 				int userIndex = GetUserIndexFromCode (code);
-				room.RemoveUser (GetUserIndexFromCode (code));
+
+				Debug.Log ("UserDel: " + userIndex);
+				if ( OnGetRemovedIndex != null) {
+					OnGetRemovedIndex (userIndex);
+				}
+
+				room.RemoveUser (userIndex);
 
 				var array = N ["user_list"];
 

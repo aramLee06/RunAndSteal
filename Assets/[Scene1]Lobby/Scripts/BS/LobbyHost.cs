@@ -17,7 +17,6 @@ public class LobbyHost : MonoBehaviour
     UXAndroidManager androidManager;
 
 	public Text roomNumberTxt;
-	public Text logText;
 	public GameObject freeLabel;
 
     void Awake()
@@ -114,13 +113,13 @@ public class LobbyHost : MonoBehaviour
         {
             
             hostController.SetMaxUser(2); // for GOOGLE
-            f2pLabel.SetActive(true);
+			freeLabel.SetActive(true);
 
         }
         else
         {
 			hostController.SetMaxUser(2); // for GOOGLE
-			f2pLabel.SetActive(true);
+			freeLabel.SetActive(true);
         }
         PopupManager_RaS.IsFreeSetter(true);
         hostController.Connect();
@@ -579,7 +578,6 @@ public class LobbyHost : MonoBehaviour
     private bool isTutorialWatched = false;
 
     public UILabel roomNumberLabel = null;
-    public GameObject f2pLabel;
 
     private bool[] connectedUser = new bool[6];
     private int roomMasterIndex = 0;
@@ -664,10 +662,8 @@ public class LobbyHost : MonoBehaviour
     }
 
 	public void screenLog(string str){
-		//logText.text += "\n" + str;
 	}
 
 	public void screenLogClear(){
-		//logText.text = "LOG :";
 	}
 }

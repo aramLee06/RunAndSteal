@@ -187,14 +187,6 @@ public class LobbyClient : MonoBehaviour
 	void OnJoinSucceeded(bool isHost)
 	{
 		Debug.Log("OnJoinSucceed > isHost : " + isHost);
-		/*
-		m_ClientController.SetPlayerState (UXUser.LobbyState.Wait);
-		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log ("ISPREMIUM : " + inapp.IsPremiumVersion ());
-		if (inapp.IsPremiumVersion ()) {
-			SendToHost ("PREMIUM,");
-		}
-		*/
 
 		AfterJoin();
 	}
@@ -569,10 +561,7 @@ public class LobbyClient : MonoBehaviour
 		}
 		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
 
-		//backDrop.SetActive (false);
 		Destroy (backDrop);
-		//blackOut.SetActive(false);
-		//readyButton.SetActive (true);
 	}
 
 	public void PlayerIndexChanged (int index)

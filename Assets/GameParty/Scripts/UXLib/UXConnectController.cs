@@ -639,6 +639,25 @@ namespace UXLib
             connect.Send(sendString);
         }
 
+		/** Send data to specific user
+		    @param target int[] type
+        */
+		public void SendDataToCode(int[] target, string msg)
+		{//sendDataToUser2
+			string targets = "";
+			for (int i = 0, len = target.Length; i < len; i++) {
+				targets += target [i];
+				if (i != len - 1) {
+					targets += ",";
+				}
+			}
+			string sendString = "{\"cmd\":\"send_target\",\"target\":[" + targets + "],\"data\":";
+			sendString += GetSendDataFormat(msg);
+			sendString += "}" + DATA_DELIMITER;
+			//{"cmd":"send_target","target":["target"],"data":GetSendDataFormat(msg)}232
+			connect.Send(sendString);
+		}
+
         /** Send data to host
             @param msg sending data
         */

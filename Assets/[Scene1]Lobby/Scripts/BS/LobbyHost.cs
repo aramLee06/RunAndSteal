@@ -109,7 +109,6 @@ public class LobbyHost : MonoBehaviour
 		hostController.OnLeavePremiumUser += OnLeavePremiumUser;
 
         hostController.SetAutoStart(2, 1);
-		Debug.Log ("Start freeLabel");
         if (result == false)
         {
             

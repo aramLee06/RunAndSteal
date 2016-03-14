@@ -52,11 +52,16 @@ public class PS_ResultManager : MonoBehaviour
 
 	public void Player1ReplayButton()
 	{
-		lobbyClient.Replay();
+		//lobbyClient.Replay();
+
+		Application.LoadLevel("LobbyClient");
+		lobbyClient.SendAll("Replay");
 	}
 
 	public void Player1ExitButton()
 	{
+		Application.LoadLevel("LobbyClient");
+		lobbyClient.SendAll("Replay");
         PopupManager_RaS.Instance.CloseGame();
 	}
 }

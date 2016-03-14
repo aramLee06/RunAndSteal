@@ -55,8 +55,6 @@ namespace UXLib.User {
 		public void CopyList(List<UXUser> list) {
 
 			// isPremium 정보 일시 저장
-			int preListCnt = objectList.Count;
-
 			List<UXObject> preObjList = new List<UXObject> (objectList);
 			objectList.Clear ();
 

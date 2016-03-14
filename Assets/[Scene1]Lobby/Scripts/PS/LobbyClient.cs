@@ -535,6 +535,7 @@ public class LobbyClient : MonoBehaviour
 		return isRoomMaster;
 	}
 
+	/*
 	public void Replay()
 	{
 		SendAll("Replay");
@@ -543,6 +544,7 @@ public class LobbyClient : MonoBehaviour
 		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");
 	}
+	*/
 
 	public void OnPurchaseSuccess(){
 		//////////////SendToHost ("PREMIUM,");

@@ -53,13 +53,24 @@ namespace UXLib.User {
 		}
 		
 		public void CopyList(List<UXUser> list) {
+
+			// isPremium 정보 일시 저장
+			List<UXObject> preObjList = new List<UXObject> (objectList);
 			objectList.Clear ();
-			
-			for (int i = 0; i < list.Count; i++) {
-				UXUser user = list[i];
+
+			foreach (UXUser user in list) {
+				user.IsPremium = false;
+				foreach (UXObject preObj in preObjList){				
+					UXUser preUser = (UXUser)preObj;
+					if (user.GetCode () == preUser.GetCode ()) {
+						user.IsPremium = preUser.IsPremium;
+					}
+				}
+
 				objectList.Add (user);
 			}
 		}
+
 		
 	}
 }

@@ -11,7 +11,7 @@ using UXLib.UI;
 public class LobbyClient : MonoBehaviour
 {
 
-	// TODO :  게임 기본 패키지 이름, 게임별로 맞게 변경 필요함
+	// Game Package Name
 	public static string GAME_PACKAGE_NAME = "com.cspmedia.runandsteal";
 
 	//int userCode;
@@ -29,6 +29,7 @@ public class LobbyClient : MonoBehaviour
 	private UXAndroidManager m_AndroidManager;
 
 	public PremiumVersionStore inapp;
+	public GameObject backDrop;
 
 	// 현재 플레이어 ID
 	private int _i_PlayerID;
@@ -66,33 +67,18 @@ public class LobbyClient : MonoBehaviour
 	{
 		Screen.orientation = ScreenOrientation.Portrait;
 		Screen.SetResolution(720, 1280, true);
-		
-		blackOut.SetActive(true);
+
+		//blackOut.SetActive(true);
 
 		m_ClientController = UXClientController.Instance;
 		m_PlayerController = UXPlayerController.Instance;
-
-		/*
-		userCode = -1;
-		launcherCode = -1;
-
-		bool result = m_ClientController.SetCode (userCode, launcherCode);
-		result = true;
-		if (result == false) {
-			PopupManager_RaS.IsFreeSetter (true);
-			Application.LoadLevel ("1_Login");
-			return;
-		} else {
-			PopupManager_RaS.IsFreeSetter(false);
-		}
-		*/
 
 		PopupManager_RaS.IsFreeSetter(false); // TOOD : PopupManager 공통 모듈로 바꿔야함
 
 		userCode = m_PlayerController.GetCode(); // 유저 코드 가져옴
 		roomNumber = UXConnectController.GetRoomNumber(); // 방 번호 가져옴
 
-		blackOut.SetActive(false);
+		//blackOut.SetActive(false);
 		
 		//userCode = m_PlayerController.GetCode ();
 		//launcherCode = UXClientController.GetRoomNumber();
@@ -148,7 +134,7 @@ public class LobbyClient : MonoBehaviour
     void Update()
     {
         m_ClientController.Run();
-
+		i_PlayerID = UXRoom.Instance.Player.GetIndex ();
 		if(i_PlayerID >= 0)
 		{
             playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[i_PlayerID];
@@ -183,9 +169,6 @@ public class LobbyClient : MonoBehaviour
 
 	void OnConnectFailed()
 	{
-		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log("OnConnectFailed : " + i_PlayerID);
-		AfterJoin();
 	}
 
 	void OnJoinFailed(int errCode)
@@ -204,16 +187,7 @@ public class LobbyClient : MonoBehaviour
 	void OnJoinSucceeded(bool isHost)
 	{
 		Debug.Log("OnJoinSucceed > isHost : " + isHost);
-		/*
-		m_ClientController.SetPlayerState (UXUser.LobbyState.Wait);
-		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log ("ISPREMIUM : " + inapp.IsPremiumVersion ());
-		if (inapp.IsPremiumVersion ()) {
-			SendToHost ("PREMIUM,");
-		}
-		*/
 
-		Debug.Log("OnJoinSucceeded : " + i_PlayerID);
 		AfterJoin();
 	}
 
@@ -222,16 +196,18 @@ public class LobbyClient : MonoBehaviour
 	void OnUserAdded(int userIndex, int userCode) 
 	{
 		i_PlayerID = m_PlayerController.GetIndex();
-		Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " , PlayerID : " + i_PlayerID);
+		//Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " , PlayerID : " + i_PlayerID);
 	}
 	
 	void OnUserRemoved(string name, int code)
 	{
 		i_PlayerID = m_PlayerController.GetIndex();
+		// Reset State of Ready Button
+		m_PlayerController.SetLobbyState(UXUser.LobbyState.Wait);
 		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 
-	void OnUserLeaved(int userIndex) {
+	void OnUserLeaved(int userIndex) { // 이거슨 안 쓰이는 거지
 		i_PlayerID = userIndex;
 	}
 	
@@ -283,6 +259,13 @@ public class LobbyClient : MonoBehaviour
 		}
 
 		cancelButton.SetActive(false);
+
+		GameObject backdrop2 = GameObject.Find ("BackDrop");
+		if (backdrop2 != null) {
+			backdrop2.SetActive (false);
+		}
+
+		//backDrop.SetActive(false);
 	}
 	
 	void OnExit() {}
@@ -320,7 +303,7 @@ public class LobbyClient : MonoBehaviour
 
         if (words[0] == "Exit")
         {
-            PopupManager_RaS.Instance.CloseGame();
+            //PopupManager_RaS.Instance.CloseGame();
         }
 
 		/*
@@ -421,9 +404,11 @@ public class LobbyClient : MonoBehaviour
 			myRank = System.Convert.ToInt32(words[1]);
 			break;
 		case "Replay":
+			
 			m_ClientController.SendEndGame();
 			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
+
 			break;
 		}
 	}
@@ -508,13 +493,15 @@ public class LobbyClient : MonoBehaviour
 		m_ClientController.SendDataTo(m_PlayerController, msg);
 	}
 
+	/*
 	public UXUser.LobbyState GetLobbyState()
 	{
 		return m_PlayerController.GetLobbyState();
 	}
+	*/
 
 	// Phone Screen UI
-	public GameObject blackOut = null;
+	//public GameObject blackOut = null;
 
 	public GameObject playerNumber = null;
 	public Sprite[] playerNumberSprite = new Sprite[6];
@@ -548,6 +535,7 @@ public class LobbyClient : MonoBehaviour
 		return isRoomMaster;
 	}
 
+	/*
 	public void Replay()
 	{
 		SendAll("Replay");
@@ -556,23 +544,31 @@ public class LobbyClient : MonoBehaviour
 		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");
 	}
+	*/
 
 	public void OnPurchaseSuccess(){
-		SendToHost ("PREMIUM,");
+		//////////////SendToHost ("PREMIUM,");
+		UXPlayerController player = UXPlayerController.Instance;
+		player.IsPremium = true;
 	}
 
 	public void AfterJoin ()
 	{
+		Debug.Log ( "AfterJoin " + inapp.IsPremiumVersion());
 		if (inapp.IsPremiumVersion())
 		{
-			SendToHost("PREMIUM,");
+			////////////SendToHost("PREMIUM,");
+			UXPlayerController player = UXPlayerController.Instance;
+			player.IsPremium = true;
 		}
 		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
+
+		Destroy (backDrop);
 	}
 
 	public void PlayerIndexChanged (int index)
 	{
-		Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
+		//Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
 		if(index >= 0)
 		{
 			playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[index];

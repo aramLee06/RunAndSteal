@@ -30,8 +30,7 @@ MonoBehaviour:
     - name: Soomla.Store.NoneBP
       value: 
     - name: Soomla.Store.AndroidPublicKey
-      value: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjpT+i9iWQKrM00mby2IUs4Gc+VxnC8A0pcKxQMnY0x7PGpw8SXowVeXaDgCoWK81SZ1OrxwSEsuEBjxmpaZHizTUVQpZ/jLBrtOcN4w8ifradAHfpveV5KB7Mu499fzS6uv21LMV00FJI7BzpTXnuYj1f1YGJmaWjlJXWma9pZ9f/nSeabUtV8mpkjsF5y0YbnBvO/MPrJWFge4EcfvpPPxUd7pjvOtwZCeeIaMbktGq9Cy87PBksYYwlxI5pyjthx4mU2Lq6aN/goEUn2WlxQVFnuwXNzEhvNCGiznrAOLZDUxDA17PhluQ9ROV0I+NDgl1pvulniJ0pdx+s1QONQIDAQAB
-        +XKBZAO32ta4IM2dYv2U0zrclRgOIEs4TK+uBVBQf7MgURixE7OheuVogPtaEuvjBJJJsuIY/sT8n3q6flFA4zIhA15R5pLs6xvR068kIZNGLpy0Uqrw8Zpe7OfYkj27jPGymMb57KKxSbY0vsGfRweK73f2EWXKXCkN8qda+JqS9gGJR4gb3VWdPArLq18QVl7bDkEQXPbbBFyb1BxREbHizc8Ye/n6b85k0hTA9ii3RgAUfeppXADCEUwOCaWLpSdAm9rPMh/PazVtYF1oVq+5sL8Lv+9/i7iHMmYNGiBY/cr1xtrwIDAQAB
+      value: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjCGvcIdaysHjnP6MH64OB+8eYD7ZN72yA4wNIHij1iejpJGQDz7xgRd3hKVPqONH88uJgrrVjrBMv8Ijls5dJlbW8mSsDNA8TE4GOcPwBOpbWk8sWwRjmHB1M2Rf+aMfwqK7GhCS8x37G8XnJZ5UsuicjGmWvZVNHdNHcKQgbKRrQA9m8fxwsA0NwC2vWTehWYjOSbx+hLw2vYQm+17AlGiG/R0D7YAX8h3dmDLxVd3+xIhhTDyPXKKXP4KRFQ5+QR/wf3Avb5nLH0CieVxtueSXY5HbX0HbjDKQy+/liauBO6vHhaLzfiR1m0kc6xAk8bqHPe1C5QrqWeJKfqEZsQIDAQAB
     - name: Soomla.Store.AndroidTestPurchases
       value: False
     - name: Soomla.Store.PlaySsvValidation

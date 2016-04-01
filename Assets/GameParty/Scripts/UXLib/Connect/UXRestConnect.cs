@@ -26,11 +26,13 @@ namespace UXLib.Connect
 		}
 		
 		public static string Request(string endPoint, string method, string data) {
+            Debug.Log(UXConnectController.BASE_REST_URL);
 			return RequestURL(UXConnectController.BASE_REST_URL, endPoint, method, data);
 		} 
 		
 		public static string RequestURL(string baseURL, string endPoint, string method, string data) {
 			string url = baseURL + "/" + endPoint;
+            Debug.Log(url);
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 			
 			request.Method = method;

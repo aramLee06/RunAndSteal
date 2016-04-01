@@ -17,14 +17,29 @@ namespace UXLib.User {
 
 		string token;
 		string imageURL;
-		
+		UXRoomConnect roomConnect;
 		UXUser.LobbyState lobbyState;
 		string lastReceivedData;
 		
 		bool isLauncherLogin;
 		bool isUserLogin;
+		public static char DATA_DELIMITER = (char)232;//여기서 자름
 
-		
+		private bool isPremium = false; //현재 플레이어가 프리미엄 버전인지에 대한 여부 (초기값 false)
+		public bool IsPremium
+		{
+			get{
+				return isPremium;
+			}
+			set{
+				this.isPremium = value;
+				if (isPremium) {
+					string sendString = "{\"cmd\":\"premium_user\",\"u_code\":\"" + GetCode () + "\",\"l_code\":\"" + UXConnectController.room.RoomNumber+ "\"}" + DATA_DELIMITER;
+					roomConnect.Send (sendString);
+				}
+			}
+		} 
+
 		private static UXPlayerController instance = null;
 		public static UXPlayerController Instance {
 			get {
@@ -38,7 +53,8 @@ namespace UXLib.User {
 		private UXPlayerController() : base("player") {
 			isLauncherLogin = false;
 			isUserLogin = false;
-			
+			roomConnect = UXRoomConnect.Instance;
+
 			name = "";
 			code = -1;
 		}
@@ -69,33 +85,15 @@ namespace UXLib.User {
 		string deviceNumber = SystemInfo.deviceUniqueIdentifier;
 
 		public int GetUserCodeFromServer() {
-			JSONClass json = new JSONClass();
-			json.Add ("mac", deviceNumber);
-			
-			string recData = UXRestConnect.Request("users/token", UXRestConnect.REST_METHOD_POST, json.ToString()); 
-			if (recData == null) {
-				return UXRestConnect.RESULT_ERROR;
-			}
-			
-			lastReceivedData = recData;
-			
-			var N = JSON.Parse(recData);
-			int rec = N["gp_ack"].AsInt;
-			
-			bool result	= (rec == UXRoomConnect.ACK_RESULT_OK);
-			
-			if (result == true) { 
+			string recData = UXRestConnect.Request("user/uuid", UXRestConnect.REST_METHOD_GET, ""); 
+			Debug.Log (recData);
 
-				code = N["u_code"].AsInt;
-				token = N["token"];
-				
-				isUserLogin = true;
-				return UXRestConnect.RESULT_TRUE;
-			} 
+			var N = JSON.Parse(recData);
+			code = N["uuid"].AsInt;
 			
-			isUserLogin = false;
+			isUserLogin = true;
 			
-			return UXRestConnect.RESULT_FALSE;
+			return UXRestConnect.RESULT_TRUE;
 		}
 
 		/** Not used */

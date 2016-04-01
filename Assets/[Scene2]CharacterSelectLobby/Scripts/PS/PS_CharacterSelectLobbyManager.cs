@@ -40,6 +40,7 @@ public class PS_CharacterSelectLobbyManager : MonoBehaviour
 					characterList.GetComponent<UIScrollView>().enabled = false;
 					selectedCharacter = i;
 					lobbyClient.myCharacter = (int)selectedCharacter;
+					Debug.Log ("SelectBtn :: " + selectedCharacter);
 					lobbyClient.SendToHost("CharacterSelect," + selectedCharacter);
 
 					Camera.main.GetComponent<AudioSource>().PlayOneShot(selectSound);

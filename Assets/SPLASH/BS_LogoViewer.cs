@@ -27,18 +27,18 @@ public class BS_LogoViewer : MonoBehaviour
     IEnumerator Start()
     {
         BuildType = buildType;
-        Debug.Log("FIFIFIFIFIFIFIFI" + BuildType.ToString());
+		Debug.Log("BS_LogoViewer Start() : " + BuildType.ToString());
 
         switch (buildType)
         {
             case BUILDTYPE.DEFAULT:
-                UXLib.UXConnectController.ROOM_SERVER_PORT = 5000;
+                //UXLib.UXConnectController.ROOM_SERVER_PORT = 4000;
                 //UXLib.UXConnectController.REST_SERVER_PORT = 3000;
                 break;
             case BUILDTYPE.MHT:
             case BUILDTYPE.TOGIC:
             case BUILDTYPE.TAIWAN:
-                UXLib.UXConnectController.ROOM_SERVER_PORT = 5000;
+                //UXLib.UXConnectController.ROOM_SERVER_PORT = 4000;
                 //UXLib.UXConnectController.REST_SERVER_PORT = 3000;
                 break;
         }

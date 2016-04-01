@@ -56,39 +56,12 @@ public class BS_ResultManager : MonoBehaviour
 	{
 		lobbyHost = GameObject.Find ("LobbyHost").GetComponent<LobbyHost>();
 
-		/*
-		// Test Data
-		lobby.GetPlayerCount() = 3;
-
-		lobby.selectedPlayerCharacter[0] = (int)CHARACTER_TYPE.CHARACTER_JOHNNY;
-		lobby.selectedPlayerCharacter[1] = (int)CHARACTER_TYPE.CHARACTER_JEAN;
-		lobby.selectedPlayerCharacter[2] = (int)CHARACTER_TYPE.CHARACTER_BUNNEE;
-
-		lobby.itemScore[0, 0] = 20;
-		lobby.itemScore[0, 1] = 30;
-		lobby.itemScore[0, 2] = 30;
-		lobby.itemScore[0, 3] = 20;
-		lobby.itemScore[0, 4] = 10;
-		lobby.itemScore[1, 0] = 12;
-		lobby.itemScore[1, 1] = 3;
-		lobby.itemScore[1, 2] = 12;
-		lobby.itemScore[1, 3] = 32;
-		lobby.itemScore[1, 4] = 12;
-		lobby.itemScore[2, 0] = 35;
-		lobby.itemScore[2, 1] = 32;
-		lobby.itemScore[2, 2] = 12;
-		lobby.itemScore[2, 3] = 17;
-		lobby.itemScore[2, 4] = 7;
-
-		lobby.totalScore[0] = 500;
-		lobby.totalScore[1] = 2000;
-		lobby.totalScore[2] = 1000;
-		*/
-
+		// Game에 참가한 Player만 점수판 표시
 		for(int i = 0; i < playerTable.Length; i++)
 		{
 			if(i < lobbyHost.GetPlayerCount())
 			{
+				// 연결이 끊어진 Player는 표시 하지 않음
 				if(lobbyHost.selectedPlayerCharacter[i] == (int)CHARACTER_TYPE.CHARACTER_DISCONNECTED)
 				{
 					playerTable[i].SetActive(false);
@@ -202,10 +175,14 @@ public class BS_ResultManager : MonoBehaviour
 
 	void CalculateRank()
 	{
+		// A -> B (a.length)
 		Array.Copy(lobbyHost.totalScore, sortedTotalScore, lobbyHost.totalScore.Length);
+		// 오름차순 정렬
 		Array.Sort(sortedTotalScore);
+		// 뒤집기
 		Array.Reverse(sortedTotalScore);
 
+		// player 등수 찾기
 		for(int i = 0; i < lobbyHost.totalScore.Length; i++)
 		{
 			for(int j = 0; j < sortedTotalScore.Length; j++)
@@ -217,7 +194,8 @@ public class BS_ResultManager : MonoBehaviour
 				}		
 			}
 		}
-		
+
+		// A -> B (a.length)
 		Array.Copy (playerRank, playerRealRank, playerRank.Length);
 		for(int i = 0; i < playerRealRank.Length; i++)
 		{

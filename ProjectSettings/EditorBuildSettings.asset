@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Examples/MuffinRush/scene.unity
+  - enabled: 0
+    path: Assets/Examples/MuffinRush/MuffinRush.unity
+  - enabled: 1
+    path: Assets/GameParty/Scenes/Intro/SelectType.unity
+  - enabled: 1
+    path: Assets/GameParty/Scenes/Login/1_Login.unity
+  - enabled: 1
+    path: Assets/GameParty/Scenes/Login/2_RoomNumber.unity
+  - enabled: 1
+    path: Assets/[Scene1]Lobby/LobbyClient.unity
+  - enabled: 1
+    path: Assets/[Scene2]CharacterSelectLobby/CharacterSelectLobbyPS.unity
+  - enabled: 1
+    path: Assets/[Scene3]Tutorial/TutorialPS.unity
+  - enabled: 1
+    path: Assets/[Scene5]InGame/InGamePS.unity
+  - enabled: 1
+    path: Assets/[Scene6]Result/ResultPS.unity
+  - enabled: 1
+    path: Assets/SPLASH/BS_LogoViewer.unity
+  - enabled: 1
+    path: Assets/[Scene1]Lobby/LobbyHost.unity
+  - enabled: 1
+    path: Assets/[Scene2]CharacterSelectLobby/CharacterSelectLobbyBS.unity
+  - enabled: 1
+    path: Assets/[Scene3]Tutorial/TutorialBS_Android.unity
+  - enabled: 1
+    path: Assets/[Scene4]GameLoading/GameLoadingBS.unity
+  - enabled: 1
+    path: Assets/[Scene3]Tutorial/TutorialBS_PC.unity
+  - enabled: 1
+    path: Assets/[Scene5]InGame/InGameBS.unity
+  - enabled: 1
+    path: Assets/[Scene6]Result/ResultBS.unity

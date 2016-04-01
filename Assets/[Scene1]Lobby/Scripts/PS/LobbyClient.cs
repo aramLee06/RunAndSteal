@@ -10,15 +10,42 @@ using UXLib.UI;
 
 public class LobbyClient : MonoBehaviour
 {
-	int userCode;
-	public static int launcherCode;
-	
-	UXPlayerController player;
-	UXClientController clientController;
 
-	UXAndroidManager androidManager;
+	// Game Package Name
+	public static string GAME_PACKAGE_NAME = "com.cspmedia.runandsteal";
 
-	PremiumVersionStore inapp;
+	//int userCode;
+	//public static int launcherCode;
+
+	int userCode; // 접속용 유저 코드, SDK 1.5에서 삭제 예정	
+	public static int roomNumber;
+
+	//UXPlayerController player;
+	//UXClientController clientController;
+	private UXPlayerController m_PlayerController; 
+	private UXClientController m_ClientController;
+
+	//UXAndroidManager androidManager;
+	private UXAndroidManager m_AndroidManager;
+
+	public PremiumVersionStore inapp;
+	public GameObject backDrop;
+
+	// 현재 플레이어 ID
+	private int _i_PlayerID;
+	public int i_PlayerID {
+		get {
+			return this._i_PlayerID;
+		}
+		set {
+			PlayerIndexChanged (value);	
+			this._i_PlayerID = value;
+		}
+	}
+
+	private bool isRoomMaster = false; // 접속한 방의 방장인지?
+
+	private int i_AckFailedCount = 0; // ACK 실패 횟수
 
 	void Awake ()
 	{
@@ -27,97 +54,90 @@ public class LobbyClient : MonoBehaviour
 			Destroy(this.gameObject);
 			return;
 		}
-
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+		#if UNITY_ANDROID && !UNITY_EDITOR
 		GameObject go = GameObject.Find ("AndroidManager");
-		androidManager = go.GetComponent<UXAndroidManager> ();
-		androidManager.LockWifi();
-#endif
+		m_AndroidManager = go.GetComponent<UXAndroidManager> ();
+		m_AndroidManager.LockWifi();
+		#endif
 	}
 
 	void Start ()
 	{
 		Screen.orientation = ScreenOrientation.Portrait;
 		Screen.SetResolution(720, 1280, true);
+
+		//blackOut.SetActive(true);
+
+		m_ClientController = UXClientController.Instance;
+		m_PlayerController = UXPlayerController.Instance;
+
+		PopupManager_RaS.IsFreeSetter(false); // TOOD : PopupManager 공통 모듈로 바꿔야함
+
+		userCode = m_PlayerController.GetCode(); // 유저 코드 가져옴
+		roomNumber = UXConnectController.GetRoomNumber(); // 방 번호 가져옴
+
+		//blackOut.SetActive(false);
 		
-		blackOut.SetActive(true);
+		//userCode = m_PlayerController.GetCode ();
+		//launcherCode = UXClientController.GetRoomNumber();
 
-		clientController = UXClientController.Instance;
-		player = UXPlayerController.Instance;
+		i_PlayerID = m_PlayerController.GetIndex();
 
-		userCode = -1;
-		launcherCode = -1;
-
-		inapp = GameObject.Find ("InAppPurchase").GetComponent<PremiumVersionStore> ();
-
-		bool result = clientController.SetCode (userCode, launcherCode);
-		result = true;
-		if (result == false) {
-			PopupManager_RaS.IsFreeSetter (true);
-			Application.LoadLevel ("1_Login");
-			return;
-		} else {
-			PopupManager_RaS.IsFreeSetter(false);
-		}
-
-		blackOut.SetActive(false);
+		m_ClientController.OnConnected += OnConnected;
+		m_ClientController.OnConnectFailed += OnConnectFailed;
+		m_ClientController.OnJoinSucceeded += OnJoinSucceeded;
+		m_ClientController.OnJoinFailed += OnJoinFailed;
+		m_ClientController.OnDisconnected += OnDisconnected;
 		
-		userCode = player.GetCode ();
-		launcherCode = UXClientController.GetRoomNumber();
-
-		playerID = player.GetIndex();
-
-		clientController.OnConnected += OnConnected;
-		clientController.OnConnectFailed += OnConnected;
-		clientController.OnJoinFailed += OnJoinFailed;
-		clientController.OnJoinSucceeded += OnJoinSucceeded;
-		clientController.OnDisconnected += OnDisconnected;
+		m_ClientController.OnUserAdded += OnUserAdded;
+		m_ClientController.OnUserRemoved += OnUserRemoved;
+		m_ClientController.OnUserLeaved += OnUserLeaved;
+		m_ClientController.OnNetworkReported += OnNetworkReported;
+		m_ClientController.OnUpdateReadyCount += OnUpdateReadyCount;
 		
-		clientController.OnUserAdded += OnUserAdded;
-		clientController.OnUserRemoved += OnUserRemoved;
-		clientController.OnNetworkReported += OnNetworkReported;
-		clientController.OnUpdateReadyCount += OnUpdateReadyCount;
-		clientController.OnUserLeaved += OnUserLeaved;
+		m_ClientController.OnGameStart += OnGameStart;
+		m_ClientController.OnGameRestart += OnGameRestart;
+		m_ClientController.OnGameResult += OnGameResult;
+		m_ClientController.OnIndexChanged += OnIndexChanged;
 		
-		clientController.OnGameStart += OnGameStart;
-		clientController.OnGameRestart += OnGameRestart;
-		clientController.OnGameResult += OnGameResult;
-		clientController.OnIndexChanged += OnIndexChanged;
-		
-		clientController.OnUserListReceived += OnUserListReceived;
-		clientController.OnGameEnd += OnGameEnd;
-		clientController.OnExit += OnExit;
-		clientController.OnAckFailed += OnAckFailed;
-		clientController.OnHostDisconnected += OnHostDisconnected;
+		m_ClientController.OnUserListReceived += OnUserListReceived;
+		m_ClientController.OnGameEnd += OnGameEnd;
+		m_ClientController.OnExit += OnExit;
+		m_ClientController.OnAckFailed += OnAckFailed;
+		m_ClientController.OnHostDisconnected += OnHostDisconnected;
 
-		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
+		//inapp.OnPurchaseSuccess += OnPurchaseSuccess;
 		
 		//==========================================
-		clientController.OnHostJoined += OnHostJoined;
-		clientController.OnError += OnError;
-		clientController.OnReceived += OnReceived;
+		m_ClientController.OnHostJoined += OnHostJoined;
+		m_ClientController.OnError += OnError;
+		m_ClientController.OnReceived += OnReceived;
 		//==========================================
 			
-		if(clientController.IsConnected() == false)
+		if(m_ClientController.IsConnected() == false)
 		{
-			clientController.Connect();
+			m_ClientController.Connect();
         }
         else
         {
-            clientController.Join("none");
+            //m_ClientController.Join("none");
+			m_ClientController.Join(GAME_PACKAGE_NAME);
         }
 
 		cancelButton.SetActive(false);
+
+		DontDestroyOnLoad(this.gameObject);
 	}
 
     void Update()
     {
-        clientController.Run();
-		if(playerID >= 0)
+        m_ClientController.Run();
+		i_PlayerID = UXRoom.Instance.Player.GetIndex ();
+		if(i_PlayerID >= 0)
 		{
-            playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[playerID];
+            playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[i_PlayerID];
         }
 
 		if(Input.GetKeyDown(KeyCode.Escape) == true)
@@ -125,92 +145,79 @@ public class LobbyClient : MonoBehaviour
 			//PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
 
-		if(player.GetLobbyState() == UXUser.LobbyState.Ready)
+		if(m_PlayerController.GetLobbyState() == UXUser.LobbyState.Ready)
 		{
 			readyButton.SetActive(false);
 			cancelButton.SetActive(true);
 		}
-		else if(player.GetLobbyState() == UXUser.LobbyState.Wait)
+		else if(m_PlayerController.GetLobbyState() == UXUser.LobbyState.Wait)
 		{
 			readyButton.SetActive(true);
 			cancelButton.SetActive(false);
 		}
 	}
 
-	void OnApplicationFocus(bool state)
-	{
-	}
+	void OnApplicationFocus(bool state) {}
 
 	void OnConnected()
 	{
 		Debug.Log("OnServerConnected:-------");
-
-		clientController.Join("none");
+		//m_ClientController.Join("none");
 		//GameObject.Find ("QR_Back").GetComponent<QROnOff_ras> ().Init ();
+		m_ClientController.Join(GAME_PACKAGE_NAME);
+	}
+
+	void OnConnectFailed()
+	{
 	}
 
 	void OnJoinFailed(int errCode)
 	{
 		Debug.Log ("OnJoinFailed > " + errCode);
 
-		if (errCode == UXConnectController.JE_MAX_USER) 
-		{
+		//if (errCode == UXConnectController.JE_MAX_USER) 
+		//{
 			//PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_MAXUSER);
-		}
+		//}
+		Clear();
+		RoomNumberWindow.latest_errCode = errCode;
+		Application.LoadLevel("2_RoomNumber");
 	}
 
 	void OnJoinSucceeded(bool isHost)
 	{
 		Debug.Log("OnJoinSucceed > isHost : " + isHost);
-		clientController.SetPlayerState (UXUser.LobbyState.Wait);
-		playerID = player.GetIndex();
-		if (inapp.IsPremiumVersion ()) {
-			SendToHost ("PREMIUM,");
-		}
+
+		AfterJoin();
 	}
 
-	void OnDisconnected()
-    {
-	}
+	void OnDisconnected() {}
 
 	void OnUserAdded(int userIndex, int userCode) 
 	{
-		Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode);
-
-		playerID = player.GetIndex();
+		i_PlayerID = m_PlayerController.GetIndex();
+		//Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " , PlayerID : " + i_PlayerID);
 	}
 	
 	void OnUserRemoved(string name, int code)
 	{
-		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code);
-
-		playerID = player.GetIndex();
+		i_PlayerID = m_PlayerController.GetIndex();
+		// Reset State of Ready Button
+		m_PlayerController.SetLobbyState(UXUser.LobbyState.Wait);
+		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 
-	void OnUserLeaved(int userIndex)
-	{
-
+	void OnUserLeaved(int userIndex) { // 이거슨 안 쓰이는 거지
+		i_PlayerID = userIndex;
 	}
 	
-	void OnNetworkReported(int count, float time)
-	{
-		Debug.Log("OnNetworkReported > count : " + count + ", time : " + time);
-	}
+	void OnNetworkReported(int count, float time) {}
 
-	void OnUserLobbyStateChanged(int userIndex, UXUser.LobbyState state)
-	{
-		Debug.Log("OnUserLobbyStateChanged > userIndex : " + userIndex + ", state : " + state);
-	}
+	void OnUserLobbyStateChanged(int userIndex, UXUser.LobbyState state) {}
 	
-	void OnAutoCountChanged(int restSecond) 
-	{
-		Debug.Log("OnAutoCountChanged > restSecond:" + restSecond);
-	}
-	
-	void OnUpdateReadyCount(int ready, int total)
-	{
-		Debug.Log("OnUpdateReadyCount > ready : " + ready + ", total : " + total);
-	}
+	void OnAutoCountChanged(int restSecond)  {}
+
+	void OnUpdateReadyCount(int ready, int total) {}
 	
 	void OnGameStart() 
 	{
@@ -228,28 +235,19 @@ public class LobbyClient : MonoBehaviour
 		Application.LoadLevel("CharacterSelectLobbyPS");
 	}
 	
-	void OnGameRestart()
-	{
-		Debug.Log("Restart Game");
-	}
+	void OnGameRestart() {}
 	
-	void OnGameResult()
-	{
-		Debug.Log("OnGameResult");
-	}
+	void OnGameResult() {}
 	
 	void OnIndexChanged(int idx) 
 	{
 		Debug.Log ("OnIndexChanged > idx : " + idx);
 		
-		playerID = idx;
+		i_PlayerID = idx;
 		//GameObject.Find ("QR_Back").GetComponent<QROnOff_ras> ().Init ();
 	}
 	
-	void OnUserListReceived(List<UXUser> list)
-	{
-		Debug.Log ("OnUserListReceived > list : " + list.Count);
-	}
+	void OnUserListReceived(List<UXUser> list) {}
 	
 	void OnGameEnd()
 	{
@@ -261,12 +259,16 @@ public class LobbyClient : MonoBehaviour
 		}
 
 		cancelButton.SetActive(false);
+
+		GameObject backdrop2 = GameObject.Find ("BackDrop");
+		if (backdrop2 != null) {
+			backdrop2.SetActive (false);
+		}
+
+		//backDrop.SetActive(false);
 	}
 	
-	void OnExit()
-	{
-		Debug.Log("Game Exit");
-	}
+	void OnExit() {}
 
 	void OnAckFailed ()
 	{
@@ -284,15 +286,9 @@ public class LobbyClient : MonoBehaviour
         PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED);
 	}
 	
-	void OnHostJoined()
-	{
-		Debug.Log("OnHostJoined");
-	}
+	void OnHostJoined() {}
 	
-	void OnError(int err, string msg)
-	{
-		Debug.Log("OnError > err : " + err + ", msg : " + msg);
-	}
+	void OnError(int err, string msg) {}
 	
 	void OnReceived(int userIndex, string msg)
 	{
@@ -307,9 +303,10 @@ public class LobbyClient : MonoBehaviour
 
         if (words[0] == "Exit")
         {
-            PopupManager_RaS.Instance.CloseGame();
+            //PopupManager_RaS.Instance.CloseGame();
         }
 
+		/*
 		if (Application.loadedLevelName == "LobbyClient") {
 			switch(words[0])
 			{
@@ -321,6 +318,7 @@ public class LobbyClient : MonoBehaviour
 					break;
 			}
 		}
+		*/
 
 		GameObject phoneScreen = GameObject.Find ("PS"); 
 		if(phoneScreen == null)
@@ -387,7 +385,7 @@ public class LobbyClient : MonoBehaviour
 			myScore = System.Convert.ToInt32(words[1]);
 			break;
 		case "StartResult":
-			if(playerID == System.Convert.ToInt32(words[1]))
+			if(i_PlayerID == System.Convert.ToInt32(words[1]))
 			{
 				isRoomMaster = true;
 			}
@@ -406,51 +404,53 @@ public class LobbyClient : MonoBehaviour
 			myRank = System.Convert.ToInt32(words[1]);
 			break;
 		case "Replay":
-			clientController.SendEndGame();
-			clientController.SetPlayerState(UXUser.LobbyState.Wait);
+			
+			m_ClientController.SendEndGame();
+			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
+
 			break;
 		}
 	}
     
     public void Clear()
 	{
-        if (clientController != null)
+        if (m_ClientController != null)
         {
-            clientController.OnConnected -= OnConnected;
-            clientController.OnConnectFailed -= OnConnected;
-            clientController.OnJoinFailed -= OnJoinFailed;
-            clientController.OnJoinSucceeded -= OnJoinSucceeded;
-            clientController.OnDisconnected -= OnDisconnected;
+            m_ClientController.OnConnected -= OnConnected;
+            m_ClientController.OnConnectFailed -= OnConnected;
+            m_ClientController.OnJoinFailed -= OnJoinFailed;
+            m_ClientController.OnJoinSucceeded -= OnJoinSucceeded;
+            m_ClientController.OnDisconnected -= OnDisconnected;
 
-            clientController.OnUserAdded -= OnUserAdded;
-            clientController.OnUserRemoved -= OnUserRemoved;
-            clientController.OnNetworkReported -= OnNetworkReported;
+            m_ClientController.OnUserAdded -= OnUserAdded;
+            m_ClientController.OnUserRemoved -= OnUserRemoved;
+            m_ClientController.OnNetworkReported -= OnNetworkReported;
 
-            clientController.OnUpdateReadyCount -= OnUpdateReadyCount;
-            clientController.OnUserLeaved -= OnUserLeaved;
+            m_ClientController.OnUpdateReadyCount -= OnUpdateReadyCount;
+            m_ClientController.OnUserLeaved -= OnUserLeaved;
 
-            clientController.OnGameStart -= OnGameStart;
-            clientController.OnGameRestart -= OnGameRestart;
-            clientController.OnGameResult -= OnGameResult;
-            clientController.OnIndexChanged -= OnIndexChanged;
+            m_ClientController.OnGameStart -= OnGameStart;
+            m_ClientController.OnGameRestart -= OnGameRestart;
+            m_ClientController.OnGameResult -= OnGameResult;
+            m_ClientController.OnIndexChanged -= OnIndexChanged;
 
-            clientController.OnUserListReceived -= OnUserListReceived;
-            clientController.OnGameEnd -= OnGameEnd;
-            clientController.OnExit -= OnExit;
-            clientController.OnAckFailed -= OnAckFailed;
-            clientController.OnHostDisconnected -= OnHostDisconnected;
+            m_ClientController.OnUserListReceived -= OnUserListReceived;
+            m_ClientController.OnGameEnd -= OnGameEnd;
+            m_ClientController.OnExit -= OnExit;
+            m_ClientController.OnAckFailed -= OnAckFailed;
+            m_ClientController.OnHostDisconnected -= OnHostDisconnected;
 
             //==========================================
-            clientController.OnHostJoined -= OnHostJoined;
-            clientController.OnError -= OnError;
-            clientController.OnReceived -= OnReceived;
+            m_ClientController.OnHostJoined -= OnHostJoined;
+            m_ClientController.OnError -= OnError;
+            m_ClientController.OnReceived -= OnReceived;
             //==========================================
 
             //[FOR ONEPAD]
             //GamePadDownLoad.Instance.bundle.Unload(false);
 
-            clientController = null;
+            m_ClientController = null;
         }
 
         GameObject.Destroy(gameObject);
@@ -468,33 +468,40 @@ public class LobbyClient : MonoBehaviour
 	}
 
 	/********** for game **********/
-	private int playerID = -1;
-	private bool isRoomMaster = false;
+	//private int i_PlayerID = -1;
+	//private bool isRoomMaster = false;
 
 	private int ackFailedCount = 0;
 
 	public int GetPlayerID()
 	{
-		return playerID;
+		return i_PlayerID;
 	}
 
 	public void SendAll(string str)
 	{
-		clientController.SendData(str);
+		m_ClientController.SendData(str);
 	}
 	
 	public void SendToHost(string str)
 	{
-		clientController.SendDataToHost(str);
+		m_ClientController.SendDataToHost(str);
 	}
 	
-	public void SendTo(int player, string msg)
+	public void SendTo(int m_PlayerController, string msg)
 	{
-		clientController.SendDataTo(player, msg);
+		m_ClientController.SendDataTo(m_PlayerController, msg);
 	}
 
+	/*
+	public UXUser.LobbyState GetLobbyState()
+	{
+		return m_PlayerController.GetLobbyState();
+	}
+	*/
+
 	// Phone Screen UI
-	public GameObject blackOut = null;
+	//public GameObject blackOut = null;
 
 	public GameObject playerNumber = null;
 	public Sprite[] playerNumberSprite = new Sprite[6];
@@ -511,14 +518,14 @@ public class LobbyClient : MonoBehaviour
 	
 	public void ReadyButton()
 	{
-		clientController.SetPlayerState(UXUser.LobbyState.Ready);
+		m_ClientController.SetPlayerState(UXUser.LobbyState.Ready);
 		
 		Camera.main.GetComponent<AudioSource>().PlayOneShot(readyButtonSound);
 	}
 	
 	public void CancelButton()
 	{
-		clientController.SetPlayerState(UXUser.LobbyState.Wait);
+		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		
 		Camera.main.GetComponent<AudioSource>().PlayOneShot(readyButtonSound);
 	}
@@ -528,16 +535,45 @@ public class LobbyClient : MonoBehaviour
 		return isRoomMaster;
 	}
 
+	/*
 	public void Replay()
 	{
 		SendAll("Replay");
 
-		clientController.SendEndGame();
-		clientController.SetPlayerState(UXUser.LobbyState.Wait);
+		m_ClientController.SendEndGame();
+		m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 		Application.LoadLevel("LobbyClient");
 	}
+	*/
 
 	public void OnPurchaseSuccess(){
-		SendToHost ("PREMIUM,");
+		//////////////SendToHost ("PREMIUM,");
+		UXPlayerController player = UXPlayerController.Instance;
+		player.IsPremium = true;
 	}
+
+	public void AfterJoin ()
+	{
+		Debug.Log ( "AfterJoin " + inapp.IsPremiumVersion());
+		if (inapp.IsPremiumVersion())
+		{
+			////////////SendToHost("PREMIUM,");
+			UXPlayerController player = UXPlayerController.Instance;
+			player.IsPremium = true;
+		}
+		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
+
+		Destroy (backDrop);
+	}
+
+	public void PlayerIndexChanged (int index)
+	{
+		//Debug.Log("PlayerIndexChanged : " + index + " player. " + i_PlayerID);
+		if(index >= 0)
+		{
+			playerNumber.GetComponent<SpriteRenderer>().sprite = playerNumberSprite[index];
+		}
+	}
+
+
 }

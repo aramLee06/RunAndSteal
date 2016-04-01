@@ -687,7 +687,12 @@ namespace SimpleJSON
 			stream.Position = 0;
 			return LoadFromStream (stream);
 		}
-	}
+
+        public JSONNode()
+        {
+            // TODO: Complete member initialization
+        }
+    }
 	// End of JSONNode
 	
 	public class JSONArray : JSONNode, IEnumerable

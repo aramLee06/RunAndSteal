@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fader
+  - Item
+  - FxTemporaire
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Floor
+  - Character
+  - Item
+  - Wall
+  - Store
+  - Car
+  - ScoringPosition
+  - ScoredItem
+  - Magnet
+  - StoreGate
+  - 
+  - BackDropTag
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3084365827
+    locked: 0
+  - name: Player
+    uniqueID: 1344621165
+    locked: 0
+  - name: Title
+    uniqueID: 3662426489
+    locked: 0
+  - name: Controller
+    uniqueID: 3127460971
+    locked: 0
+  - name: TouchLight
+    uniqueID: 1652584259
+    locked: 0

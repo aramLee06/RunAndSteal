@@ -26,6 +26,8 @@ public class RoomNumberWindow : MonoBehaviour {
 	UXClientController clientController;
 	CommonLang commonLang;
 
+	public static int latest_errCode = -1;
+
 	public Text noti;
 
 	void Start () {
@@ -41,7 +43,7 @@ public class RoomNumberWindow : MonoBehaviour {
 		clientController = UXClientController.Instance;
 
 		commonLang = CommonLang.instance;
-		Debug.Log (commonLang.langList.Count);
+		//Debug.Log (commonLang.langList.Count);
 		noti.text = commonLang.langList[1];
 
 		clientController.OnConnected += OnConnected;
@@ -55,14 +57,18 @@ public class RoomNumberWindow : MonoBehaviour {
 			serverConnect.SetActive(true);
 			clientController.Connect();
 		}
-
-
 		
 		if(string.IsNullOrEmpty(qrString) == false){
 			UXConnectController.SetRoomNumber(int.Parse(qrString));
-			clientController.Join("none");
+			clientController.Join("com.cspmedia.runandsteal");
 		}
 
+		if(latest_errCode != -1)
+		{
+			OnJoinFailed (latest_errCode);
+			isCon = true;
+			latest_errCode = -1;
+		}
 	}
 	
 	void Update () {
@@ -82,11 +88,9 @@ public class RoomNumberWindow : MonoBehaviour {
 			}
 		}
 
-		if(isCon = true){
+		if(isCon == true){
 			isCon = false;
 			serverConnect.SetActive(false);
-			//Debug.Log (commonLang.langList.Count);
-			//noti.text = commonLang.langList[9];
 		}
 
 	}
@@ -137,22 +141,27 @@ public class RoomNumberWindow : MonoBehaviour {
 	
 	void OnJoinFailed(int err){
 		if(err == 10001 || err == 20003){
+			// Invalied Room Number
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[8]);
 			return;
 			
 		}else if(err == 10002){
+			// The User is already connect.
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[14]);
 			return;
 			
 		}else if (err == 10003 || err == 20001){
 			Debug.Log("Max User");
+			// Max User
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[12] );
 			return;
+
 		}else if(err == 10004 ||  err == 20002){
 			Debug.Log("Already Start");
+			// Already Start
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[13] );
 			return;

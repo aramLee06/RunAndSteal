@@ -45,7 +45,7 @@ public class LoginWindow : MonoBehaviour {
 
 		//chineseButton.SetActive(true);
 		//englishButton.SetActive(true);
-		logoImage.SetActive(true);
+		//logoImage.SetActive(true);
 		//ChinaButton ();
 		EnglishButton();
 

@@ -392,10 +392,10 @@ public class LobbyClient : MonoBehaviour
 			Application.LoadLevel("ResultPS");
 			break;
 			
-		case "Pause":
+		case "Pause_cli":
 			GameObject.Find("PauseButton").GetComponent<PauseManager_ras>().GetPause();
 			break;
-		case "Resume":
+		case "Resume_cli":
 			GameObject.Find("PauseButton").GetComponent<PauseManager_ras>().GetResume();
 			break;
 			

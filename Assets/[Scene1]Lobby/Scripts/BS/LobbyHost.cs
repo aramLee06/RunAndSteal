@@ -501,13 +501,13 @@ public class LobbyHost : MonoBehaviour
                 break;
 
             case "Pause":
-                SendAll("Pause");
+                SendAll("Pause_cli");
                 GameObject.Find("PauseUI").GetComponent<Image>().enabled = true;
                 GameObject.Find("PauseBlack").GetComponent<Image>().enabled = true;
                 Time.timeScale = 0f;
                 break;
             case "Resume":
-                SendAll("Resume");
+                SendAll("Resume_cli");
                 GameObject.Find("PauseUI").GetComponent<Image>().enabled = false;
                 GameObject.Find("PauseBlack").GetComponent<Image>().enabled = false;
                 Time.timeScale = 1f;

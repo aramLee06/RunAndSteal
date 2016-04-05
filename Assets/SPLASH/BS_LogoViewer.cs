@@ -46,16 +46,16 @@ public class BS_LogoViewer : MonoBehaviour
         switch (buildType)
         {
             case BUILDTYPE.DEFAULT:
-                gamePartyLogo.SetActive(true);
+               // gamePartyLogo.SetActive(true);
                 break;
             case BUILDTYPE.MHT:
-                modanLogo.SetActive(true);
+                //modanLogo.SetActive(true);
                 break;
             case BUILDTYPE.TOGIC:
-                gamePartyLogo.SetActive(true);
+                //gamePartyLogo.SetActive(true);
                 break;
             case BUILDTYPE.TAIWAN:
-                gamePartyLogo.SetActive(true);
+                //gamePartyLogo.SetActive(true);
                 break;
         }
 

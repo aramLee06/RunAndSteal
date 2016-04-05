@@ -262,6 +262,14 @@ Prefab:
       propertyPath: moveSceneName
       value: LobbyHost
       objectReference: {fileID: 0}
+    - target: {fileID: 155908, guid: 339b06b5001daf447bce944c009c7cfe, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 177710, guid: 339b06b5001daf447bce944c009c7cfe, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 339b06b5001daf447bce944c009c7cfe, type: 2}
   m_IsPrefabParent: 0

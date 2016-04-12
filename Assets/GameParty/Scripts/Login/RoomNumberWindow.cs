@@ -140,7 +140,7 @@ public class RoomNumberWindow : MonoBehaviour {
 
 	
 	void OnJoinFailed(int err){
-		if(err == 10001 || err == 20003){
+		if(err == 10001 || err == 20001){
 			// Invalied Room Number
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[8]);
@@ -152,14 +152,14 @@ public class RoomNumberWindow : MonoBehaviour {
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[14]);
 			return;
 			
-		}else if (err == 10003 || err == 20001){
+		}else if (err == 10003 || err == 20003){
 			Debug.Log("Max User");
 			// Max User
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 			CommonUtil.InstantiateOKPopUp(commonLang.langList[12] );
 			return;
 
-		}else if(err == 10004 ||  err == 20002){
+		}else if(err == 10004 ||  err == 20004){
 			Debug.Log("Already Start");
 			// Already Start
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;;

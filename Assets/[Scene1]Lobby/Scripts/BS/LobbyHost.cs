@@ -36,9 +36,6 @@ public class LobbyHost : MonoBehaviour
 
     void Start()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        Screen.SetResolution(1920, 1080, true);
-
         Debug.Log("LobbyHost Start : " + BS_LogoViewer.BuildType.ToString());
 
 		screenLog (BS_LogoViewer.BuildType.ToString ());

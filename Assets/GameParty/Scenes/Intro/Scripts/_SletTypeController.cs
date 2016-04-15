@@ -9,8 +9,8 @@ public class _SletTypeController : MonoBehaviour {
 	public GameObject ControllerBtn;
 	public GameObject BackDrop;
 
-	public Text portrit_screen_text;
-	public Text portrit_controller_text;
+	public Text portrait_screen_text;
+	public Text portriat_controller_text;
 	public Text landscape_guide_text;
 
 	public Text CountText;
@@ -35,12 +35,6 @@ public class _SletTypeController : MonoBehaviour {
 
 	public void ScreenMode(){
 	 	BackDrop.SetActive (true);
-		if (Screen.orientation == ScreenOrientation.LandscapeRight) {
-			Screen.orientation = ScreenOrientation.LandscapeRight;
-		} else {
-			Screen.orientation = ScreenOrientation.Landscape;
-		}
-		Screen.SetResolution (1920, 1080, true);
 		SceneManager.LoadScene ("BS_LogoViewer");
 	}
 
@@ -58,13 +52,13 @@ public class _SletTypeController : MonoBehaviour {
 		Logo.transform.localPosition = new Vector3 (0, 159, 0);
 		Logo.transform.localScale = new Vector3 (1, 1, 0);
 
-		portrit_screen_text.gameObject.SetActive (true);
-		portrit_screen_text.transform.localPosition = new Vector3 (0, -17, 0);
-		portrit_screen_text.transform.localScale = new Vector3 (1, 1, 0);
+		portrait_screen_text.gameObject.SetActive (true);
+		portrait_screen_text.transform.localPosition = new Vector3 (0, -17, 0);
+		portrait_screen_text.transform.localScale = new Vector3 (1, 1, 0);
 
-		portrit_controller_text.gameObject.SetActive (true);
-		portrit_controller_text.transform.localPosition = new Vector3 (4, -306, 0);
-		portrit_controller_text.transform.localScale = new Vector3 (1, 1, 0);
+		portriat_controller_text.gameObject.SetActive (true);
+		portriat_controller_text.transform.localPosition = new Vector3 (4, -306, 0);
+		portriat_controller_text.transform.localScale = new Vector3 (1, 1, 0);
 
 		ScreenBtn.transform.localPosition = new Vector3 (0,-121,0);
 		ScreenBtn.transform.localScale = new Vector3 (1, 1, 0);
@@ -73,8 +67,8 @@ public class _SletTypeController : MonoBehaviour {
 	}
 
 	void onLandscape(){		
-		portrit_screen_text.gameObject.SetActive (false);
-		portrit_controller_text.gameObject.SetActive (false);
+		portrait_screen_text.gameObject.SetActive (false);
+		portriat_controller_text.gameObject.SetActive (false);
 
 		Logo.transform.localPosition = new Vector3 (-190, -100, 0);
 		Logo.transform.localScale = new Vector3 (0.8f, 0.8f, 0);

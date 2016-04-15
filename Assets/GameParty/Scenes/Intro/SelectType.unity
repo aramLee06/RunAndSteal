@@ -199,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &72912381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -214,8 +214,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.5, y: 73}
-  m_SizeDelta: {x: 360, y: 21}
+  m_AnchoredPosition: {x: 153, y: -195}
+  m_SizeDelta: {x: 382, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72912382
 MonoBehaviour:
@@ -916,6 +916,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -960,8 +961,8 @@ MonoBehaviour:
   ScreenBtn: {fileID: 1506699651}
   ControllerBtn: {fileID: 138821189}
   BackDrop: {fileID: 1963358906}
-  portrit_screen_text: {fileID: 522126698}
-  portrit_controller_text: {fileID: 1669632733}
+  portrait_screen_text: {fileID: 522126698}
+  portriat_controller_text: {fileID: 1669632733}
   landscape_guide_text: {fileID: 72912382}
   CountText: {fileID: 1746015593}
 --- !u!1 &1669632731

@@ -36,6 +36,12 @@ public class LobbyHost : MonoBehaviour
 
     void Start()
     {
+		if (Screen.orientation == ScreenOrientation.LandscapeRight) {
+			Screen.orientation = ScreenOrientation.LandscapeRight;
+		} else {
+			Screen.orientation = ScreenOrientation.Landscape;
+		}
+		Screen.SetResolution (1920, 1080, true);
         Debug.Log("LobbyHost Start : " + BS_LogoViewer.BuildType.ToString());
 
 		screenLog (BS_LogoViewer.BuildType.ToString ());

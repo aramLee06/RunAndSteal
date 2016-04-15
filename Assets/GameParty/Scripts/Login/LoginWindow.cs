@@ -45,8 +45,9 @@ public class LoginWindow : MonoBehaviour {
 
 		//chineseButton.SetActive(true);
 		//englishButton.SetActive(true);
-		logoImage.SetActive(true);
-		ChinaButton ();
+		//logoImage.SetActive(true);
+		//ChinaButton ();
+		EnglishButton();
 
 		#if UNITY_ANDROID && !UNITY_EDITOR
 		infoText.text = androidManager.GetVersionName("com.cspmedia.gamepartyplayer") + "/" + ((ServerList)PlayerPrefs.GetInt("ServerList"));

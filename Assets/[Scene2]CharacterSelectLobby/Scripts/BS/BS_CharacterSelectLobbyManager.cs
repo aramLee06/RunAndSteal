@@ -73,12 +73,20 @@ public class BS_CharacterSelectLobbyManager : MonoBehaviour
 
 		Camera.main.GetComponent<AudioSource>().PlayOneShot(characterSelectSound);
 
-		lobbyHost.selectedPlayerCharacter[player] = (int)characterType;
-		character[player].SetActive(true);
-		character[player].GetComponent<BS_SelectCharacter>().SetCharacter(characterType);
+		Debug.Log ("selectedPlayerCharacter : " + lobbyHost.selectedPlayerCharacter.Length + ", " + player);
+		if (lobbyHost.selectedPlayerCharacter.Length > player)
+			lobbyHost.selectedPlayerCharacter[player] = (int)characterType;
 
-		characterName[player].GetComponent<SpriteRenderer>().sprite = characterNameSpirte[(int)characterType];
-		iTween.RotateTo(playerNumber[player], iTween.Hash("rotation", new Vector3(0, -180.0f, 0), "time", 2.0f, "easetype", iTween.EaseType.easeOutElastic));
+		if (character.Length > player) {
+			character [player].SetActive (true);
+			character [player].GetComponent<BS_SelectCharacter> ().SetCharacter (characterType);
+		}
+
+		if (characterName.Length > player) 
+			characterName[player].GetComponent<SpriteRenderer>().sprite = characterNameSpirte[(int)characterType];
+
+		if (playerNumber.Length > player)
+			iTween.RotateTo(playerNumber[player], iTween.Hash("rotation", new Vector3(0, -180.0f, 0), "time", 2.0f, "easetype", iTween.EaseType.easeOutElastic));
 	}
 
 	public bool IsSoldOutCharacter(int characterType)

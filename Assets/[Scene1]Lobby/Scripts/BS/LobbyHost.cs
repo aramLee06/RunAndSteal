@@ -6,16 +6,18 @@ using UXLib.Base;
 using UXLib.Connect;
 using UXLib.User;
 using UXLib.Util;
-//using System.Threading;
 using UnityEngine.UI;
 
 public class LobbyHost : MonoBehaviour
 {
+	// Game 
+	public static string GAME_PACKAGE_NAME = "com.cspmedia.runandsteal";
+
     UXHostController hostController;
     UXAndroidManager androidManager;
 
 	public Text roomNumberTxt;
-	public Text logText;
+	public GameObject freeLabel;
 
     void Awake()
     {
@@ -30,25 +32,19 @@ public class LobbyHost : MonoBehaviour
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-		/*
-		#if UNITY_ANDROID && !UNITY_EDITOR
-		GameObject go = GameObject.Find ("AndroidManager");
-		androidManager = go.GetComponent<UXAndroidManager>();
-		androidManager.LockWifi();
-		#endif
-		*/
     }
 
     void Start()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        Screen.SetResolution(1920, 1080, true);
-
-        Debug.Log("22222222222222222222222222" + BS_LogoViewer.BuildType.ToString());
+		if (Screen.orientation == ScreenOrientation.LandscapeRight) {
+			Screen.orientation = ScreenOrientation.LandscapeRight;
+		} else {
+			Screen.orientation = ScreenOrientation.Landscape;
+		}
+		Screen.SetResolution (1920, 1080, true);
+        Debug.Log("LobbyHost Start : " + BS_LogoViewer.BuildType.ToString());
 
 		screenLog (BS_LogoViewer.BuildType.ToString ());
-
-        //blackOut.SetActive(true);
 
         hostController = UXHostController.Instance;
 		screenLog ("IsConnect : " + hostController.IsConnected ());
@@ -65,9 +61,7 @@ public class LobbyHost : MonoBehaviour
 
         if (result == false)
         {
-			Debug.Log ("Create Room");
-            hostController.CreateRoom();
-//            roomNumberLabel.text = UXHostController.GetRoomNumberString();
+			hostController.CreateRoom(GAME_PACKAGE_NAME, hostController.GetMaxUser());
 			Debug.Log ("Room NUM : " + UXHostController.GetRoomNumberString ());
 			roomNumberTxt.text = UXHostController.GetRoomNumberString () + "";
 			screenLog ("ROOM INFO : " + UXConnectController.ROOM_SERVER_IP + ", " + UXConnectController.ROOM_SERVER_PORT);
@@ -81,8 +75,6 @@ public class LobbyHost : MonoBehaviour
 			#endif
 			roomNumberTxt.text = UXHostController.GetRoomNumberString () + "";
         }
-
-        Debug.Log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + BS_LogoViewer.BuildType.ToString());
 
         hostController.OnConnected += OnConnected;
         hostController.OnConnectFailed += OnConnected;
@@ -116,28 +108,21 @@ public class LobbyHost : MonoBehaviour
         //==========================================
         hostController.OnHostDisconnected += hostController_OnHostDisconnected;
 
+		hostController.OnJoinPremiumUser += OnJoinPremiumUser;
+		hostController.OnLeavePremiumUser += OnLeavePremiumUser;
+
         hostController.SetAutoStart(2, 1);
         if (result == false)
         {
             
             hostController.SetMaxUser(2); // for GOOGLE
-            f2pLabel.SetActive(true);
+			freeLabel.SetActive(true);
 
-//            hostController.SetMaxUser(6); // for MHT
-//            f2pLabel.SetActive(false);
         }
         else
         {
-			#if UNITY_ANDROID && !UNITY_EDITOR
-            //int countryCode = androidManager.GetCountryCode();
-            //PlayerPrefs.SetInt("ServerList", countryCode);
-            //Debug.Log("------------------code:" + countryCode);
-			#endif
-
-//			hostController.SetMaxUser(6); // for premium
-//			f2pLabel.SetActive(false);
 			hostController.SetMaxUser(2); // for GOOGLE
-			f2pLabel.SetActive(true);
+			freeLabel.SetActive(true);
         }
         PopupManager_RaS.IsFreeSetter(true);
         hostController.Connect();
@@ -149,6 +134,7 @@ public class LobbyHost : MonoBehaviour
             playerNumber[i].SetActive(false);
         }
 
+		Debug.Log ("LobbyHost :: " + selectedPlayerCharacter.Length);
         for (int i = 0; i < selectedPlayerCharacter.Length; i++)
         {
             selectedPlayerCharacter[i] = (int)CHARACTER_TYPE.CHARACTER_NONE;
@@ -161,6 +147,18 @@ public class LobbyHost : MonoBehaviour
         blackOut.SetActive(false);
 
         iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, -10), 4.0f);
+    }
+
+    void OnLeavePremiumUser () {}
+
+    void OnJoinPremiumUser ()
+    {
+		Debug.Log ("Join PremiumUser");
+		hostController.SetMaxUser (6);
+		if (freeLabel != null) {
+			freeLabel.SetActive (false);
+		}
+
     }
 
     void hostController_OnHostDisconnected()
@@ -178,7 +176,7 @@ public class LobbyHost : MonoBehaviour
         if (isGameStart == false)
         {
 			maxPlayer = hostController.GetMaxUser();
-            for (int i = 0; i < maxPlayer; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (i < playerCount)
                 {
@@ -213,25 +211,24 @@ public class LobbyHost : MonoBehaviour
         {
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
-    }
 
-    void OnApplicationFocus(bool state)
-    {
+		/*
+		if(freeLabel != null) {
+			if (UXHostController.room.IsPremium) {
+				freeLabel.SetActive (false);
+			} else {
+				freeLabel.SetActive (true);
+			}
+		}
+		*/
     }
 
     void OnConnected()
     {
-        UXLog.SetLogMessage("OnServerConnected:-------" + " == 1");
-        Debug.Log("OnServerConnected:-------" + " == 1");
-
-        hostController.Join("com.cspmedia.runandsteal.ps");
+		hostController.Join(GAME_PACKAGE_NAME);
     }
 
-    void OnJoinFailed(int errCode)
-    {
-        UXLog.SetLogMessage("OnJoinFailed > " + errCode + " == 2");
-        Debug.Log("OnJoinFailed > " + errCode + " == 2");
-    }
+    void OnJoinFailed(int errCode) {}
 
     void OnJoinSucceeded(bool isHost)
     {
@@ -242,15 +239,10 @@ public class LobbyHost : MonoBehaviour
         playerCount = hostController.GetConnectUserCount();
     }
 
-    void OnDisconnected()
-    {
-    }
+    void OnDisconnected() {}
 
     void OnUserAdded(int userIndex, int userCode)
     {
-        UXLog.SetLogMessage("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " == 5");
-        Debug.Log("OnLobbyUserAdded > userIndex : " + userIndex + ",userCode : " + userCode + " == 5");
-
         playerCount = hostController.GetConnectUserCount();
     }
 
@@ -258,9 +250,27 @@ public class LobbyHost : MonoBehaviour
     {
         UXLog.SetLogMessage("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
         Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
-
+		hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
+
+		CheckPremiumUser ();
     }
+
+	void CheckPremiumUser() {
+		
+		if (UXHostController.room.IsPremium) {
+			hostController.SetMaxUser (6);
+			if (freeLabel != null) {
+				freeLabel.SetActive (false);
+			}
+		} else {
+			hostController.SetMaxUser (2);
+			if (freeLabel != null) {
+				freeLabel.SetActive (true);
+			}
+		}
+
+	}
 
     void OnUserLeaved(int userIndex)
     {
@@ -423,29 +433,29 @@ public class LobbyHost : MonoBehaviour
         msg.Trim();
         words = msg.Split(splitchar.ToCharArray(), System.StringSplitOptions.None);
 
-
         if (words[0] == "Exit")
         {
-            SendAll("Exit");
+            //SendAll("Exit");
 
-            Debug.Break();
-            hostController.SendEndGame();
-            Application.Quit();
+            //Debug.Break();
+            //hostController.SendEndGame();
+            //Application.Quit();
 
         }
 
-        if (Application.loadedLevelName == "LobbyHost")
+		if (Application.loadedLevelName.Equals("LobbyHost"))
         {
-            switch (words[0])
-            {
-				case "PREMIUM":
-					hostController.SetMaxUser (6);
-					f2pLabel.SetActive (false);
-                    break;
-                case "QROff":
-                    //GameObject.Find("QR_Back_Host").transform.localScale = Vector2.zero;
-                    break;
-            }
+
+			Debug.Log ("Received ::isPremium? " + UXHostController.room.IsPremium);
+			if (freeLabel == null) {
+				freeLabel = GameObject.Find ("Free Play");
+			} 
+
+			if (UXHostController.room.IsPremium) {
+				freeLabel.SetActive (false);
+			} else {
+				freeLabel.SetActive (true);
+			}
         }
 
         GameObject bigScreen = GameObject.Find("BS");
@@ -494,13 +504,13 @@ public class LobbyHost : MonoBehaviour
                 break;
 
             case "Pause":
-                SendAll("Pause");
+                SendAll("Pause_cli");
                 GameObject.Find("PauseUI").GetComponent<Image>().enabled = true;
                 GameObject.Find("PauseBlack").GetComponent<Image>().enabled = true;
                 Time.timeScale = 0f;
                 break;
             case "Resume":
-                SendAll("Resume");
+                SendAll("Resume_cli");
                 GameObject.Find("PauseUI").GetComponent<Image>().enabled = false;
                 GameObject.Find("PauseBlack").GetComponent<Image>().enabled = false;
                 Time.timeScale = 1f;
@@ -519,7 +529,7 @@ public class LobbyHost : MonoBehaviour
     {
         if (hostController != null)
         {
-            hostController.SendExit();
+            //hostController.SendExit();
             hostController.Clear();
             UXConnectController.SetRoomNumber(-1);
 
@@ -554,6 +564,8 @@ public class LobbyHost : MonoBehaviour
             hostController.OnReceived -= OnReceived;
             //==========================================
             hostController.OnHostDisconnected -= hostController_OnHostDisconnected;
+			hostController.OnJoinPremiumUser -= OnJoinPremiumUser;
+			hostController.OnLeavePremiumUser -= OnLeavePremiumUser;
         }
     }
     void OnGUI()
@@ -562,9 +574,6 @@ public class LobbyHost : MonoBehaviour
         GUI.skin.label.fontSize = 20;
         GUI.skin.button.fontSize = 40;
 
-        // GUI.Label(new Rect(20, 0, 1600, 800), ":"+ UXLog.GetLogMessage());
-
-        // GUI.Label(new Rect(20, 100, 1600, 800), hostController.GetRoomNumberString());
     }
 
     /********** for game **********/
@@ -575,7 +584,6 @@ public class LobbyHost : MonoBehaviour
     private bool isTutorialWatched = false;
 
     public UILabel roomNumberLabel = null;
-    public GameObject f2pLabel = null;
 
     private bool[] connectedUser = new bool[6];
     private int roomMasterIndex = 0;
@@ -660,10 +668,8 @@ public class LobbyHost : MonoBehaviour
     }
 
 	public void screenLog(string str){
-		//logText.text += "\n" + str;
 	}
 
 	public void screenLogClear(){
-		//logText.text = "LOG :";
 	}
 }

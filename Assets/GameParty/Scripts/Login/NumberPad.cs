@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Text.RegularExpressions;
 using UXLib;
+using UXLib.User;
 using UXLib.Util;
 
 public class NumberPad : MonoBehaviour {
@@ -62,8 +63,9 @@ public class NumberPad : MonoBehaviour {
 			if(numberCheck == true){
 
 				UXConnectController.SetRoomNumber(int.Parse (inputNumber));
-
-				clientController.Join("none");
+				UXRoom.Instance.RoomNumber = inputNumber;
+				// clientController.Join("none");
+				Application.LoadLevel("LobbyClient");
 				
 				return;
 			} else {

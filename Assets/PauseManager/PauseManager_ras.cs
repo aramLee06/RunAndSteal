@@ -17,7 +17,7 @@ public class PauseManager_ras : MonoBehaviour {
 
 	public void SendPause()
 	{
-		clientLobby.SendAll("Pause");
+		clientLobby.SendToHost("Pause");
 	}
 	
 	public void GetPause()
@@ -28,7 +28,7 @@ public class PauseManager_ras : MonoBehaviour {
 	
 	public void SendResume()
 	{
-		clientLobby.SendAll("Resume");
+		clientLobby.SendToHost("Resume");
 	}
 	
 	public void GetResume()

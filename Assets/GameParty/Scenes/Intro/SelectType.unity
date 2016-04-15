@@ -961,8 +961,8 @@ MonoBehaviour:
   ScreenBtn: {fileID: 1506699651}
   ControllerBtn: {fileID: 138821189}
   BackDrop: {fileID: 1963358906}
-  portrit_screen_text: {fileID: 522126698}
-  portrit_controller_text: {fileID: 1669632733}
+  portrait_screen_text: {fileID: 522126698}
+  portriat_controller_text: {fileID: 1669632733}
   landscape_guide_text: {fileID: 72912382}
   CountText: {fileID: 1746015593}
 --- !u!1 &1669632731

@@ -93,7 +93,7 @@ public class LobbyClient : MonoBehaviour
 		
 		m_ClientController.OnUserAdded += OnUserAdded;
 		m_ClientController.OnUserRemoved += OnUserRemoved;
-		m_ClientController.OnUserLeaved += OnUserLeaved;
+		m_ClientController.OnUserLeavedInGame += OnUserLeaved;
 		m_ClientController.OnNetworkReported += OnNetworkReported;
 		m_ClientController.OnUpdateReadyCount += OnUpdateReadyCount;
 		
@@ -207,7 +207,7 @@ public class LobbyClient : MonoBehaviour
 		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 
-	void OnUserLeaved(int userIndex) { // 이거슨 안 쓰이는 거지
+	void OnUserLeaved(int userIndex, int userCode) { 
 		i_PlayerID = userIndex;
 	}
 	
@@ -428,7 +428,7 @@ public class LobbyClient : MonoBehaviour
             m_ClientController.OnNetworkReported -= OnNetworkReported;
 
             m_ClientController.OnUpdateReadyCount -= OnUpdateReadyCount;
-            m_ClientController.OnUserLeaved -= OnUserLeaved;
+			m_ClientController.OnUserLeavedInGame -= OnUserLeaved;
 
             m_ClientController.OnGameStart -= OnGameStart;
             m_ClientController.OnGameRestart -= OnGameRestart;

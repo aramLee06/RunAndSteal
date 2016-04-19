@@ -24,7 +24,7 @@ namespace UXLib.User {
 				}
 			}
 			return null;
-		} 
+		}
 		
 		public bool IsConnectedUser(int index) {
 			if (index < 0 || index >= objectList.Count) {
@@ -56,6 +56,7 @@ namespace UXLib.User {
 
 			// isPremium 정보 일시 저장
 			List<UXObject> preObjList = new List<UXObject> (objectList);
+
 			objectList.Clear ();
 
 			foreach (UXUser user in list) {
@@ -66,7 +67,6 @@ namespace UXLib.User {
 						user.IsPremium = preUser.IsPremium;
 					}
 				}
-
 				objectList.Add (user);
 			}
 		}

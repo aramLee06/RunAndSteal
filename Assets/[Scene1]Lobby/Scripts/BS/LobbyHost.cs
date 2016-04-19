@@ -89,7 +89,7 @@ public class LobbyHost : MonoBehaviour
         hostController.OnUserLobbyStateChanged += OnUserLobbyStateChanged;
         hostController.OnAutoCountChanged += OnAutoCountChanged;
         hostController.OnUpdateReadyCount += OnUpdateReadyCount;
-        hostController.OnUserLeaved += OnUserLeaved;
+		hostController.OnUserLeavedInGame += OnUserLeaved;
 
         hostController.OnGameStart += OnGameStart;
         hostController.OnGameRestart += OnGameRestart;
@@ -272,7 +272,7 @@ public class LobbyHost : MonoBehaviour
 
 	}
 
-    void OnUserLeaved(int userIndex)
+	void OnUserLeaved(int userIndex, int userCode)
     {
         connectedUser[userIndex] = false;
 
@@ -546,7 +546,7 @@ public class LobbyHost : MonoBehaviour
             hostController.OnUserLobbyStateChanged -= OnUserLobbyStateChanged;
             hostController.OnAutoCountChanged -= OnAutoCountChanged;
             hostController.OnUpdateReadyCount -= OnUpdateReadyCount;
-            hostController.OnUserLeaved -= OnUserLeaved;
+			hostController.OnUserLeavedInGame -= OnUserLeaved;
 
             hostController.OnGameStart -= OnGameStart;
             hostController.OnGameRestart -= OnGameRestart;

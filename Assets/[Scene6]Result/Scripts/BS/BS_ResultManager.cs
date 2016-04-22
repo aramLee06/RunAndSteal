@@ -244,7 +244,8 @@ public class BS_ResultManager : MonoBehaviour
 
 		for(int i = 0; i < lobbyHost.GetPlayerCount(); i++)
 		{
-			lobbyHost.SendTo(i, "MyRank," + playerRank[i]);
+			//lobbyHost.SendTo(i, "MyRank," + playerRank[i]);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[i], "MyRank," + playerRank[i]);
 		}
 	}
 

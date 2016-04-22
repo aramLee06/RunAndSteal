@@ -13,7 +13,8 @@ namespace UXLib.Connect.Protocol.Generator.Command
             base.baseGenerate(UXProtocol.Command_Generate.broadcast, data);
             //length, data
             string _data = data["data"];
-            int length = _data.Length * 3;
+            //int length = _data.Length * 3;
+			int length = _data.Length;
             AddByte8((byte)length);
             AddByteString(_data);
 

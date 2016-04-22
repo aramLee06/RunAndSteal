@@ -16,7 +16,8 @@ namespace UXLib.Connect.Protocol.Generator.Command
             string _data = data["data"];
             var target = data["target"];
 
-			int length = 1+ (_data.Length * 3) +(4* target.Count);
+			//int length = 1+ (_data.Length * 3) +(4* target.Count);
+			int length = 1+ _data.Length +(4*target.Count);
             AddByte8((byte)length);
 
             AddByte8((byte)target.Count);//target_len

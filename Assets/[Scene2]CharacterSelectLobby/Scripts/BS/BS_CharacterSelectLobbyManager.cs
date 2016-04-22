@@ -64,7 +64,7 @@ public class BS_CharacterSelectLobbyManager : MonoBehaviour
 		}
 	}
 
-	public void SetSelectedCharacter(int player, int characterType)
+	public void SetSelectedCharacter(int player, int characterType) //player = idx
 	{
 		if(characterType > (int)CHARACTER_TYPE.CHARACTER_MAX)
 		{

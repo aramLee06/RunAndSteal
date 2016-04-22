@@ -53,7 +53,6 @@ public class PS_ResultManager : MonoBehaviour
 	public void Player1ReplayButton()
 	{
 		//lobbyClient.Replay();
-
 		Application.LoadLevel("LobbyClient");
 		lobbyClient.SendAll("Replay");
 	}

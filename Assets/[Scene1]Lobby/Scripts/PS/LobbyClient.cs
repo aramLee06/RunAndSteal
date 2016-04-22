@@ -290,9 +290,9 @@ public class LobbyClient : MonoBehaviour
 	
 	void OnError(int err, string msg) {}
 	
-	void OnReceived(int userIndex, string msg)
+	void OnReceived(int userCode, string msg)
 	{
-		Debug.Log("OnReceived > userIndex : " + userIndex + ", msg : " + msg);
+		Debug.Log("OnReceived > userCode : " + userCode + ", msg : " + msg);
 
 		string   splitchar  = ",";
 		string[] words      = null;
@@ -385,7 +385,7 @@ public class LobbyClient : MonoBehaviour
 			myScore = System.Convert.ToInt32(words[1]);
 			break;
 		case "StartResult":
-			if(i_PlayerID == System.Convert.ToInt32(words[1]))
+			if(m_PlayerController.GetCode() == System.Convert.ToInt32(words[1]))
 			{
 				isRoomMaster = true;
 			}
@@ -409,6 +409,9 @@ public class LobbyClient : MonoBehaviour
 			m_ClientController.SetPlayerState(UXUser.LobbyState.Wait);
 			Application.LoadLevel("LobbyClient");
 
+			break;
+		case "CancelSoldOut":
+			//TODO 선택가능하게 버튼 살리기 && 캐릭터 회색된거 풀기
 			break;
 		}
 	}

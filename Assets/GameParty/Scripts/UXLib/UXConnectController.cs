@@ -90,7 +90,7 @@ namespace UXLib
         public delegate void OnDisconnectedHandler();
         public delegate void OnHostJoinedHandler();
         public delegate void OnErrorHandler(int err, string msg);
-        public delegate void OnReceivedHandler(int userIndex, string msg);
+        public delegate void OnReceivedHandler(int userCode, string msg);
         public delegate void OnUserAddedHandler(int userIndex, int code);
         public delegate void OnUserRemovedHandler(string name, int code);
         public delegate void OnUserLobbyStateChangedHandler(int userIndex, UXUser.LobbyState state);
@@ -961,7 +961,7 @@ namespace UXLib
 				}
 			} else if (command == "update_user_index_result") { // 사용되고 있음
 				int index = N ["index"].AsInt;
-
+					
 				UXPlayerController player = UXPlayerController.Instance;
 				player.SetIndex (index);
 				if (OnIndexChanged != null) {

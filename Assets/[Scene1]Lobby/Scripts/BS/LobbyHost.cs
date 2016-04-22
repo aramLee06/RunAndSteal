@@ -7,6 +7,7 @@ using UXLib.Connect;
 using UXLib.User;
 using UXLib.Util;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LobbyHost : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class LobbyHost : MonoBehaviour
 
 	public Text roomNumberTxt;
 	public GameObject freeLabel;
-
+	public List <int> GameUserList = new List<int>();
     void Awake()
     {
 		Debug.Log ("AWAKE LOBBY HOST!");
@@ -89,7 +90,7 @@ public class LobbyHost : MonoBehaviour
         hostController.OnUserLobbyStateChanged += OnUserLobbyStateChanged;
         hostController.OnAutoCountChanged += OnAutoCountChanged;
         hostController.OnUpdateReadyCount += OnUpdateReadyCount;
-        hostController.OnUserLeaved += OnUserLeaved;
+		hostController.OnUserLeavedInGame += OnUserLeaved;
 
         hostController.OnGameStart += OnGameStart;
         hostController.OnGameRestart += OnGameRestart;
@@ -144,7 +145,7 @@ public class LobbyHost : MonoBehaviour
 		StartCoroutine(PlayIntroVideo());
 #endif
 
-        blackOut.SetActive(false);
+       // blackOut.SetActive(false);
 
         iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, -10), 4.0f);
     }
@@ -185,7 +186,6 @@ public class LobbyHost : MonoBehaviour
                         playerNumber[i].SetActive(true);
                         Camera.main.GetComponent<AudioSource>().PlayOneShot(numberSound);
                     }
-
                     UXUserController userController = UXUserController.Instance;
                     UXUser user = (UXUser)userController.GetAt(i);
 
@@ -272,36 +272,80 @@ public class LobbyHost : MonoBehaviour
 
 	}
 
-    void OnUserLeaved(int userIndex)
-    {
+	void OnUserLeaved(int userIndex, int userCode)
+	{
+		userIndex = GameUserList.IndexOf (userCode);
         connectedUser[userIndex] = false;
+		GameUserList [userIndex] = -1;
+		roomMasterCode = -1;
 
-        for (int i = 0; i < connectedUser.Length; i++)
-        {
-            if (connectedUser[i] == true)
-            {
-                roomMasterIndex = i;
-                break;
-            }
+		foreach (int code in GameUserList) {
+			if (code != -1) {
+				roomMasterCode = code;
+				break;
+			}
+		}
 
-            // All Disconnected
-            roomMasterIndex = -1;
-        }
-
-        if (roomMasterIndex == -1)
+		if (roomMasterCode == -1)// All Disconnected
         {
             hostController.SendEndGame();
-            Application.Quit();
+			//TODO popup 
+			PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
+           // Application.Quit();
         }
 
+		int charType = selectedPlayerCharacter [userIndex];
         selectedPlayerCharacter[userIndex] = (int)CHARACTER_TYPE.CHARACTER_DISCONNECTED;
 
-        totalScore[userIndex] = 0;
-        for (int i = 0; i < itemScore.GetLength(1); i++)
-        {
-            itemScore[userIndex, i] = 0;
-        }
+		totalScore[userIndex] = 0;
+		for (int i = 0; i < itemScore.GetLength(1); i++)
+		{
+			itemScore[userIndex, i] = 0;
+		}
+
+		if (InGameUserCount() == 1) { //한명만 남은 거
+			//TODO popup
+			//PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED);
+			hostController.SendData("Replay");
+		}
+
+		if (SceneManager.GetActiveScene ().name == "CharacterSelectLobbyBS") {
+			CancleSoldOut (userCode, charType);                    
+			ClearSelectedCharacter(userIndex);
+		}
     }
+	public void ClearSelectedCharacter(int userIndex)
+	{
+		GameObject bigScreen = GameObject.Find("BS");
+		if (bigScreen == null)
+		{
+			return;
+		}
+		bigScreen.GetComponent<BS_CharacterSelectLobbyManager>().ClearCharacter(userIndex);
+	}
+	public int InGameUserCount(){
+		int count = 0;
+
+		foreach (int code in GameUserList) {
+			if (code != -1)
+				count += 1;
+		}
+			
+		return count;
+	}
+
+	void CancleSoldOut (int userCode, int charType)
+	{
+		List<int> SendList = new List<int> ();
+	
+		foreach (int code in GameUserList) {
+			if (code != -1) {
+				SendList.Add (code);
+			}
+		}
+
+		hostController.SendDataToCode (SendList.ToArray (), "CancelSoldOut," + charType);
+	}
 
     void OnNetworkReported(int count, float time)
     {
@@ -350,6 +394,8 @@ public class LobbyHost : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+		CopyGameUserList ();
+
         Application.LoadLevel("CharacterSelectLobbyBS");
     }
 
@@ -357,6 +403,7 @@ public class LobbyHost : MonoBehaviour
     {
         UXLog.SetLogMessage("Restart Game" + " == 14");
         Debug.Log("Restart Game" + " == 14");
+
     }
 
     void OnGameResult()
@@ -422,8 +469,10 @@ public class LobbyHost : MonoBehaviour
         Debug.Log("OnError > err : " + err + ", msg : " + msg + " == 21");
     }
 
-    void OnReceived(int userIndex, string msg)
+    void OnReceived(int userCode, string msg)
     {
+		int userIndex = GameUserList.IndexOf (userCode);
+		
         UXLog.SetLogMessage("OnReceived > userIndex : " + userIndex + ", msg : " + msg + " == 22");
         Debug.Log("OnReceived > userIndex : " + userIndex + ", msg : " + msg + " == 22");
 
@@ -445,7 +494,6 @@ public class LobbyHost : MonoBehaviour
 
 		if (Application.loadedLevelName.Equals("LobbyHost"))
         {
-
 			Debug.Log ("Received ::isPremium? " + UXHostController.room.IsPremium);
 			if (freeLabel == null) {
 				freeLabel = GameObject.Find ("Free Play");
@@ -468,20 +516,20 @@ public class LobbyHost : MonoBehaviour
         {
             // Character Select
             case "CharacterSelect":
-                if (bigScreen.GetComponent<BS_CharacterSelectLobbyManager>().IsSoldOutCharacter(int.Parse(words[1])) == false)
+                if (bigScreen.GetComponent<BS_CharacterSelectLobbyManager>().IsSoldOutCharacter(int.Parse(words[1])) == false)//선택가능
                 {
                     bigScreen.GetComponent<BS_CharacterSelectLobbyManager>().SetSelectedCharacter(userIndex, int.Parse(words[1]));
                     for (int i = 0; i < playerCount; i++)
                     {
                         if (i != userIndex)
                         {
-                            SendTo(i, "SoldOut," + words[1]);
+							SendToCode(GameUserList[i], "SoldOut," + words[1]); // 팔렸다고 모두에게 알ㄹㅣ기
                         }
                     }
                 }
-                else
+                else // soldout
                 {
-                    SendTo(userIndex, "SoldOut," + words[1]);
+                    SendToCode(GameUserList[userIndex], "SoldOut," + words[1]);//이건 머야
                 }
                 break;
 
@@ -497,8 +545,10 @@ public class LobbyHost : MonoBehaviour
 
             // Result
             case "Replay":
-                roomMasterIndex = 0;
+                roomMasterCode = -1;
                 hostController.RefreshUserListFromServer();
+				CopyGameUserList ();
+				playerCount = hostController.GetConnectUserCount();
                 hostController.SendEndGame();
                 Application.LoadLevel("LobbyHost");
                 break;
@@ -546,7 +596,7 @@ public class LobbyHost : MonoBehaviour
             hostController.OnUserLobbyStateChanged -= OnUserLobbyStateChanged;
             hostController.OnAutoCountChanged -= OnAutoCountChanged;
             hostController.OnUpdateReadyCount -= OnUpdateReadyCount;
-            hostController.OnUserLeaved -= OnUserLeaved;
+			hostController.OnUserLeavedInGame -= OnUserLeaved;
 
             hostController.OnGameStart -= OnGameStart;
             hostController.OnGameRestart -= OnGameRestart;
@@ -586,7 +636,7 @@ public class LobbyHost : MonoBehaviour
     public UILabel roomNumberLabel = null;
 
     private bool[] connectedUser = new bool[6];
-    private int roomMasterIndex = 0;
+    private int roomMasterCode = 0;
 
     private bool isAckOn = true;
     private int ackFailedCount = 0;
@@ -606,8 +656,13 @@ public class LobbyHost : MonoBehaviour
         hostController.SendDataTo(player, msg);
     }
 
+	public void SendToCode (int u_code, string msg)
+	{
+		hostController.SendDataToCode (u_code, msg);
+	}
+
     // Big Screen UI
-    public GameObject blackOut = null;
+    //public GameObject blackOut = null;
 
     public GameObject[] playerNumber = new GameObject[6];
     public Sprite[] playerNumberOn = new Sprite[6];
@@ -662,7 +717,7 @@ public class LobbyHost : MonoBehaviour
 
     public void StartResult()
     {
-        SendAll("StartResult," + roomMasterIndex);
+        SendAll("StartResult," + roomMasterCode);
 
         Application.LoadLevel("ResultBS");
     }
@@ -671,5 +726,14 @@ public class LobbyHost : MonoBehaviour
 	}
 
 	public void screenLogClear(){
+	}
+	public void CopyGameUserList (){
+		UXUserController userList = UXUserController.Instance;
+		GameUserList.Clear ();
+
+		foreach (UXObject obj in userList.GetList()) {
+			UXUser user = (UXUser)obj;
+			GameUserList.Add (user.GetCode());
+		}
 	}
 }

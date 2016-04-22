@@ -69,6 +69,8 @@ public class PopupManager_RaS : MonoBehaviour
 
         if (popupType == POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED)
             StartCoroutine(AutoExitCoru());
+		else if (popupType == POPUP_TYPE_RaS.POPUP_GAMESCLOSE)
+			OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
     }
 
     IEnumerator AutoExitCoru()

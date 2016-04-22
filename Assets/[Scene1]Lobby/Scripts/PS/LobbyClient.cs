@@ -93,7 +93,7 @@ public class LobbyClient : MonoBehaviour
 		
 		m_ClientController.OnUserAdded += OnUserAdded;
 		m_ClientController.OnUserRemoved += OnUserRemoved;
-		m_ClientController.OnUserLeaved += OnUserLeaved;
+		m_ClientController.OnUserLeavedInGame += OnUserLeaved;
 		m_ClientController.OnNetworkReported += OnNetworkReported;
 		m_ClientController.OnUpdateReadyCount += OnUpdateReadyCount;
 		
@@ -207,7 +207,7 @@ public class LobbyClient : MonoBehaviour
 		Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " , PlayerID : " + i_PlayerID);
 	}
 
-	void OnUserLeaved(int userIndex) { // 이거슨 안 쓰이는 거지
+	void OnUserLeaved(int userIndex, int userCode) { 
 		i_PlayerID = userIndex;
 	}
 	
@@ -290,9 +290,9 @@ public class LobbyClient : MonoBehaviour
 	
 	void OnError(int err, string msg) {}
 	
-	void OnReceived(int userIndex, string msg)
+	void OnReceived(int userCode, string msg)
 	{
-		Debug.Log("OnReceived > userIndex : " + userIndex + ", msg : " + msg);
+		Debug.Log("OnReceived > userCode : " + userCode + ", msg : " + msg);
 
 		string   splitchar  = ",";
 		string[] words      = null;
@@ -385,7 +385,7 @@ public class LobbyClient : MonoBehaviour
 			myScore = System.Convert.ToInt32(words[1]);
 			break;
 		case "StartResult":
-			if(i_PlayerID == System.Convert.ToInt32(words[1]))
+			if(m_PlayerController.GetCode() == System.Convert.ToInt32(words[1]))
 			{
 				isRoomMaster = true;
 			}
@@ -410,6 +410,10 @@ public class LobbyClient : MonoBehaviour
 			Application.LoadLevel("LobbyClient");
 
 			break;
+		case "CancelSoldOut":
+			int charType = int.Parse (words [1]);
+			phoneScreen.GetComponent<PS_CharacterSelectLobbyManager>().CancelCharacterSoldOut(charType);
+			break;
 		}
 	}
     
@@ -428,7 +432,7 @@ public class LobbyClient : MonoBehaviour
             m_ClientController.OnNetworkReported -= OnNetworkReported;
 
             m_ClientController.OnUpdateReadyCount -= OnUpdateReadyCount;
-            m_ClientController.OnUserLeaved -= OnUserLeaved;
+			m_ClientController.OnUserLeavedInGame -= OnUserLeaved;
 
             m_ClientController.OnGameStart -= OnGameStart;
             m_ClientController.OnGameRestart -= OnGameRestart;

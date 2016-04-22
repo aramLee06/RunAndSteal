@@ -174,6 +174,7 @@ public class BS_InGameManager : MonoBehaviour
 			{
 				scoreBoard[i].SetActive(false);
 				character[i].SetActive(false);
+				character[i].gameObject.GetComponent<BS_Character> ().LeavedTail();//
 			}
 		}
 		if(isGameStart == true && isGameSet == false)
@@ -270,9 +271,10 @@ public class BS_InGameManager : MonoBehaviour
 				lobbyHost.totalScore[i] = BS_ScoreManager.Instance().GetPlayerScore(i);
 			}
 
-			for(int i = 0; i < lobbyHost.GetPlayerCount(); i++)
+			for(int i = 0; i < lobbyHost.GetPlayerCount(); i++) //i = userindex
 			{
-				lobbyHost.SendTo(i, "MyScore," + lobbyHost.totalScore[i]);
+				//lobbyHost.SendTo(i, "MyScore," + lobbyHost.totalScore[i]);
+				lobbyHost.SendToCode(lobbyHost.GameUserList[i], "MyScore," + lobbyHost.totalScore[i]);
 			}
 
 			StartCoroutine(GameSet());

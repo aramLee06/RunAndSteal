@@ -64,6 +64,7 @@ public class BS_Character : MonoBehaviour
 
 	private bool isStunned = false;
 
+
 	void OnCollisionEnter(Collision other)
 	{
 		if(other.gameObject.layer == LayerMask.NameToLayer("Item"))
@@ -116,28 +117,28 @@ public class BS_Character : MonoBehaviour
 				switch(other.gameObject.GetComponent<BS_Item>().GetItemType())
 				{
 				case ITEM_TYPE.ITEM_APPLE:
-					lobbyHost.SendTo(playerNumber, "AppleSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "AppleSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_SILVER:
-					lobbyHost.SendTo(playerNumber, "SilverSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "SilverSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_GOLD:
-					lobbyHost.SendTo(playerNumber, "GoldSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "GoldSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_RING:
-					lobbyHost.SendTo(playerNumber, "RingSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "RingSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_DIAMOND:
-					lobbyHost.SendTo(playerNumber, "DiamondSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "DiamondSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_SPEED:
-					lobbyHost.SendTo(playerNumber, "SpeedSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "SpeedSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_MAGNET:
-					lobbyHost.SendTo(playerNumber, "MagnetSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "MagnetSound," + myScore);
 					break;
 				case ITEM_TYPE.ITEM_BONUS:
-					lobbyHost.SendTo(playerNumber, "BonusSound," + myScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "BonusSound," + myScore);
 					break;
 				}
   				
@@ -150,8 +151,8 @@ public class BS_Character : MonoBehaviour
 					if(enemyNumber < 0) //array index exception - enemyNumber가 -1로 추정됨
 						return;
 
-					lobbyHost.SendTo(playerNumber, "StealEmojiSound");
-					lobbyHost.SendTo(enemyNumber, "AngryEmojiSound");
+					lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "StealEmojiSound");
+					lobbyHost.SendToCode(lobbyHost.GameUserList[enemyNumber], "AngryEmojiSound");
 
 					int enemyTailLength = this.transform.GetComponentInParent<BS_InGameManager>().character[enemyNumber].GetComponent<BS_Character>().tails.Count;
 					int enemyTailCutPoint = other.gameObject.GetComponent<BS_Item>().GetTailIndex();
@@ -222,28 +223,28 @@ public class BS_Character : MonoBehaviour
 		switch(other.gameObject.GetComponent<BS_Item>().GetItemType())
 		{
 		case ITEM_TYPE.ITEM_APPLE:
-			lobbyHost.SendTo(playerNumber, "AppleSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "AppleSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_SILVER:
-			lobbyHost.SendTo(playerNumber, "SilverSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "SilverSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_GOLD:
-			lobbyHost.SendTo(playerNumber, "GoldSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "GoldSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_RING:
-			lobbyHost.SendTo(playerNumber, "RingSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "RingSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_DIAMOND:
-			lobbyHost.SendTo(playerNumber, "DiamondSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "DiamondSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_SPEED:
-			lobbyHost.SendTo(playerNumber, "SpeedSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "SpeedSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_MAGNET:
-			lobbyHost.SendTo(playerNumber, "MagnetSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "MagnetSound," + myScore);
 			break;
 		case ITEM_TYPE.ITEM_BONUS:
-			lobbyHost.SendTo(playerNumber, "BonusSound," + myScore);
+			lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "BonusSound," + myScore);
 			break;
 		}
 	}
@@ -266,6 +267,8 @@ public class BS_Character : MonoBehaviour
 		}
 
 		previousAngle = (int)this.transform.eulerAngles.y;
+
+
 	}
 
 	void Update ()
@@ -340,6 +343,7 @@ public class BS_Character : MonoBehaviour
 		confusionEmozi.transform.eulerAngles = Vector3.zero;
 		angryEmozi.transform.eulerAngles = Vector3.zero;
 		laughEmozi.transform.eulerAngles = Vector3.zero;
+
 	}
 
 	public void MoveCharacter(int angle, bool isJoystick)
@@ -544,7 +548,18 @@ public class BS_Character : MonoBehaviour
 
 		tails.Clear();
 
-		lobbyHost.SendTo(playerNumber, "CrashEmojiSound");
+		lobbyHost.SendToCode(lobbyHost.GameUserList[playerNumber], "CrashEmojiSound");
+	}
+
+	public void LeavedTail(){
+
+		for(int i = 0; i < tails.Count; i++)
+		{
+			GameObject cutTail = (GameObject)tails[i];
+			cutTail.GetComponent<BS_Item>().CutTail();
+		}
+
+		tails.Clear();
 	}
 
 	public IEnumerator ConfusionEmozi()

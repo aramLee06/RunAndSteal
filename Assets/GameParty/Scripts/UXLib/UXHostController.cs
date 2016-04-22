@@ -26,6 +26,7 @@ namespace UXLib {
 		public delegate void OnAutoStartFailedHandler();
 		public delegate void OnJoinPremiumUserHandler ();
 		public delegate void OnLeavePremiumUserHandler ();
+
 		
 		/** Called when host succeeded in joinig 
 			@param isHostJoined True if host was joined, false otherwise

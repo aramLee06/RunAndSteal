@@ -36,9 +36,9 @@ public class PS_SelectCharacter : MonoBehaviour
 		}
 	}
 
-	public void SetSoldOut()
+	public void SetSoldOut(bool value)
 	{
-		isSoldOut = true;
+		isSoldOut = value;
 	}
 
 	public bool IsSoldOut()

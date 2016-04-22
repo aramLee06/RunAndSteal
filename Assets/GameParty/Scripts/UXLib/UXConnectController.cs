@@ -77,7 +77,7 @@ namespace UXLib
 
         protected bool isSendNetWorkResult;//안씀
         protected bool isHostJoined;
-        protected bool isGameStarted = false;
+        public bool isGameStarted = false;
 
         protected string systemUID;
 
@@ -90,7 +90,7 @@ namespace UXLib
         public delegate void OnDisconnectedHandler();
         public delegate void OnHostJoinedHandler();
         public delegate void OnErrorHandler(int err, string msg);
-        public delegate void OnReceivedHandler(int userIndex, string msg);
+        public delegate void OnReceivedHandler(int userCode, string msg);
         public delegate void OnUserAddedHandler(int userIndex, int code);
         public delegate void OnUserRemovedHandler(string name, int code);
         public delegate void OnUserLobbyStateChangedHandler(int userIndex, UXUser.LobbyState state);
@@ -100,7 +100,7 @@ namespace UXLib
         public delegate void OnGameRestartHandler();
         public delegate void OnGameResultHandler();
         public delegate void OnGameEndHandler();
-        public delegate void OnUserLeavedHandler(int index);
+		public delegate void OnUserLeavedHandler(int index, int code);
         public delegate void OnExitHandler();
         public delegate void OnUpdateReadyCountHandler(int ready, int total);
         public delegate void OnIndexChangedHandler(int idx);
@@ -147,7 +147,7 @@ namespace UXLib
         /** Called when user leave the game
             @param index user index
         */
-        public event OnUserLeavedHandler OnUserLeaved;//게임중에 나감 (다른사람이)
+        public event OnUserLeavedHandler OnUserLeavedInGame;//게임중에 나감 (다른사람이)
 
         /** Called when user index was changed
             @param idx new index
@@ -186,7 +186,7 @@ namespace UXLib
         public event OnAckFailedHandler OnAckFailed; //x
 
         /** */
-		public event OnHostDisconnectedHandler OnHostDisconnected;
+        public event OnHostDisconnectedHandler OnHostDisconnected;
 
 		/** removed User's Index */
 		public event OnGetRemovedIndexHandeler OnGetRemovedIndex;
@@ -948,17 +948,20 @@ namespace UXLib
 
 				if (array != null) {
 					List<UXUser> list = ParseUserList ((JSONArray)array);
-
 					room.UpdateUserList (list);
 				}
 
-				if (OnUserRemoved != null) {
-					OnUserRemoved (name, code);
+				if (!isGameStarted) {
+					if (OnUserRemoved != null) {
+						OnUserRemoved (name, code);
+					}
+				} else {
+					if(OnUserLeavedInGame != null)
+						OnUserLeavedInGame (userIndex, code);
 				}
-
 			} else if (command == "update_user_index_result") { // 사용되고 있음
 				int index = N ["index"].AsInt;
-
+					
 				UXPlayerController player = UXPlayerController.Instance;
 				player.SetIndex (index);
 				if (OnIndexChanged != null) {
@@ -986,7 +989,8 @@ namespace UXLib
 				int userIndex = GetUserIndexFromCode (senderCode);
 
 				if (OnReceived != null) {
-					OnReceived (userIndex, val);
+					//OnReceived (userIndex, val);
+					OnReceived(senderCode, val);
 				}
 			} else if (command == "check_network_state_result") {	//이거 안올듯. 위에서 cmd:check_network_state를안보내
 				int cur = N ["count"].AsInt;

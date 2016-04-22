@@ -55,28 +55,28 @@ public class BS_ScoringPosition : MonoBehaviour
 				{
 				case ITEM_TYPE.ITEM_APPLE:
 					lobbyHost.itemScore[headPlayer, (int)ITEM_TYPE.ITEM_APPLE]++;
-					lobbyHost.SendTo(headPlayer, "SellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SellSound," + headPlayerScore);
 					break;
 				case ITEM_TYPE.ITEM_SILVER:
 					lobbyHost.itemScore[headPlayer, (int)ITEM_TYPE.ITEM_SILVER]++;
-					lobbyHost.SendTo(headPlayer, "SellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SellSound," + headPlayerScore);
 					break;
 				case ITEM_TYPE.ITEM_GOLD:
 					lobbyHost.itemScore[headPlayer, (int)ITEM_TYPE.ITEM_GOLD]++;
-					lobbyHost.SendTo(headPlayer, "SellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SellSound," + headPlayerScore);
 					break;
 				case ITEM_TYPE.ITEM_RING:
 					lobbyHost.itemScore[headPlayer, (int)ITEM_TYPE.ITEM_RING]++;
-					lobbyHost.SendTo(headPlayer, "SellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SellSound," + headPlayerScore);
 					break;
 				case ITEM_TYPE.ITEM_DIAMOND:
 					lobbyHost.itemScore[headPlayer, (int)ITEM_TYPE.ITEM_DIAMOND]++;
-					lobbyHost.SendTo(headPlayer, "SellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SellSound," + headPlayerScore);
 					break;
 				case ITEM_TYPE.ITEM_SPEED:
 				case ITEM_TYPE.ITEM_MAGNET:
 				case ITEM_TYPE.ITEM_BONUS:
-					lobbyHost.SendTo(headPlayer, "SpecialSellSound," + headPlayerScore);
+					lobbyHost.SendToCode(lobbyHost.GameUserList[headPlayer], "SpecialSellSound," + headPlayerScore);
 					break;
 				}
 			}

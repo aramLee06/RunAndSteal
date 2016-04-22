@@ -411,7 +411,8 @@ public class LobbyClient : MonoBehaviour
 
 			break;
 		case "CancelSoldOut":
-			//TODO 선택가능하게 버튼 살리기 && 캐릭터 회색된거 풀기
+			int charType = int.Parse (words [1]);
+			phoneScreen.GetComponent<PS_CharacterSelectLobbyManager>().CancelCharacterSoldOut(charType);
 			break;
 		}
 	}

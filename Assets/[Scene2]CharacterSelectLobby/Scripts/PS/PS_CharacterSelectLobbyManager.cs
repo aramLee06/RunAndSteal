@@ -51,7 +51,7 @@ public class PS_CharacterSelectLobbyManager : MonoBehaviour
 
 	public void SetCharacterSoldOut(int characterType)
 	{
-		character[(int)characterType].GetComponent<PS_SelectCharacter>().SetSoldOut();
+		character[(int)characterType].GetComponent<PS_SelectCharacter>().SetSoldOut(true);
 		
 		if(selectedCharacter == characterType)
 		{	
@@ -63,4 +63,9 @@ public class PS_CharacterSelectLobbyManager : MonoBehaviour
 			Camera.main.GetComponent<AudioSource>().PlayOneShot(selectUnableSound);
 		}
 	}
+
+	public void CancelCharacterSoldOut(int chartype){
+		character[(int)chartype].GetComponent<PS_SelectCharacter>().SetSoldOut(false);
+	}
+
 }

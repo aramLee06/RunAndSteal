@@ -41,14 +41,8 @@ public class BS_CharacterSelectLobbyManager : MonoBehaviour
 	void Update ()
 	{
 		isAllSelected = true;
-		for(int i = 0; i < lobbyHost.GetPlayerCount(); i++)
+		for(int i = 0; i < lobbyHost.GameUserList.Count; i++)
 		{
-			if(lobbyHost.selectedPlayerCharacter[i] == (int)CHARACTER_TYPE.CHARACTER_DISCONNECTED)
-			{
-				playerNumber[i].SetActive(false);
-				character[i].SetActive(false);
-			}
-
 			if(lobbyHost.selectedPlayerCharacter[i] == (int)CHARACTER_TYPE.CHARACTER_NONE)
 			{
 				isAllSelected = false;
@@ -87,6 +81,14 @@ public class BS_CharacterSelectLobbyManager : MonoBehaviour
 
 		if (playerNumber.Length > player)
 			iTween.RotateTo(playerNumber[player], iTween.Hash("rotation", new Vector3(0, -180.0f, 0), "time", 2.0f, "easetype", iTween.EaseType.easeOutElastic));
+	}
+	public void ClearCharacter (int userIndex)
+	{
+		if(lobbyHost.selectedPlayerCharacter[userIndex] == (int)CHARACTER_TYPE.CHARACTER_DISCONNECTED)//
+		{
+			playerNumber[userIndex].SetActive(false);
+			character[userIndex].SetActive(false);
+		}
 	}
 
 	public bool IsSoldOutCharacter(int characterType)

@@ -273,7 +273,7 @@ public class LobbyHost : MonoBehaviour
 	}
 
 	void OnUserLeaved(int userIndex, int userCode)
-    {
+	{
 		userIndex = GameUserList.IndexOf (userCode);
         connectedUser[userIndex] = false;
 		GameUserList [userIndex] = -1;
@@ -289,9 +289,12 @@ public class LobbyHost : MonoBehaviour
 		if (roomMasterCode == -1)// All Disconnected
         {
             hostController.SendEndGame();
-            Application.Quit();
+			//TODO popup 
+			PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
+           // Application.Quit();
         }
 
+		int charType = selectedPlayerCharacter [userIndex];
         selectedPlayerCharacter[userIndex] = (int)CHARACTER_TYPE.CHARACTER_DISCONNECTED;
 
 		totalScore[userIndex] = 0;
@@ -301,11 +304,25 @@ public class LobbyHost : MonoBehaviour
 		}
 
 		if (InGameUserCount() == 1) { //한명만 남은 거
+			//TODO popup
+			//PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED);
 			hostController.SendData("Replay");
 		}
-		CancleSoldOut (userCode);
-    }
 
+		if (SceneManager.GetActiveScene ().name == "CharacterSelectLobbyBS") {
+			CancleSoldOut (userCode, charType);                    
+			ClearSelectedCharacter(userIndex);
+		}
+    }
+	public void ClearSelectedCharacter(int userIndex)
+	{
+		GameObject bigScreen = GameObject.Find("BS");
+		if (bigScreen == null)
+		{
+			return;
+		}
+		bigScreen.GetComponent<BS_CharacterSelectLobbyManager>().ClearCharacter(userIndex);
+	}
 	public int InGameUserCount(){
 		int count = 0;
 
@@ -317,15 +334,17 @@ public class LobbyHost : MonoBehaviour
 		return count;
 	}
 
-	void CancleSoldOut (int userCode)
+	void CancleSoldOut (int userCode, int charType)
 	{
-		int userIndex = GameUserList.IndexOf (userCode);
-
-		//selectedPlayerCharacter [userIndex] = 0;
-
-		foreach(int code in GameUserList){
-			SendToCode (code, "CancelSoldOut");
+		List<int> SendList = new List<int> ();
+	
+		foreach (int code in GameUserList) {
+			if (code != -1) {
+				SendList.Add (code);
+			}
 		}
+
+		hostController.SendDataToCode (SendList.ToArray (), "CancelSoldOut," + charType);
 	}
 
     void OnNetworkReported(int count, float time)
@@ -504,7 +523,7 @@ public class LobbyHost : MonoBehaviour
                     {
                         if (i != userIndex)
                         {
-						SendToCode(GameUserList[i], "SoldOut," + words[1]); // 팔렸다고 모두에게 알ㄹㅣ기
+							SendToCode(GameUserList[i], "SoldOut," + words[1]); // 팔렸다고 모두에게 알ㄹㅣ기
                         }
                     }
                 }

@@ -168,6 +168,30 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11488084, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_Text
+      value: Do you want to close the game?
+      objectReference: {fileID: 0}
+    - target: {fileID: 198852, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484854, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484854, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 147
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484854, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 527
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484854, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -246
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 437642f279d8b2b448363de33c9e6e64, type: 2}
   m_IsPrefabParent: 0

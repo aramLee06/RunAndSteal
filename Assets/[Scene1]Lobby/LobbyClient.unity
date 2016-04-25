@@ -346,6 +346,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -576,6 +577,30 @@ Prefab:
     - target: {fileID: 198524, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430620, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_Text
+      value: Do you want to close the game?
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409918, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.000023
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409918, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409918, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 506
+      objectReference: {fileID: 0}
+    - target: {fileID: 22409918, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}

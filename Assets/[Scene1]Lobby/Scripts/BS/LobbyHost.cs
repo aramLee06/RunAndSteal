@@ -290,7 +290,7 @@ public class LobbyHost : MonoBehaviour
         {
             hostController.SendEndGame();
 			//TODO popup 
-			PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
+			//PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
            // Application.Quit();
         }
 

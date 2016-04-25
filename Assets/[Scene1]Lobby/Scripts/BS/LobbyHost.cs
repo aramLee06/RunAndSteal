@@ -279,9 +279,9 @@ public class LobbyHost : MonoBehaviour
 		GameUserList [userIndex] = -1;
 		roomMasterCode = -1;
 
-		foreach (int code in GameUserList) {
-			if (code != -1) {
-				roomMasterCode = code;
+		for (int i = 0; i < GameUserList.Count; i++) {
+			if (GameUserList [i] != -1) {
+				roomMasterCode = i;
 				break;
 			}
 		}
@@ -717,7 +717,7 @@ public class LobbyHost : MonoBehaviour
 
     public void StartResult()
     {
-        SendAll("StartResult," + roomMasterCode);
+		SendAll("StartResult," + GameUserList[roomMasterCode]);
 
         Application.LoadLevel("ResultBS");
     }

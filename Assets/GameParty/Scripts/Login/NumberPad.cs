@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Text.RegularExpressions;
 using UXLib;
-using UXLib.User;
 using UXLib.Util;
 
 public class NumberPad : MonoBehaviour {
@@ -55,7 +54,7 @@ public class NumberPad : MonoBehaviour {
 		} else if (numberType == "done") {
 			if(string.IsNullOrEmpty(inputNumber) == true){
 				OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-				CommonUtil.InstantiateOKPopUp(commonLang.langList[7] );
+				CommonUtil.InstantiateOKPopUp(commonLang.GetWord(7));
 				return;
 			}
 			bool numberCheck = Regex.IsMatch(inputNumber, @"[0-9]{5}$");
@@ -63,14 +62,14 @@ public class NumberPad : MonoBehaviour {
 			if(numberCheck == true){
 
 				UXConnectController.SetRoomNumber(int.Parse (inputNumber));
-				UXRoom.Instance.RoomNumber = inputNumber;
-				// clientController.Join("none");
-				Application.LoadLevel("LobbyClient");
-				
+                UXLib.User.UXRoom.Instance.RoomNumber = inputNumber;
+
+				//clientController.Join("none");
+				Application.LoadLevel("ConnectClient_HiQ");
 				return;
 			} else {
 				OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-				CommonUtil.InstantiateOKPopUp(commonLang.langList[8]);
+				CommonUtil.InstantiateOKPopUp(commonLang.GetWord(8));
 				return;
 			}
 		}	

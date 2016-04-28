@@ -1,37 +1,69 @@
 ﻿using UnityEngine;
+
+using System;
 using System.Collections;
-
 using System.Collections.Generic;
-public class CommonLang : MonoBehaviour {
-	public static CommonLang instance = null;
 
-	public List<string> langList = new List<string>();
+public enum LanguageType {
+	KOR, ENG, CHI
+}
 
+public class CommonLang : MonoBehaviour{
+	public static CommonLang instance {
+		get {
+			return _instance;
+		}
+	}
+	private static CommonLang _instance = null;
+
+	private LanguageType language;
+	public LanguageType Language { 
+		get {
+			return language;
+		}
+		set{
+			this.language = value;
+			if (OnLanaugeChange != null)
+				OnLanaugeChange ();
+		}
+	}
+
+	[SerializeField]
 	public language lang;
 
-	void Start () {
-		if(instance == null)
-		{
-			instance = this; 
+	public delegate void OnLanguageChangeEvent();
+	public event OnLanguageChangeEvent OnLanaugeChange;
+
+	void Awake () {
+		if (_instance == null) {
+			_instance = this; 
+		} else {
+			Destroy (gameObject);
 		}
 	}
 
-	public void SeleteLanguage(string language) {
-
-		Debug.Log("language   :  " + language);
-		if(language == "chi"){
-			for(int i = 0; i < lang.dataArray.Length; i++) {
-				langList.Add(lang.dataArray[i].Chinese);	
-			}
-		}else {
-			for(int i = 0; i < lang.dataArray.Length; i++) {
-				langList.Add(lang.dataArray[i].English);	
-			}
-		}
-
+	public string GetWord(int index){
+		return GetWord (index, this.Language);
 	}
 
-	
-	void Update () {
+	public string GetWord(int index, LanguageType type){
+		string word = "";
+		try {
+			switch (this.Language) {
+			case LanguageType.CHI :
+				word = lang.dataArray[index].Chinese;
+				break;
+			case LanguageType.KOR :
+				word = lang.dataArray[index].Korean;
+				break;
+			case LanguageType.ENG :	
+				word = lang.dataArray[index].English;
+				break;
+			}
+		} catch(Exception e){
+			word = "No Data";
+		}
+
+		return word;
 	}
 }

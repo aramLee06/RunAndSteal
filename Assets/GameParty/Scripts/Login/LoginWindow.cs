@@ -30,7 +30,7 @@ public class LoginWindow : MonoBehaviour {
 		androidManager.InitAndroid ();
 
 		#endif
-		//CommonUtil.ScreenSettingsPortrait();
+		CommonUtil.ScreenSettingsPortrait();
 
 		if(UXPlayerLauncherController.Instance.IsConnected() == true){
 			if(UXConnectController.GetRoomNumber() != -1){
@@ -46,8 +46,8 @@ public class LoginWindow : MonoBehaviour {
 		//chineseButton.SetActive(true);
 		//englishButton.SetActive(true);
 		//logoImage.SetActive(true);
-		//ChinaButton ();
-		EnglishButton();
+
+		EnglishButton ();
 
 		#if UNITY_ANDROID && !UNITY_EDITOR
 		infoText.text = androidManager.GetVersionName("com.cspmedia.gamepartyplayer") + "/" + ((ServerList)PlayerPrefs.GetInt("ServerList"));
@@ -56,34 +56,34 @@ public class LoginWindow : MonoBehaviour {
 	}
 
 	public void ChinaButton(){
-		CommonLang.instance.SeleteLanguage("chi");
+		CommonLang.instance.Language = LanguageType.CHI;
 		Login();
 	}
 
 	public void EnglishButton(){
 
-		CommonLang.instance.SeleteLanguage("eng");
+		CommonLang.instance.Language = LanguageType.ENG;
 		Login();
 
 	} 
 
 	void Login(){
 		//logoImage.SetActive(true);
-		//chineseButton.SetActive(false);
-		//englishButton.SetActive(false);
+		chineseButton.SetActive(false);
+		englishButton.SetActive(false);
 
 		int result = 100;
 
-		Debug.Log (CommonLang.instance.langList.Count);
-		//stateText.text = CommonLang.instance.langList[0];
+		stateText.text = CommonLang.instance.GetWord(0);
 		result = playerController.GetUserCodeFromServer();
 		if(result == -1 || result == 100 || result == 0){
 			
 			OKPopUp.popUpType = OKPopUp.APPLICATION_QUIT;
 
-			CommonUtil.InstantiateOKPopUp(CommonLang.instance.langList[4]);
+			CommonUtil.InstantiateOKPopUp(CommonLang.instance.GetWord(4));
 			return;
 		}else if(result == 1){
+
 			Application.LoadLevel ("2_RoomNumber");
 		}
 	}

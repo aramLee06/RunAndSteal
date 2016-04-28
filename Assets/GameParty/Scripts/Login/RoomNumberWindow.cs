@@ -26,10 +26,9 @@ public class RoomNumberWindow : MonoBehaviour {
 	UXClientController clientController;
 	CommonLang commonLang;
 
-	public static int latest_errCode = -1;
-
 	public Text noti;
 
+	public static int latest_errCode = -1;
 	void Start () {
 
 		CommonUtil.ScreenSettingsPortrait();
@@ -43,8 +42,8 @@ public class RoomNumberWindow : MonoBehaviour {
 		clientController = UXClientController.Instance;
 
 		commonLang = CommonLang.instance;
-		//Debug.Log (commonLang.langList.Count);
-		noti.text = commonLang.langList[1];
+//		Debug.Log (commonLang.langList.Count);
+		noti.text = commonLang.GetWord(1);
 
 		clientController.OnConnected += OnConnected;
 		clientController.OnConnectFailed += OnConnectFailed;
@@ -57,16 +56,17 @@ public class RoomNumberWindow : MonoBehaviour {
 			serverConnect.SetActive(true);
 			clientController.Connect();
 		}
+
+
 		
 		if(string.IsNullOrEmpty(qrString) == false){
 			UXConnectController.SetRoomNumber(int.Parse(qrString));
-			clientController.Join("com.cspmedia.runandsteal");
+			clientController.Join("com.cspmedia.hiq");
 		}
 
-		if(latest_errCode != -1)
+		if (latest_errCode != -1) 
 		{
 			OnJoinFailed (latest_errCode);
-			isCon = true;
 			latest_errCode = -1;
 		}
 	}
@@ -79,18 +79,20 @@ public class RoomNumberWindow : MonoBehaviour {
 			qrCodeIsNull = true;
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
 
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[6]);
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(6));
 		}
 		if(Application.platform == RuntimePlatform.Android){
 			if(Input.GetKeyUp(KeyCode.Escape)){
 				YesOrNoPopUp.popUpType = YesOrNoPopUp.APPLICATION_QUIT;
-				CommonUtil.InstantiateYesNoPopUP(commonLang.langList[15]);
+				CommonUtil.InstantiateYesNoPopUP(commonLang.GetWord(15));
 			}
 		}
 
-		if(isCon == true){
+		if(isCon = true){
 			isCon = false;
 			serverConnect.SetActive(false);
+			//Debug.Log (commonLang.langList.Count);
+			//noti.text = commonLang.langList[9];
 		}
 
 	}
@@ -124,51 +126,46 @@ public class RoomNumberWindow : MonoBehaviour {
 	void OnConnectFailed(){
 		OKPopUp.popUpType = OKPopUp.APPLICATION_QUIT;
 		
-		CommonUtil.InstantiateOKPopUp(commonLang.langList[3]);	
+		CommonUtil.InstantiateOKPopUp(commonLang.GetWord(3));	
 	}
 
 	void OnDisconnected(){
 		OKPopUp.popUpType = OKPopUp.APPLICATION_QUIT;
-		CommonUtil.InstantiateOKPopUp(commonLang.langList[5]);
+		CommonUtil.InstantiateOKPopUp(commonLang.GetWord(5));
 	}
 
 
 	void OnJoinSucceeded(bool isHost){
 		Debug.Log("OnJoinSucceeded !!!!!! ");
-		Application.LoadLevel("LobbyClient");
+		Application.LoadLevel("ConnectClient_HiQ");
 	}
 
 	
 	void OnJoinFailed(int err){
 		if(err == 10001 || err == 20001){
-			// Invalied Room Number
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[8]);
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(8));
 			return;
 			
 		}else if(err == 10002){
-			// The User is already connect.
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[14]);
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(14));
 			return;
 			
 		}else if (err == 10003 || err == 20003){
 			Debug.Log("Max User");
-			// Max User
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[12] );
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(12) );
 			return;
-
 		}else if(err == 10004 ||  err == 20004){
 			Debug.Log("Already Start");
-			// Already Start
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;;
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[13] );
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(13) );
 			return;
 		}
 		else {
 			OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;
-			CommonUtil.InstantiateOKPopUp(commonLang.langList[6] );
+			CommonUtil.InstantiateOKPopUp(commonLang.GetWord(6) );
 		}
 	}
 }

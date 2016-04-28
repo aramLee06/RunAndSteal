@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e14a72067f1ad408ec8d661bc560ce, type: 3}
+  m_Name: ExcelGenerator
+  m_EditorClassIdentifier: 
+  templatePath: QuickSheet/ExcelPlugin/Templates
+  scriptFilePath: QuickSheet/ExcelPlugin/Runtime
+  editorScriptFilePath: QuickSheet/ExcelPlugin/Editor
+  sheetName: player_language.xls
+  workSheetName: language
+  headerColumnList:
+  - type: 2
+    name: Number
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: Korean
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: English
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: Chinese
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: divide_line
+    isEnable: 0
+    isArray: 0
+  excelFilePath: Assets/GameParty/Resources/player_language.xls
+  SheetNames:
+  - language
+  currentSelectedSheet: 0

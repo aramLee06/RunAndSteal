@@ -9,7 +9,6 @@ using System.IO;
 /// !!! Machine generated code !!!
 ///
 [CustomEditor(typeof(language))]
-
 public class languageEditor : BaseExcelEditor<language>
 {	
     public override void OnEnable()

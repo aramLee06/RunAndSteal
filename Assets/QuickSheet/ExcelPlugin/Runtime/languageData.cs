@@ -9,6 +9,12 @@ using System.Collections;
 public class languageData
 {
 	[SerializeField]
+	int number;
+	
+	[ExposeProperty]
+	public int Number { get {return number; } set { number = value;} }
+	
+	[SerializeField]
 	string korean;
 	
 	[ExposeProperty]
@@ -25,5 +31,11 @@ public class languageData
 	
 	[ExposeProperty]
 	public string Chinese { get {return chinese; } set { chinese = value;} }
+	
+	[SerializeField]
+	string divide_line;
+	
+	[ExposeProperty]
+	public string Divide_line { get {return divide_line; } set { divide_line = value;} }
 	
 }

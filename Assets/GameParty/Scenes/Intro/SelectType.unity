@@ -180,9 +180,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 62472934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d1f8473aa15b4d9ea9827619db3b731, type: 3}
+  m_Script: {fileID: 11500000, guid: 934cbf463a2a04befa8c4a365997ef45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  langList: []
+  lang: {fileID: 11400000, guid: cf0e2d568bd0d4f45ae9d80d58e1a036, type: 2}
 --- !u!1 &72912380
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,13 +195,14 @@ GameObject:
   - 224: {fileID: 72912381}
   - 222: {fileID: 72912383}
   - 114: {fileID: 72912382}
+  - 114: {fileID: 72912384}
   m_Layer: 5
   m_Name: landscape_guide_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &72912381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -211,7 +214,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1614104075}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 153, y: -195}
@@ -249,13 +252,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Controller Portable = Turn to portrait view
+  m_Text: 'Game Controller Portable = Turn to portrait view '
 --- !u!222 &72912383
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72912380}
+--- !u!114 &72912384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72912380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ef87327124447aabac5b21bd36947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 27
 --- !u!1 &138821189
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +609,7 @@ GameObject:
   - 224: {fileID: 522126697}
   - 222: {fileID: 522126699}
   - 114: {fileID: 522126698}
+  - 114: {fileID: 522126700}
   m_Layer: 5
   m_Name: portratit_screen_text
   m_TagString: Untagged
@@ -612,11 +628,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1614104075}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -17}
-  m_SizeDelta: {x: 575, y: 48}
+  m_AnchoredPosition: {x: 0.000049591064, y: -17}
+  m_SizeDelta: {x: 720, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522126698
 MonoBehaviour:
@@ -639,12 +655,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -657,6 +673,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522126696}
+--- !u!114 &522126700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522126696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ef87327124447aabac5b21bd36947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 24
 --- !u!1 &1355875966
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,10 +960,10 @@ RectTransform:
   m_Children:
   - {fileID: 1767681592}
   - {fileID: 1355875967}
-  - {fileID: 522126697}
-  - {fileID: 1669632732}
   - {fileID: 72912381}
   - {fileID: 1746015592}
+  - {fileID: 522126697}
+  - {fileID: 1669632732}
   - {fileID: 1506699652}
   - {fileID: 138821190}
   - {fileID: 1963358909}
@@ -961,8 +989,8 @@ MonoBehaviour:
   ScreenBtn: {fileID: 1506699651}
   ControllerBtn: {fileID: 138821189}
   BackDrop: {fileID: 1963358906}
-  portrait_screen_text: {fileID: 522126698}
-  portriat_controller_text: {fileID: 1669632733}
+  portrait_screen_text: {fileID: 0}
+  portriat_controller_text: {fileID: 0}
   landscape_guide_text: {fileID: 72912382}
   CountText: {fileID: 1746015593}
 --- !u!1 &1669632731
@@ -975,6 +1003,7 @@ GameObject:
   - 224: {fileID: 1669632732}
   - 222: {fileID: 1669632734}
   - 114: {fileID: 1669632733}
+  - 114: {fileID: 1669632735}
   m_Layer: 5
   m_Name: portratit_controller_text
   m_TagString: Untagged
@@ -993,11 +1022,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1614104075}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -306}
-  m_SizeDelta: {x: 603, y: 48}
+  m_AnchoredPosition: {x: 0.000015258789, y: -306}
+  m_SizeDelta: {x: 720, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669632733
 MonoBehaviour:
@@ -1020,12 +1049,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1038,6 +1067,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669632731}
+--- !u!114 &1669632735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669632731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ef87327124447aabac5b21bd36947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 25
 --- !u!1 &1746015591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1089,7 @@ GameObject:
   - 224: {fileID: 1746015592}
   - 222: {fileID: 1746015594}
   - 114: {fileID: 1746015593}
+  - 114: {fileID: 1746015595}
   m_Layer: 5
   m_Name: CountText
   m_TagString: Untagged
@@ -1066,10 +1108,10 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1614104075}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 73}
+  m_AnchoredPosition: {x: 115, y: 73}
   m_SizeDelta: {x: 646, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746015593
@@ -1111,6 +1153,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746015591}
+--- !u!114 &1746015595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746015591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ef87327124447aabac5b21bd36947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 26
 --- !u!1 &1767681591
 GameObject:
   m_ObjectHideFlags: 0

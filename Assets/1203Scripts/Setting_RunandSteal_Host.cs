@@ -6,15 +6,10 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using UXLib;
 
-public class Setting_RunandSteal_Host : MonoBehaviour {
+public class Setting_Space : MonoBehaviour {
 	
-	public enum LangType
-	{
-		CHINA = 0,
-		ENGLISH = 1,
-	}
-	public static LangType langType;
-
+	
+	
 	public GameObject panel;
 	public GameObject chinaLang;
 	public GameObject englishLang;
@@ -60,8 +55,7 @@ public class Setting_RunandSteal_Host : MonoBehaviour {
 		} else if(((ServerList)PlayerPrefs.GetInt ("ServerList")) == ServerList.SG) {
 			serverState.text = "Singapore";
 		}
-
-		Debug.Log (PlayerPrefs.GetString (LANGUAGE));
+		
 		if(PlayerPrefs.GetString(LANGUAGE) == CHINA){
 			chinaLang.SetActive(true);
 			englishLang.SetActive(false);
@@ -80,9 +74,9 @@ public class Setting_RunandSteal_Host : MonoBehaviour {
 			
 			if(settingCloseWidth != 637)
 			{
-				//textobj_player.text = "Please download the GamePartyPlayer";
-				//textobj_store.text = "Enter your room number or Scan QR code";
-				//textobj_popup.text = "Can start the game when\nthere are 2 players or more";
+				textobj_player.text = "Please download the GamePartyPlayer";
+				textobj_store.text = "Enter your room number or Scan QR code";
+				textobj_popup.text = "Can start the game when\nthere are 2 players or more";
 			}
 		}
 		

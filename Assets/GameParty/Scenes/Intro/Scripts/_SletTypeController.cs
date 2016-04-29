@@ -24,7 +24,11 @@ public class _SletTypeController : MonoBehaviour {
 		}else if (Screen.orientation == ScreenOrientation.Portrait){
 			onPortrait();
 		}
+
+		// Language Select!!
+		CommonLang.instance.Language = LanguageType.CHI;
 	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Screen.orientation == ScreenOrientation.Portrait && !isFixed) {

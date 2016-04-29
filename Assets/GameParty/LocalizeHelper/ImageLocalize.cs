@@ -24,6 +24,7 @@ public class ImageLocalize : MonoBehaviour {
 		if (Chinese == null)
 			Chinese = English;
 		commonLang.OnLanaugeChange += OnLanguageChange;
+		OnLanguageChange ();
 	}
 
 	void OnDestroy(){

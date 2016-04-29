@@ -183,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934cbf463a2a04befa8c4a365997ef45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  langList: []
   lang: {fileID: 11400000, guid: cf0e2d568bd0d4f45ae9d80d58e1a036, type: 2}
 --- !u!1 &72912380
 GameObject:
@@ -989,8 +988,8 @@ MonoBehaviour:
   ScreenBtn: {fileID: 1506699651}
   ControllerBtn: {fileID: 138821189}
   BackDrop: {fileID: 1963358906}
-  portrait_screen_text: {fileID: 0}
-  portriat_controller_text: {fileID: 0}
+  portrit_screen_text: {fileID: 522126698}
+  portrit_controller_text: {fileID: 1669632733}
   landscape_guide_text: {fileID: 72912382}
   CountText: {fileID: 1746015593}
 --- !u!1 &1669632731

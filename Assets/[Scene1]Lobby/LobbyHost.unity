@@ -173,6 +173,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
@@ -1216,6 +1217,7 @@ GameObject:
   - 224: {fileID: 737557269}
   - 222: {fileID: 737557271}
   - 114: {fileID: 737557270}
+  - 114: {fileID: 737557272}
   m_Layer: 5
   m_Name: RoomNumber
   m_TagString: Untagged
@@ -1274,6 +1276,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 737557268}
+--- !u!114 &737557272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737557268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d933f46e8b44dcb8b4b55687919dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: {fileID: 21300000, guid: f906373420f99b344aab936c5d3a3193, type: 3}
+  Korean: {fileID: 21300000, guid: f906373420f99b344aab936c5d3a3193, type: 3}
+  Chinese: {fileID: 21300000, guid: 9f6d6edf8b19d4596bf4db8133b5dec5, type: 3}
 --- !u!1 &753671820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1413,7 @@ Transform:
   m_GameObject: {fileID: 800835420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0035273368, y: 0.0035273368, z: 0.0035273368}
+  m_LocalScale: {x: 0.003984064, y: 0.003984064, z: 0.003984064}
   m_Children:
   - {fileID: 256565429}
   - {fileID: 1766170683}
@@ -2410,8 +2426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNumberTxt: {fileID: 458924513}
   freeLabel: {fileID: 246475752}
+  GameUserList: 
   roomNumberLabel: {fileID: 1939868628}
-  blackOut: {fileID: 1911542333}
   playerNumber:
   - {fileID: 1736133878}
   - {fileID: 734761456}
@@ -2542,6 +2558,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

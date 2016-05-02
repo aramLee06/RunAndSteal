@@ -33,7 +33,7 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: 0
+        second: 0.99355316
       data:
         first:
           name: _Invert

@@ -39,7 +39,7 @@ public class _SletTypeController : MonoBehaviour {
 
 	public void ScreenMode(){
 	 	BackDrop.SetActive (true);
-		SceneManager.LoadScene ("ConnectHost");
+		SceneManager.LoadScene ("BS_LogoViewer");
 	}
 
 	public void ControllerMode(){
@@ -90,9 +90,10 @@ public class _SletTypeController : MonoBehaviour {
 
 	IEnumerator SceneCountDown (){
 		int count = 5;
-		string tempTxt = CommonLang.instance.GetWord(26);
+//		string tempTxt = CommonLang.instance.GetWord(26);
 		while (count >= 0) {
-			CountText.text = string.Format (tempTxt, count);
+			CountText.text = "切换到游戏画面中的 "+count+" 秒...";
+			//CountText.text = ""
 			yield return new WaitForSeconds (1.0f);
 			count--;
 		}

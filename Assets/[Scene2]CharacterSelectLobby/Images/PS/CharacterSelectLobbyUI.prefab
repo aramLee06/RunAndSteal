@@ -42,8 +42,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 40eec2beeed4e0847a6f4d49d594365d, type: 2}
   mSprites:
   - name: (1)_(lobby)_soldout
-    x: 721
-    y: 1887
+    x: 900
+    y: 1576
     width: 321
     height: 161
     borderLeft: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_button01_v1_360x1065
-    x: 597
-    y: 1504
+    x: 900
+    y: 1738
     width: 385
     height: 310
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: (lobby)_button02_v1_360x1065
-    x: 1369
-    y: 1516
+    x: 294
+    y: 1277
     width: 385
     height: 298
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 0
   - name: (lobby)_button03_v1_360x1065
-    x: 983
-    y: 1507
+    x: 1286
+    y: 1741
     width: 385
     height: 307
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 0
   - name: (lobby)_gray_character-andy_v1
-    x: 0
-    y: 12
+    x: 680
+    y: 647
     width: 218
     height: 380
     borderLeft: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: (lobby)_gray_character-bunnee_v1
     x: 0
-    y: 1321
+    y: 1555
     width: 293
     height: 493
     borderLeft: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: (lobby)_gray_character-frank_v1
     x: 0
-    y: 393
+    y: 627
     width: 286
     height: 433
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 67
     paddingBottom: 0
   - name: (lobby)_gray_character-jean-paul_v1
-    x: 1755
-    y: 1561
+    x: 899
+    y: 1155
     width: 277
     height: 253
     borderLeft: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: (lobby)_gray_character-johnny_v1
     x: 294
-    y: 42
+    y: 884
     width: 273
     height: 392
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 108
     paddingBottom: 0
   - name: (lobby)_gray_character-johnson_v1
-    x: 294
-    y: 1342
+    x: 597
+    y: 1576
     width: 302
     height: 472
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 28
     paddingBottom: 0
   - name: (lobby)_gray_character-roony_v1
-    x: 871
-    y: 1157
+    x: 294
+    y: 190
     width: 306
     height: 346
     borderLeft: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
     paddingTop: 154
     paddingBottom: 0
   - name: (lobby)_name_andy_v1_360x360
-    x: 1433
-    y: 1923
+    x: 1778
+    y: 1450
     width: 194
     height: 125
     borderLeft: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_bunnee_v1_360x360
-    x: 1043
-    y: 1923
+    x: 0
+    y: 67
     width: 194
     height: 125
     borderLeft: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_frank_v1_360x360
-    x: 597
-    y: 604
+    x: 1286
+    y: 1615
     width: 194
     height: 125
     borderLeft: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_jean-paul_v1_360x360
-    x: 597
-    y: 478
+    x: 294
+    y: 64
     width: 194
     height: 125
     borderLeft: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_johnny_v1_360x360
-    x: 1628
-    y: 1923
+    x: 1193
+    y: 1450
     width: 194
     height: 125
     borderLeft: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_johnson_v1_360x360
-    x: 1238
-    y: 1923
+    x: 1388
+    y: 1450
     width: 194
     height: 125
     borderLeft: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_roony_v1_360x360
-    x: 1823
-    y: 1923
+    x: 1583
+    y: 1450
     width: 194
     height: 125
     borderLeft: 0
@@ -276,10 +276,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_select-character_bar_v2
-    x: 0
-    y: 1815
-    width: 720
-    height: 233
+    x: 680
+    y: 1409
+    width: 512
+    height: 166
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_shadow_v1
-    x: 721
-    y: 1830
+    x: 0
+    y: 10
     width: 192
     height: 56
     borderLeft: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Andy_150310
-    x: 597
-    y: 730
+    x: 680
+    y: 1028
     width: 218
     height: 380
     borderLeft: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Bunnee_150310
     x: 0
-    y: 827
+    y: 1061
     width: 293
     height: 493
     borderLeft: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
     paddingTop: 7
     paddingBottom: 0
   - name: Frank_150310
-    x: 294
-    y: 435
+    x: 0
+    y: 193
     width: 286
     height: 433
     borderLeft: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
     paddingTop: 67
     paddingBottom: 0
   - name: Jean_150310
-    x: 1485
-    y: 1250
+    x: 1177
+    y: 1155
     width: 277
     height: 253
     borderLeft: 0
@@ -354,8 +354,8 @@ MonoBehaviour:
     paddingTop: 247
     paddingBottom: 0
   - name: Johnny_150310
-    x: 597
-    y: 1111
+    x: 1672
+    y: 1656
     width: 273
     height: 392
     borderLeft: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Johnson_150310
     x: 294
-    y: 869
+    y: 1576
     width: 302
     height: 472
     borderLeft: 0
@@ -380,8 +380,8 @@ MonoBehaviour:
     paddingTop: 28
     paddingBottom: 0
   - name: Roony_150310
-    x: 1178
-    y: 1157
+    x: 294
+    y: 537
     width: 306
     height: 346
     borderLeft: 0
@@ -407,4 +407,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 105738}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

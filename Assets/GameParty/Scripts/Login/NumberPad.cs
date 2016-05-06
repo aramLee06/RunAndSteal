@@ -65,7 +65,7 @@ public class NumberPad : MonoBehaviour {
                 UXLib.User.UXRoom.Instance.RoomNumber = inputNumber;
 
 				//clientController.Join("none");
-				Application.LoadLevel("ConnectClient_HiQ");
+				Application.LoadLevel("LobbyClient");
 				return;
 			} else {
 				OKPopUp.popUpType = OKPopUp.POPUP_DESTROY;

@@ -671,9 +671,6 @@ namespace UXLib
         }
 
 
-		public void SendPremium(bool isPremium){
-			player.IsPremium = isPremium;
-		}
 
 
 

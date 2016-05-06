@@ -576,7 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beffe65640ba431db04b9bc2f734438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inapp: {fileID: 0}
   backDrop: {fileID: 0}
   playerNumber: {fileID: 153874}
   playerNumberSprite:

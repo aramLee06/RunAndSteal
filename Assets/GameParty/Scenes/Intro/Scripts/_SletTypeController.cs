@@ -21,7 +21,7 @@ public class _SletTypeController : MonoBehaviour {
 	void Start () {
 
 		// Language Select!!
-		CommonLang.instance.Language = LanguageType.CHI;
+		CommonLang.instance.Language = LanguageType.ENG;
 
 		if (Screen.orientation == ScreenOrientation.Landscape || Screen.orientation == ScreenOrientation.LandscapeRight) {
 			onLandscape ();
@@ -41,7 +41,7 @@ public class _SletTypeController : MonoBehaviour {
 
 	public void ScreenMode(){
 	 	BackDrop.SetActive (true);
-		SceneManager.LoadScene ("ConnectHost");
+		SceneManager.LoadScene ("BS_LogoViewer");
 	}
 
 	public void ControllerMode(){

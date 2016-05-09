@@ -35,16 +35,6 @@ namespace UXLib.User {
 			return isConnected;
 		}
 
-		private bool isPremium = false;
-		public bool IsPremium 
-		{
-			get{
-				return isPremium;
-			}
-			set{
-				this.isPremium = value;
-			}
-		} 
 
 		public string GetImageURL() { return imageURL; }
 		public LobbyState GetLobbyState() { return lobbyState; }

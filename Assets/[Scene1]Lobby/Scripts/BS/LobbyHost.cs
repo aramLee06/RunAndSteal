@@ -18,7 +18,6 @@ public class LobbyHost : MonoBehaviour
     UXAndroidManager androidManager;
 
 	public Text roomNumberTxt;
-	public GameObject freeLabel;
 	public List <int> GameUserList = new List<int>();
     void Awake()
     {
@@ -109,22 +108,9 @@ public class LobbyHost : MonoBehaviour
         //==========================================
         hostController.OnHostDisconnected += hostController_OnHostDisconnected;
 
-		hostController.OnJoinPremiumUser += OnJoinPremiumUser;
-		hostController.OnLeavePremiumUser += OnLeavePremiumUser;
 
         hostController.SetAutoStart(2, 1);
-        if (result == false)
-        {
-            
-            hostController.SetMaxUser(2); // for GOOGLE
-			freeLabel.SetActive(true);
-
-        }
-        else
-        {
-			hostController.SetMaxUser(2); // for GOOGLE
-			freeLabel.SetActive(true);
-        }
+           
         PopupManager_RaS.IsFreeSetter(true);
         hostController.Connect();
 
@@ -150,17 +136,6 @@ public class LobbyHost : MonoBehaviour
         iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, -10), 4.0f);
     }
 
-    void OnLeavePremiumUser () {}
-
-    void OnJoinPremiumUser ()
-    {
-		Debug.Log ("Join PremiumUser");
-		hostController.SetMaxUser (6);
-		if (freeLabel != null) {
-			freeLabel.SetActive (false);
-		}
-
-    }
 
     void hostController_OnHostDisconnected()
     {
@@ -176,7 +151,7 @@ public class LobbyHost : MonoBehaviour
 
         if (isGameStart == false)
         {
-			maxPlayer = hostController.GetMaxUser();
+			//maxPlayer = hostController.GetMaxUser();
             for (int i = 0; i < 6; i++)
             {
                 if (i < playerCount)
@@ -212,15 +187,7 @@ public class LobbyHost : MonoBehaviour
             //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
         }
 
-		/*
-		if(freeLabel != null) {
-			if (UXHostController.room.IsPremium) {
-				freeLabel.SetActive (false);
-			} else {
-				freeLabel.SetActive (true);
-			}
-		}
-		*/
+
     }
 
     void OnConnected()
@@ -237,6 +204,7 @@ public class LobbyHost : MonoBehaviour
 
         hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
+		hostController.SetMaxUser(6); // 인앱없어졌ㅅ으니까 처음에 바로 열어주ㄹ거야
     }
 
     void OnDisconnected() {}
@@ -253,24 +221,10 @@ public class LobbyHost : MonoBehaviour
 		hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
 
-		CheckPremiumUser ();
+
     }
 
-	void CheckPremiumUser() {
-		
-		if (UXHostController.room.IsPremium) {
-			hostController.SetMaxUser (6);
-			if (freeLabel != null) {
-				freeLabel.SetActive (false);
-			}
-		} else {
-			hostController.SetMaxUser (2);
-			if (freeLabel != null) {
-				freeLabel.SetActive (true);
-			}
-		}
 
-	}
 
 	void OnUserLeaved(int userIndex, int userCode)
 	{
@@ -492,20 +446,6 @@ public class LobbyHost : MonoBehaviour
 
         }
 
-		if (Application.loadedLevelName.Equals("LobbyHost"))
-        {
-			Debug.Log ("Received ::isPremium? " + UXHostController.room.IsPremium);
-			if (freeLabel == null) {
-				freeLabel = GameObject.Find ("Free Play");
-			} 
-
-			if (UXHostController.room.IsPremium) {
-				freeLabel.SetActive (false);
-			} else {
-				freeLabel.SetActive (true);
-			}
-        }
-
         GameObject bigScreen = GameObject.Find("BS");
         if (bigScreen == null)
         {
@@ -614,8 +554,6 @@ public class LobbyHost : MonoBehaviour
             hostController.OnReceived -= OnReceived;
             //==========================================
             hostController.OnHostDisconnected -= hostController_OnHostDisconnected;
-			hostController.OnJoinPremiumUser -= OnJoinPremiumUser;
-			hostController.OnLeavePremiumUser -= OnLeavePremiumUser;
         }
     }
     void OnGUI()

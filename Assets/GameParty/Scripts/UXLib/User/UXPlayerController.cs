@@ -25,21 +25,6 @@ namespace UXLib.User {
 		bool isUserLogin;
 		public static char DATA_DELIMITER = (char)232;//여기서 자름
 
-		private bool isPremium = false; //현재 플레이어가 프리미엄 버전인지에 대한 여부 (초기값 false)
-		public bool IsPremium
-		{
-			get{
-				return isPremium;
-			}
-			set{
-				this.isPremium = value;
-				if (isPremium) {
-					string sendString = "{\"cmd\":\"premium_user\",\"u_code\":\"" + GetCode () + "\",\"l_code\":\"" + UXConnectController.room.RoomNumber+ "\"}" + DATA_DELIMITER;
-					roomConnect.Send (sendString);
-				}
-			}
-		} 
-
 		private static UXPlayerController instance = null;
 		public static UXPlayerController Instance {
 			get {

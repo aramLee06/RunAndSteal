@@ -41,13 +41,6 @@ namespace UXLib.User {
 				return player;
 			}	
 		}
-			
-		public bool IsPremium 
-		{
-			get{
-				return IsPremiumRoom();
-			}
-		} 
 
 
 		private int maxUser = 2; //이 방에 접속할 수 있는 최대 인원 수 (초기값 2)
@@ -74,19 +67,6 @@ namespace UXLib.User {
 			set{ 
 				this.roomNumber = value;
 			} 
-		}
-
-		private bool IsPremiumRoom(){
-			UXUserController userController = UXUserController.Instance;
-			List<UXObject> userList = userController.GetList();
-			for (int i = 0; i < userList.Count; i++)
-			{
-				UXUser user = (UXUser)userList[i];
-				if (user.IsPremium) {
-					return true;
-				}
-			}
-			return false;
 		}
 
 		public UXRoom ()

@@ -60,13 +60,6 @@ namespace UXLib.User {
 			objectList.Clear ();
 
 			foreach (UXUser user in list) {
-				user.IsPremium = false;
-				foreach (UXObject preObj in preObjList){				
-					UXUser preUser = (UXUser)preObj;
-					if (user.GetCode () == preUser.GetCode ()) {
-						user.IsPremium = preUser.IsPremium;
-					}
-				}
 				objectList.Add (user);
 			}
 		}

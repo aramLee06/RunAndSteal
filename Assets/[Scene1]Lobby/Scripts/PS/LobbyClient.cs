@@ -28,7 +28,6 @@ public class LobbyClient : MonoBehaviour
 	//UXAndroidManager androidManager;
 	private UXAndroidManager m_AndroidManager;
 
-	public PremiumVersionStore inapp;
 	public GameObject backDrop;
 
 	// 현재 플레이어 ID
@@ -108,7 +107,6 @@ public class LobbyClient : MonoBehaviour
 		m_ClientController.OnAckFailed += OnAckFailed;
 		m_ClientController.OnHostDisconnected += OnHostDisconnected;
 
-		//inapp.OnPurchaseSuccess += OnPurchaseSuccess;
 		
 		//==========================================
 		m_ClientController.OnHostJoined += OnHostJoined;
@@ -550,23 +548,10 @@ public class LobbyClient : MonoBehaviour
 	}
 	*/
 
-	public void OnPurchaseSuccess(){
-		//////////////SendToHost ("PREMIUM,");
-		UXPlayerController player = UXPlayerController.Instance;
-		player.IsPremium = true;
-	}
 
 	public void AfterJoin ()
 	{
-		Debug.Log ( "AfterJoin " + inapp.IsPremiumVersion());
-		if (inapp.IsPremiumVersion())
-		{
-			////////////SendToHost("PREMIUM,");
-			UXPlayerController player = UXPlayerController.Instance;
-			player.IsPremium = true;
-		}
-		inapp.OnPurchaseSuccess += OnPurchaseSuccess;
-
+		Debug.Log ( "AfterJoin " );
 		Destroy (backDrop);
 	}
 

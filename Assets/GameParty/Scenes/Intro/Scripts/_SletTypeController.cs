@@ -19,14 +19,16 @@ public class _SletTypeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		// Language Select!!
+		CommonLang.instance.Language = LanguageType.ENG;
+
 		if (Screen.orientation == ScreenOrientation.Landscape || Screen.orientation == ScreenOrientation.LandscapeRight) {
 			onLandscape ();
 		}else if (Screen.orientation == ScreenOrientation.Portrait){
 			onPortrait();
 		}
-
-		// Language Select!!
-		CommonLang.instance.Language = LanguageType.CHI;
+	
 	}
 
 	// Update is called once per frame

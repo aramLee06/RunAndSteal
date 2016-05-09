@@ -24,8 +24,6 @@ namespace UXLib {
 		public delegate void OnUserStateChangedHandler(int userIndex, UXUser.LobbyState state);
 		public delegate void OnAutoCountChangedHandler(int restSecond);
 		public delegate void OnAutoStartFailedHandler();
-		public delegate void OnJoinPremiumUserHandler ();
-		public delegate void OnLeavePremiumUserHandler ();
 
 		
 		/** Called when host succeeded in joinig 
@@ -60,12 +58,6 @@ namespace UXLib {
 		/** Called when auto start is failed */
 		public event OnAutoStartFailedHandler OnAutoStartFailed;
 
-		/** Called when Joined premium user **/
-		public event OnJoinPremiumUserHandler OnJoinPremiumUser;
-
-		/** Called when leaved premium user **/
-		public event OnLeavePremiumUserHandler OnLeavePremiumUser;
-		
 		private static UXHostController instance = null;
 		
 		/** Singletone */
@@ -198,29 +190,11 @@ namespace UXLib {
 				if (OnUserNetworkReported != null) {
 					OnUserNetworkReported (userIndex, count, time);
 				}
-			} else if (command == "premium_user_result") {
-				int code = N ["u_code"].AsInt;	
-				UXUserController userList = UXUserController.Instance;
-				for (int i = 0; i < userList.GetCount (); i++) {
-					UXUser user = (UXUser)userList.GetAt (i);
-					if (user.GetCode () == code) {
-						user.IsPremium = true;
-						break;
-					}
-				}
-
-				if (OnJoinPremiumUser != null) {
-					OnJoinPremiumUser ();
-				}
-			} else if (command == "user_del") {
+			}  else if (command == "user_del") {
 				int code = N ["u_code"].AsInt;
 				UXUserController userList = UXUserController.Instance;
 				UXUser user = userList.GetUserByCode (code);
-				if (user.IsPremium) {
-					if (OnLeavePremiumUser != null) {
-						OnLeavePremiumUser ();
-					}
-				}
+
 				base.ProcessReceivedMessage(data);
 			} else {
 				base.ProcessReceivedMessage(data);
@@ -258,9 +232,6 @@ namespace UXLib {
 			return room.MaxUser;		
 		}
 
-		public bool IsPremiumRoom(){
-			return room.IsPremium;
-		}
 
 		/** Set auto start options
 			@param minimumUser minium user

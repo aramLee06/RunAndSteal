@@ -41,32 +41,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 57ae41e578551eb43b3fde8505f9c326, type: 2}
   mSprites:
-  - name: (lobby)_button-cancel_v1_360x1065
-    x: 0
-    y: 460
-    width: 385
-    height: 307
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 2
-    paddingRight: 3
-    paddingTop: 4
-    paddingBottom: 0
-  - name: (lobby)_button-ready_v1_360x1065
-    x: 0
-    y: 152
-    width: 385
-    height: 307
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 2
-    paddingRight: 3
-    paddingTop: 4
-    paddingBottom: 0
   - name: Black
     x: 0
     y: 768
@@ -79,6 +53,58 @@ MonoBehaviour:
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
+    paddingBottom: 0
+  - name: btn_cancel_chn
+    x: 1107
+    y: 1741
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 0
+  - name: btn_cancel_eng
+    x: 0
+    y: 152
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 0
+  - name: btn_ready_chn
+    x: 721
+    y: 1741
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 0
+  - name: btn_reday_eng
+    x: 0
+    y: 460
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
     paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

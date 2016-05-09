@@ -132,9 +132,53 @@ Prefab:
       propertyPath: backDrop
       value: 
       objectReference: {fileID: 187706853}
+    - target: {fileID: 11448994, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
+      propertyPath: mSpriteName
+      value: btn_reday_eng
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491128, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
+      propertyPath: mSpriteName
+      value: btn_cancel_eng
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &11372254 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 188502, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
+  m_PrefabInternal: {fileID: 11372253}
+--- !u!114 &11372255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11372254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: btn_ready_eng
+  Chinese: btn_ready_chn
+  Korean: 
+--- !u!1 &11372256 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 183628, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
+  m_PrefabInternal: {fileID: 11372253}
+--- !u!114 &11372257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11372256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: btn_cancel_eng
+  Chinese: btn_cancel_chn
+  Korean: 
 --- !u!1 &187706853
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +390,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

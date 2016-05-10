@@ -43,7 +43,7 @@ namespace UXLib.User {
 		}
 
 
-		private int maxUser = 2; //이 방에 접속할 수 있는 최대 인원 수 (초기값 2)
+		private int maxUser = 6; //이 방에 접속할 수 있는 최대 인원 수 (초기값 2)//인앱없어져ㅆ으니까 바로 초ㅣ대값
 		public int MaxUser 
 		{ 
 			get{

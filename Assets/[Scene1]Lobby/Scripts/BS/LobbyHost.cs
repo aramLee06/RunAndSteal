@@ -204,7 +204,6 @@ public class LobbyHost : MonoBehaviour
 
         hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
-		hostController.SetMaxUser(6); // 인앱없어졌ㅅ으니까 처음에 바로 열어주ㄹ거야
     }
 
     void OnDisconnected() {}

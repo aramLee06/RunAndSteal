@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_cancel_chn
-    x: 1107
-    y: 1741
+    x: 0
+    y: 460
     width: 385
     height: 307
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 0
   - name: btn_reday_eng
-    x: 0
-    y: 460
+    x: 1107
+    y: 1741
     width: 385
     height: 307
     borderLeft: 0

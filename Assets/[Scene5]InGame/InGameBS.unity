@@ -1592,6 +1592,7 @@ GameObject:
   - 114: {fileID: 497394356}
   - 114: {fileID: 497394357}
   - 114: {fileID: 497394358}
+  - 114: {fileID: 497394359}
   m_Layer: 5
   m_Name: Go
   m_TagString: Untagged
@@ -1659,7 +1660,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11447876, guid: 6b1ec4330b0a28b469b978446ad8fbc7, type: 2}
-  mSpriteName: (1)_(ingame)_ready__go_set_02
+  mSpriteName: go_eng
   mFillCenter: 1
 --- !u!114 &497394357
 MonoBehaviour:
@@ -1740,6 +1741,20 @@ MonoBehaviour:
   callWhenFinished: 
   from: 1
   to: 0
+--- !u!114 &497394359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497394354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: go_eng
+  Chinese: go_chi
+  Korean: go_eng
 --- !u!1 &513115439 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 139700, guid: f6f25a627a51f624c853abe5de6f99c1, type: 2}
@@ -3057,6 +3072,7 @@ GameObject:
   - 4: {fileID: 737083676}
   - 114: {fileID: 737083677}
   - 114: {fileID: 737083678}
+  - 114: {fileID: 737083679}
   m_Layer: 5
   m_Name: Ready
   m_TagString: Untagged
@@ -3124,7 +3140,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11447876, guid: 6b1ec4330b0a28b469b978446ad8fbc7, type: 2}
-  mSpriteName: (1)_(ingame)_ready_go_set_01
+  mSpriteName: ready_eng
   mFillCenter: 1
 --- !u!114 &737083678
 MonoBehaviour:
@@ -3170,6 +3186,20 @@ MonoBehaviour:
   from: {x: 0, y: 0, z: 0}
   to: {x: 1, y: 1, z: 1}
   updateTable: 0
+--- !u!114 &737083679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737083675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: ready_eng
+  Chinese: ready_chi
+  Korean: ready_eng
 --- !u!1001 &748056876
 Prefab:
   m_ObjectHideFlags: 0
@@ -6091,6 +6121,7 @@ GameObject:
   - 114: {fileID: 1322359261}
   - 114: {fileID: 1322359262}
   - 114: {fileID: 1322359263}
+  - 114: {fileID: 1322359264}
   m_Layer: 5
   m_Name: GameSet
   m_TagString: Untagged
@@ -6158,7 +6189,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11447876, guid: 6b1ec4330b0a28b469b978446ad8fbc7, type: 2}
-  mSpriteName: (1)_(ingame)_ready_go_set_03
+  mSpriteName: gameset_eng
   mFillCenter: 1
 --- !u!114 &1322359262
 MonoBehaviour:
@@ -6243,6 +6274,20 @@ MonoBehaviour:
   callWhenFinished: 
   from: 0
   to: 1
+--- !u!114 &1322359264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322359259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: gameset_eng
+  Chinese: gameset_chi
+  Korean: gameset_eng
 --- !u!1 &1378250851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9145,6 +9190,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -9482,7 +9528,7 @@ Transform:
   m_GameObject: {fileID: 1941872408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0006508298, y: 0.0006508298, z: 0.0006508298}
+  m_LocalScale: {x: 0.0016666667, y: 0.0016666667, z: 0.0016666667}
   m_Children:
   - {fileID: 1576968282}
   - {fileID: 1160899370}

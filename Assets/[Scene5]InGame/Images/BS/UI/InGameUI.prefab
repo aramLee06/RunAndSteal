@@ -41,45 +41,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: aaec5bdd90331264ea4dca7bf641b0f7, type: 2}
   mSprites:
-  - name: (1)_(ingame)_ready__go_set_02
-    x: 637
-    y: 221
-    width: 214
-    height: 167
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 148
-    paddingRight: 150
-    paddingTop: 28
-    paddingBottom: 13
-  - name: (1)_(ingame)_ready_go_set_01
-    x: 637
-    y: 126
-    width: 191
-    height: 94
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 100
-    paddingRight: 107
-    paddingTop: 17
-    paddingBottom: 8
-  - name: (1)_(ingame)_ready_go_set_03
-    x: 854
-    y: 552
-    width: 319
-    height: 80
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 96
-    paddingRight: 97
-    paddingTop: 12
-    paddingBottom: 11
   - name: (1)_(ingame)_ready_go_set_blackout
     x: 0
     y: 968
@@ -107,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 4
   - name: (ingame-b)_scorebar-andy_v1
-    x: 854
-    y: 132
+    x: 1576
+    y: 349
     width: 221
     height: 82
     borderLeft: 0
@@ -120,8 +81,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: (ingame-b)_scorebar-bunnee_v1
-    x: 854
-    y: 215
+    x: 1354
+    y: 10
     width: 221
     height: 83
     borderLeft: 0
@@ -133,8 +94,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: (ingame-b)_scorebar-frank_v1
-    x: 854
-    y: 299
+    x: 1354
+    y: 94
     width: 221
     height: 83
     borderLeft: 0
@@ -146,8 +107,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: (ingame-b)_scorebar-jeanpaul_v1
-    x: 854
-    y: 383
+    x: 1354
+    y: 178
     width: 221
     height: 83
     borderLeft: 0
@@ -159,8 +120,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: (ingame-b)_scorebar-johnny_v1
-    x: 0
-    y: 6
+    x: 1354
+    y: 262
     width: 221
     height: 84
     borderLeft: 0
@@ -172,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (ingame-b)_scorebar-johnson_v1
-    x: 383
-    y: 18
+    x: 1354
+    y: 347
     width: 221
     height: 84
     borderLeft: 0
@@ -185,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (ingame-b)_scorebar-roony_v1
-    x: 854
-    y: 467
+    x: 1753
+    y: 548
     width: 221
     height: 84
     borderLeft: 0
@@ -198,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: apple
-    x: 637
-    y: 389
+    x: 742
+    y: 10
     width: 216
     height: 243
     borderLeft: 0
@@ -212,7 +173,7 @@ MonoBehaviour:
     paddingBottom: 26
   - name: dia
     x: 0
-    y: 361
+    y: 59
     width: 382
     height: 271
     borderLeft: 0
@@ -236,9 +197,61 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: gold
+  - name: gameset_chi
+    x: 1354
+    y: 432
+    width: 319
+    height: 80
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 96
+    paddingRight: 97
+    paddingTop: 12
+    paddingBottom: 11
+  - name: gameset_eng
+    x: 742
+    y: 509
+    width: 611
+    height: 123
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: go_chi
+    x: 996
+    y: 66
+    width: 214
+    height: 167
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 148
+    paddingRight: 150
+    paddingTop: 28
+    paddingBottom: 13
+  - name: go_eng
     x: 0
-    y: 91
+    y: 331
+    width: 741
+    height: 301
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: gold
+    x: 383
+    y: 61
     width: 259
     height: 269
     borderLeft: 0
@@ -249,9 +262,35 @@ MonoBehaviour:
     paddingRight: 20
     paddingTop: 16
     paddingBottom: 15
+  - name: ready_chi
+    x: 1576
+    y: 254
+    width: 191
+    height: 94
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 100
+    paddingRight: 107
+    paddingTop: 17
+    paddingBottom: 8
+  - name: ready_eng
+    x: 1354
+    y: 513
+    width: 398
+    height: 119
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: ring
-    x: 383
-    y: 103
+    x: 996
+    y: 234
     width: 206
     height: 274
     borderLeft: 0
@@ -263,8 +302,8 @@ MonoBehaviour:
     paddingTop: 15
     paddingBottom: 11
   - name: silver
-    x: 383
-    y: 378
+    x: 742
+    y: 254
     width: 253
     height: 254
     borderLeft: 0

@@ -158,9 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  English: btn_ready_eng
+  English: btn_reday_eng
   Chinese: btn_ready_chn
-  Korean: 
+  Korean: btn_reday_eng
 --- !u!1 &11372256 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 183628, guid: e389c6c736332445abf7bef8078ae8b1, type: 2}
@@ -390,6 +390,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

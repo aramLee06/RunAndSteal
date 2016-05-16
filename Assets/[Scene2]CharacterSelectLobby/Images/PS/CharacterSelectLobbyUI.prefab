@@ -41,61 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 40eec2beeed4e0847a6f4d49d594365d, type: 2}
   mSprites:
-  - name: (1)_(lobby)_soldout
-    x: 900
-    y: 1576
-    width: 321
-    height: 161
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: (lobby)_button01_v1_360x1065
-    x: 900
-    y: 1738
-    width: 385
-    height: 310
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 2
-    paddingRight: 3
-    paddingTop: 1
-    paddingBottom: 0
-  - name: (lobby)_button02_v1_360x1065
-    x: 294
-    y: 1277
-    width: 385
-    height: 298
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 2
-    paddingRight: 3
-    paddingTop: 13
-    paddingBottom: 0
-  - name: (lobby)_button03_v1_360x1065
-    x: 1286
-    y: 1741
-    width: 385
-    height: 307
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 2
-    paddingRight: 3
-    paddingTop: 4
-    paddingBottom: 0
   - name: (lobby)_gray_character-andy_v1
-    x: 680
-    y: 647
+    x: 597
+    y: 422
     width: 218
     height: 380
     borderLeft: 0
@@ -108,7 +56,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: (lobby)_gray_character-bunnee_v1
     x: 0
-    y: 1555
+    y: 1321
     width: 293
     height: 493
     borderLeft: 0
@@ -121,7 +69,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: (lobby)_gray_character-frank_v1
     x: 0
-    y: 627
+    y: 393
     width: 286
     height: 433
     borderLeft: 0
@@ -133,8 +81,8 @@ MonoBehaviour:
     paddingTop: 67
     paddingBottom: 0
   - name: (lobby)_gray_character-jean-paul_v1
-    x: 899
-    y: 1155
+    x: 1755
+    y: 1250
     width: 277
     height: 253
     borderLeft: 0
@@ -146,8 +94,8 @@ MonoBehaviour:
     paddingTop: 247
     paddingBottom: 0
   - name: (lobby)_gray_character-johnny_v1
-    x: 294
-    y: 884
+    x: 597
+    y: 803
     width: 273
     height: 392
     borderLeft: 0
@@ -159,8 +107,8 @@ MonoBehaviour:
     paddingTop: 108
     paddingBottom: 0
   - name: (lobby)_gray_character-johnson_v1
-    x: 597
-    y: 1576
+    x: 294
+    y: 1342
     width: 302
     height: 472
     borderLeft: 0
@@ -172,8 +120,8 @@ MonoBehaviour:
     paddingTop: 28
     paddingBottom: 0
   - name: (lobby)_gray_character-roony_v1
-    x: 294
-    y: 190
+    x: 871
+    y: 502
     width: 306
     height: 346
     borderLeft: 0
@@ -185,8 +133,8 @@ MonoBehaviour:
     paddingTop: 154
     paddingBottom: 0
   - name: (lobby)_name_andy_v1_360x360
-    x: 1778
-    y: 1450
+    x: 1178
+    y: 1070
     width: 194
     height: 125
     borderLeft: 0
@@ -198,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_bunnee_v1_360x360
-    x: 0
-    y: 67
+    x: 871
+    y: 124
     width: 194
     height: 125
     borderLeft: 0
@@ -211,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_frank_v1_360x360
-    x: 1286
-    y: 1615
+    x: 871
+    y: 250
     width: 194
     height: 125
     borderLeft: 0
@@ -224,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_jean-paul_v1_360x360
-    x: 294
-    y: 64
+    x: 871
+    y: 376
     width: 194
     height: 125
     borderLeft: 0
@@ -237,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_johnny_v1_360x360
-    x: 1193
-    y: 1450
+    x: 597
+    y: 44
     width: 194
     height: 125
     borderLeft: 0
@@ -250,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_johnson_v1_360x360
-    x: 1388
-    y: 1450
+    x: 597
+    y: 170
     width: 194
     height: 125
     borderLeft: 0
@@ -263,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_name_roony_v1_360x360
-    x: 1583
-    y: 1450
+    x: 597
+    y: 296
     width: 194
     height: 125
     borderLeft: 0
@@ -276,8 +224,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: (lobby)_select-character_bar_v2
-    x: 680
-    y: 1409
+    x: 721
+    y: 1882
     width: 512
     height: 166
     borderLeft: 0
@@ -288,9 +236,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: (lobby)_shadow_v1
+  - name: (lobby)_select-character_bar_v4
     x: 0
-    y: 10
+    y: 1815
+    width: 720
+    height: 233
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: (lobby)_shadow_v1
+    x: 721
+    y: 1825
     width: 192
     height: 56
     borderLeft: 0
@@ -302,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Andy_150310
-    x: 680
-    y: 1028
+    x: 0
+    y: 12
     width: 218
     height: 380
     borderLeft: 0
@@ -314,9 +275,87 @@ MonoBehaviour:
     paddingRight: 71
     paddingTop: 120
     paddingBottom: 0
+  - name: btn_select_chi
+    x: 983
+    y: 1504
+    width: 385
+    height: 310
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 0
+  - name: btn_select_eng
+    x: 597
+    y: 1504
+    width: 385
+    height: 310
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 0
+  - name: btn_select2_chi
+    x: 1369
+    y: 1205
+    width: 385
+    height: 298
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 13
+    paddingBottom: 0
+  - name: btn_select2_eng
+    x: 983
+    y: 1205
+    width: 385
+    height: 298
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 13
+    paddingBottom: 0
+  - name: btn_wait_chi
+    x: 597
+    y: 1196
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 0
+  - name: btn_wait_eng
+    x: 1369
+    y: 1507
+    width: 385
+    height: 307
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 0
   - name: Bunnee_150310
     x: 0
-    y: 1061
+    y: 827
     width: 293
     height: 493
     borderLeft: 0
@@ -328,8 +367,8 @@ MonoBehaviour:
     paddingTop: 7
     paddingBottom: 0
   - name: Frank_150310
-    x: 0
-    y: 193
+    x: 294
+    y: 435
     width: 286
     height: 433
     borderLeft: 0
@@ -341,8 +380,8 @@ MonoBehaviour:
     paddingTop: 67
     paddingBottom: 0
   - name: Jean_150310
-    x: 1177
-    y: 1155
+    x: 1755
+    y: 1561
     width: 277
     height: 253
     borderLeft: 0
@@ -354,8 +393,8 @@ MonoBehaviour:
     paddingTop: 247
     paddingBottom: 0
   - name: Johnny_150310
-    x: 1672
-    y: 1656
+    x: 294
+    y: 42
     width: 273
     height: 392
     borderLeft: 0
@@ -368,7 +407,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Johnson_150310
     x: 294
-    y: 1576
+    y: 869
     width: 302
     height: 472
     borderLeft: 0
@@ -380,8 +419,8 @@ MonoBehaviour:
     paddingTop: 28
     paddingBottom: 0
   - name: Roony_150310
-    x: 294
-    y: 537
+    x: 871
+    y: 849
     width: 306
     height: 346
     borderLeft: 0
@@ -391,6 +430,32 @@ MonoBehaviour:
     paddingLeft: 27
     paddingRight: 27
     paddingTop: 154
+    paddingBottom: 0
+  - name: soldout_chi
+    x: 1234
+    y: 1887
+    width: 321
+    height: 161
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: soldout_eng
+    x: 1556
+    y: 1887
+    width: 321
+    height: 161
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
     paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

@@ -99,7 +99,7 @@ MonoBehaviour:
     divide_line: '----------------------------------------------------------------------------'
   - number: 15
     korean: "\uAC8C\uC784\uC744 \uC885\uB8CC\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C ?"
-    english: 'Exit: Do you want to close the game?'
+    english: Do you want to close the game?
     chinese: "\u9000\u51FA\uFF1A\u4F60\u60F3\u5173\u95ED\u6E38\u620F\uFF1F"
     divide_line: '----------------------------------------------------------------------------'
   - number: 16
@@ -168,4 +168,23 @@ MonoBehaviour:
     korean: "\uAC8C\uC784 \uC870\uC791\uAE30 = \uC138\uB85C\uBAA8\uB4DC\uB85C \uC804\uD658"
     english: 'Game Controller Portable = Turn to portrait view '
     chinese: "\u6E38\u620F\u63A7\u5236\u5668\u4FBF\u643A\u5F0F=\u8F6C\u5230\u7EB5\u5411\u89C6\u56FE"
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 28
+    korean: "\uC11C\uBC84\uC640\uC758 \uC5F0\uACB0\uC774 \uB04A\uACBC\uC2B5\uB2C8\uB2E4.\n\uAC8C\uC784\uC744
+      \uC885\uB8CC\uD569\uB2C8\uB2E4."
+    english: 'The host was disconnected.
+
+      Application shutting down.'
+    chinese: 
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 29
+    korean: "{0} \uCD08 \uD6C4\n\uC885\uB8CC\uB429\uB2C8\uB2E4."
+    english: "will be closed \nin {0} seconds"
+    chinese: 
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 30
+    korean: "2\uC778 \uC774\uC0C1 \uD50C\uB808\uC774\uC5B4 \uC811\uC18D \uC2DC \uD50C\uB808\uC774\uAC00
+      \uAC00\uB2A5\uD569\uB2C8\uB2E4."
+    english: can be started more than 2 players
+    chinese: 
     divide_line: '----------------------------------------------------------------------------'

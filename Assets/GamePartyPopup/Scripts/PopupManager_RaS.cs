@@ -72,16 +72,17 @@ public class PopupManager_RaS : MonoBehaviour
 		
     }
 
-    IEnumerator AutoExitCoru()
-    {
-        for (int i = 10; i >= 0; i--)
-        {
-            autoExitText.text = "It will exit in\r\n" + i.ToString() + " seconds";
-            yield return new WaitForSeconds(1f);
-        }
-        CloseGame();
-        yield return null;
-    }
+	IEnumerator AutoExitCoru()
+	{
+		for (int i = 10; i >= 0; i--)
+		{
+			string tempTxt = CommonLang.instance.GetWord(29);
+			autoExitText.text = string.Format (tempTxt, i);
+			yield return new WaitForSeconds(1f);
+		}
+		CloseGame();
+		yield return null;
+	}
 
     #region Button Callbacks
     public void ClosePopup()

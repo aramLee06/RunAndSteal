@@ -42,6 +42,30 @@ public class CommonLang : MonoBehaviour{
 		}
 	}
 
+	void Start(){
+		this.Language = GetSystemLanguage ();
+	}
+
+	private LanguageType GetSystemLanguage(){
+		LanguageType value;
+		switch (Application.systemLanguage) {
+		case SystemLanguage.Korean:
+			value = LanguageType.KOR;
+			break;
+		case SystemLanguage.English:
+			value = LanguageType.ENG;
+			break;
+		case SystemLanguage.Chinese:
+			value = LanguageType.CHI;
+			break;
+		default :
+			value = LanguageType.ENG;
+			break;
+		}
+
+		return value;
+	}
+
 	public string GetWord(int index){
 		return GetWord (index, this.Language);
 	}

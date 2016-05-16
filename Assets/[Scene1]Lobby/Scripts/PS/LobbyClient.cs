@@ -127,6 +127,7 @@ public class LobbyClient : MonoBehaviour
 		cancelButton.SetActive(false);
 
 		DontDestroyOnLoad(this.gameObject);
+
 	}
 
     void Update()
@@ -553,6 +554,7 @@ public class LobbyClient : MonoBehaviour
 	{
 		Debug.Log ( "AfterJoin " );
 		Destroy (backDrop);
+		UnityAds.instance.ShowAdPlacement ();
 	}
 
 	public void PlayerIndexChanged (int index)

@@ -33,6 +33,7 @@ public class PS_ResultManager : MonoBehaviour
 		{
 			player1UI.SetActive(false);
 		}
+		UnityAds.instance.ShowAdPlacement ();
 	}
 
 	void Update ()

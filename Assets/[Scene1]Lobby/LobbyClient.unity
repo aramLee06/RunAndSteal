@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ef87327124447aabac5b21bd36947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 18
+  index: 28
 --- !u!1 &1270082866 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 133206, guid: 6017bed3412a8dc4a9cc22c6d56eab2a, type: 2}

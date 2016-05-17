@@ -1288,6 +1288,7 @@ GameObject:
   - 4: {fileID: 1739976518}
   - 212: {fileID: 1739976519}
   - 114: {fileID: 1739976520}
+  - 114: {fileID: 1739976521}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -1333,7 +1334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -632540807
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23b86859820614541bb0fa25648c6ad8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4ac4fe633ea745039af75ba7923cd4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1349,6 +1350,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortLayerName: Title
+--- !u!114 &1739976521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739976517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e51c3a4d5154c45a014b7ec0bd815e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: {fileID: 21300000, guid: d4ac4fe633ea745039af75ba7923cd4a, type: 3}
+  Korean: {fileID: 21300000, guid: d4ac4fe633ea745039af75ba7923cd4a, type: 3}
+  Chinese: {fileID: 21300000, guid: 23b86859820614541bb0fa25648c6ad8, type: 3}
 --- !u!1 &1804654803
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,6 @@ public class SpriteRendererLocalize : MonoBehaviour {
 	[SerializeField]
 	Sprite Chinese;
 
-	[SerializeField]
-
-
 	private CommonLang commonLang;
 
 	void Awake(){

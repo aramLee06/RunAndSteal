@@ -72,17 +72,21 @@ public class PopupManager_RaS : MonoBehaviour
 		
     }
 
+
+
+
 	IEnumerator AutoExitCoru()
 	{
-		for (int i = 10; i >= 0; i--)
+		for (int i = 10; i > 0; i--)
 		{
-			string tempTxt = CommonLang.instance.GetWord(29);
-			autoExitText.text = string.Format (tempTxt, i);
 			yield return new WaitForSeconds(1f);
+			string tempTxt = autoExitText.text;
+			autoExitText.text = tempTxt.Replace (i.ToString (), (i - 1).ToString ());
 		}
 		CloseGame();
 		yield return null;
 	}
+
 
     #region Button Callbacks
     public void ClosePopup()

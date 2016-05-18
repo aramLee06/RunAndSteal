@@ -89,6 +89,21 @@ public class _SletTypeController : MonoBehaviour {
 
 	IEnumerator SceneCountDown (){
 		int count = 5;
+		while (count > 0) {
+			yield return new WaitForSeconds (1.0f);
+			string tempTxt = CountText.text;
+			CountText.text = tempTxt.Replace (count.ToString (), (count - 1).ToString ());
+			count--;
+		}
+		ScreenMode ();
+	}
+}
+
+
+
+
+	/* IEnumerator SceneCountDown (){
+		int count = 5;
 //		string tempTxt = CommonLang.instance.GetWord(26);
 		while (count >= 0) {
 			CountText.text = "切换到游戏画面中的 "+count+" 秒...";
@@ -97,6 +112,6 @@ public class _SletTypeController : MonoBehaviour {
 			count--;
 		}
 		ScreenMode ();
-	}
-}
+	} */
+
 

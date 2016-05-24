@@ -18,15 +18,15 @@ public class UnityAds : MonoBehaviour
 
 	public void ShowAdPlacement ()
 	{
-		if (string.IsNullOrEmpty (zoneId)) 
-		{
-			zoneId = "video";
-		}
-
-		ShowOptions options = new ShowOptions();
-		options.resultCallback = HandleShowResult;
-
-		Advertisement.Show (zoneId, options);
+//		if (string.IsNullOrEmpty (zoneId)) 
+//		{
+//			zoneId = "video";
+//		}
+//
+//		ShowOptions options = new ShowOptions();
+//		options.resultCallback = HandleShowResult;
+//
+//		Advertisement.Show (zoneId, options);
 	}
 
 	private void HandleShowResult (ShowResult result)

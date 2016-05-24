@@ -29,19 +29,19 @@ public class UnityAds : MonoBehaviour
 //		Advertisement.Show (zoneId, options);
 	}
 
-	private void HandleShowResult (ShowResult result)
-	{
-		switch (result)
-		{
-		case ShowResult.Finished: // 광고 시청 완료. -> 보상제공... 안할거야^^!
-			Debug.Log ("Video completed. Offer a reward to the player.");
-			break;
-		case ShowResult.Skipped:
-			Debug.LogWarning ("Video was skipped.");
-			break;
-		case ShowResult.Failed:
-			Debug.LogError ("Video failed to show.");
-			break;
-		}
-	}
+//	private void HandleShowResult (ShowResult result)
+//	{
+//		switch (result)
+//		{
+//		case ShowResult.Finished: // 광고 시청 완료. -> 보상제공... 안할거야^^!
+//			Debug.Log ("Video completed. Offer a reward to the player.");
+//			break;
+//		case ShowResult.Skipped:
+//			Debug.LogWarning ("Video was skipped.");
+//			break;
+//		case ShowResult.Failed:
+//			Debug.LogError ("Video failed to show.");
+//			break;
+//		}
+//	}
 }

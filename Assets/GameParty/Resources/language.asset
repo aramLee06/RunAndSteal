@@ -134,7 +134,7 @@ MonoBehaviour:
     korean: "3\uC778 \uC774\uC0C1 \uD50C\uB808\uC774\uB97C \uC6D0\uD560 \uC2DC \uD654\uBA74\uC758
       \uACB0\uC81C \uBC84\uD2BC\uC744 \uB20C\uB7EC\uC8FC\uC138\uC694"
     english: 'To play with more than 3, please select the purchase button '
-    chinese: "\u5982\u679C\u4F60\u60F3\u6709\u4E00\u4E2A3\u4E2A\u6216\u66F4\u591A\u7684\u4EBA\u73A9\uFF0C\u6309\u652F\u4ED8\u5C4F\u5E55\u4E0A\u7684\u6309\u94AE\u3002"
+    chinese: "\u514D\u8D39\u4E8C\u4EBA\u5BF9\u6218\uFF0C\u4F46\u5982\u679C\u60F3\u89813\u4EBA\u4EE5\u4E0A\u4E00\u540C\u5BF9\u6218\uFF0C\u8BF7\u8D2D\u4E70\u589E\u503C\u670D\u52A1"
     divide_line: '----------------------------------------------------------------------------'
   - number: 22
     korean: "(\uC22B\uC790) \uCD08 \uD6C4\uC5D0 \uB85C\uBE44 \uD654\uBA74\uC73C\uB85C
@@ -162,12 +162,12 @@ MonoBehaviour:
   - number: 26
     korean: "5 \uCD08 \uD6C4\uC5D0 \uAC8C\uC784 \uD654\uBA74\uC73C\uB85C \uC9C4\uC785\uD569\uB2C8\uB2E4"
     english: "Switch to game screen in 5 seconds\u2026"
-    chinese: "\u5207\u6362\u5230\u6E38\u620F\u753B\u9762\u4E2D\u7684{5}\u79D2..."
+    chinese: "5 \u79D2\u540E\u8FDB\u5165\u6E38\u620F\u754C\u9762"
     divide_line: '----------------------------------------------------------------------------'
   - number: 27
     korean: "\uAC8C\uC784 \uC870\uC791\uAE30 = \uC138\uB85C\uBAA8\uB4DC\uB85C \uC804\uD658"
     english: 'Game Controller Portable = Turn to portrait view '
-    chinese: "\u6E38\u620F\u63A7\u5236\u5668\u4FBF\u643A\u5F0F=\u8F6C\u5230\u7EB5\u5411\u89C6\u56FE"
+    chinese: "\u5C06\u624B\u673A\u9065\u63A7\u5668\u7AD6\u5411\u6446\u653E\uFF0C\u4EE5\u4FBF\u64CD\u4F5C"
     divide_line: '----------------------------------------------------------------------------'
   - number: 28
     korean: "\uC11C\uBC84\uC640\uC758 \uC5F0\uACB0\uC774 \uB04A\uACBC\uC2B5\uB2C8\uB2E4.\n\uAC8C\uC784\uC744
@@ -186,5 +186,5 @@ MonoBehaviour:
     korean: "2\uC778 \uC774\uC0C1 \uD50C\uB808\uC774\uC5B4 \uC811\uC18D \uC2DC \uD50C\uB808\uC774\uAC00
       \uAC00\uB2A5\uD569\uB2C8\uB2E4."
     english: can be started more than 2 players
-    chinese: 
+    chinese: "\u4E24\u4F4D\u6216\u8005\u4E24\u4F4D\u4EE5\u4E0A\u73A9\u5BB6\u624D\u53EF\u8FDB\u884C\u6E38\u620F"
     divide_line: '----------------------------------------------------------------------------'

@@ -19,6 +19,9 @@ public class LobbyHost : MonoBehaviour
 
 	public Text roomNumberTxt;
 	public List <int> GameUserList = new List<int>();
+	public GameObject QR_noOne;
+	public GameObject QR_joinedOne;
+
     void Awake()
     {
 		Debug.Log ("AWAKE LOBBY HOST!");
@@ -210,7 +213,11 @@ public class LobbyHost : MonoBehaviour
 
     void OnUserAdded(int userIndex, int userCode)
     {
-        playerCount = hostController.GetConnectUserCount();
+		if (playerCount == 0) {
+			QR_noOne.SetActive (false);
+			QR_joinedOne.SetActive (true);
+		}
+		playerCount = hostController.GetConnectUserCount();
     }
 
     void OnUserRemoved(string name, int code)

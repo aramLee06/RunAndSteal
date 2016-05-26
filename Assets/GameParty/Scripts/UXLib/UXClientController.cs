@@ -89,6 +89,17 @@ namespace UXLib {
 			string sendString = "{\"cmd\":\"change_lobby_state\",\"u_code\":\""+ player.GetCode () + "\",\"l_code\":\""+ room.RoomNumber + "\",\"state\":\""+ stateString + "\"}" + UXConnectController.DATA_DELIMITER; //<-?
 			Send (sendString);//{"cmd":change_lobby_state","u_code":player.GetCode()","l_code":"GetRoomNumber()","state":stateString"}232
 		}
+
+
+		public void SendPremiumUser()
+		{
+			UXPlayerController playerController = UXPlayerController.Instance;
+			int userCode = playerController.GetCode();
+			string sendString = "{\"cmd\":\"premium_user\",\"l_code\":\"" + room.RoomNumber + "\",\"u_code\":\"" + userCode + "\"}" + DATA_DELIMITER;
+			Send(sendString);  
+
+		}
+
 		
 		/** Set user code and room number 
 			@param aUcode user code

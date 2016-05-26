@@ -566,5 +566,10 @@ public class LobbyClient : MonoBehaviour
 		}
 	}
 
+	public void OnPerchaseBtn()
+	{
+		m_ClientController.SendPremiumUser ();
+	}
+
 
 }

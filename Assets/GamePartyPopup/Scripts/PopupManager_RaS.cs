@@ -52,9 +52,35 @@ public class PopupManager_RaS : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-            OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
+		if (Input.GetKeyDown (KeyCode.Escape)) { //Back버튼 누를 시 종료 팝업 띄우기
+			if (UXLib.UXConnectController.GetMode () == UXLib.UXConnectController.Mode.Host) {
+				
+				OnQuitButtonOn ();
+				m_QuitNowTime += Time.deltaTime;
+				if (m_QuitNowTime >= m_QuitOnTime && m_QuitObject != null) {
+					m_QuitObject.SetActive (false);
+				}
+			} else {
+				OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
+			}
+		}
     }
+	public GameObject m_QuitObject;
+	public Text m_QuitText;
+	private float m_QuitOnTime = 3.0f;
+	private float m_QuitNowTime = 3.0f;
+	public void OnQuitButtonOn()
+	{
+		if (m_QuitObject.activeSelf)
+		{
+			CloseGame(); // 여기서 꺼영
+			Debug.Log("종료되어써");
+			Debug.Break();
+		}
+
+		m_QuitNowTime = 0;
+		m_QuitObject.SetActive(true);
+	}
 
 
     public void OpenPopup(POPUP_TYPE_RaS popupType)

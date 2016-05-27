@@ -184,11 +184,13 @@ public class LobbyHost : MonoBehaviour
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
-        {
-            //			PopupManager.Instance().OpenPopup(POPUP_TYPE.POPUP_EXITCONFIRM);
-        }
+		if (playerCount == 0) {
+			QR_noOne.SetActive (true);
+			QR_joinedOne.SetActive (false);
+		} else {
+			QR_noOne.SetActive (false);
+			QR_joinedOne.SetActive (true);
+		}
 
 
     }
@@ -213,10 +215,6 @@ public class LobbyHost : MonoBehaviour
 
     void OnUserAdded(int userIndex, int userCode)
     {
-		if (playerCount == 0) {
-			QR_noOne.SetActive (false);
-			QR_joinedOne.SetActive (true);
-		}
 		playerCount = hostController.GetConnectUserCount();
     }
 

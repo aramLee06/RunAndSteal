@@ -184,14 +184,6 @@ public class LobbyHost : MonoBehaviour
                 }
             }
         }
-		if (playerCount == 0) {
-			QR_noOne.SetActive (true);
-			QR_joinedOne.SetActive (false);
-		} else {
-			QR_noOne.SetActive (false);
-			QR_joinedOne.SetActive (true);
-		}
-
 
     }
 
@@ -216,6 +208,7 @@ public class LobbyHost : MonoBehaviour
     void OnUserAdded(int userIndex, int userCode)
     {
 		playerCount = hostController.GetConnectUserCount();
+		QRPopoup (playerCount);
     }
 
     void OnUserRemoved(string name, int code)
@@ -224,8 +217,7 @@ public class LobbyHost : MonoBehaviour
         Debug.Log("OnUserRemoved > name : " + name + " , Code : " + code + " == 6");
 		hostController.RefreshUserListFromServer();
         playerCount = hostController.GetConnectUserCount();
-
-
+		QRPopoup (playerCount);
     }
 
 
@@ -677,5 +669,17 @@ public class LobbyHost : MonoBehaviour
 			UXUser user = (UXUser)obj;
 			GameUserList.Add (user.GetCode());
 		}
+	}
+
+	void QRPopoup(int playerCount){
+		if (playerCount == 0) {
+			QR_noOne.SetActive (true);
+			QR_joinedOne.SetActive (false);
+		} else {
+			QR_noOne.SetActive (false);
+			QR_joinedOne.SetActive (true);
+		}
+
+
 	}
 }

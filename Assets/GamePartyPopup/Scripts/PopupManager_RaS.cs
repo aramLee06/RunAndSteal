@@ -54,15 +54,15 @@ public class PopupManager_RaS : MonoBehaviour
     {
 		if (Input.GetKeyDown (KeyCode.Escape)) { //Back버튼 누를 시 종료 팝업 띄우기
 			if (UXLib.UXConnectController.GetMode () == UXLib.UXConnectController.Mode.Host) {
-				
 				OnQuitButtonOn ();
-				m_QuitNowTime += Time.deltaTime;
-				if (m_QuitNowTime >= m_QuitOnTime && m_QuitObject != null) {
-					m_QuitObject.SetActive (false);
-				}
+
 			} else {
 				OpenPopup(POPUP_TYPE_RaS.POPUP_GAMESCLOSE);
 			}
+		}
+		m_QuitNowTime += Time.deltaTime;
+		if (m_QuitNowTime >= m_QuitOnTime && m_QuitObject != null) {
+			m_QuitObject.SetActive (false);
 		}
     }
 	public GameObject m_QuitObject;

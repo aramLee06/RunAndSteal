@@ -188,13 +188,24 @@ MonoBehaviour:
     english: can be started more than 2 players
     chinese: "\u4E24\u4F4D\u6216\u8005\u4E24\u4F4D\u4EE5\u4E0A\u73A9\u5BB6\u624D\u53EF\u8FDB\u884C\u6E38\u620F"
     divide_line: '----------------------------------------------------------------------------'
-  - number: 0
-    korean: 
-    english: 
-    chinese: 
-    divide_line: 
-  - number: 0
-    korean: 
-    english: 
-    chinese: 
-    divide_line: 
+  - number: 31
+    korean: Host Disconnected
+    english: Host Disconnected
+    chinese: "\u670D\u52A1\u5668\u65AD\u5F00"
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 32
+    korean: EXIT
+    english: EXIT
+    chinese: "\u9000\u51FA"
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 33
+    korean: "\uCEE8\uD2B8\uB864\uB7EC\uB97C \uB2E4\uC6B4\uB85C\uB4DC\uD569\uB2C8\uB2E4
+      \nQR\uCF54\uB4DC\uB97C \uC2A4\uCE94\uD574\uC8FC\uC138\uC694"
+    english: "Download Controller \nScan this QR code"
+    chinese: " \u4E0B\u8F7D\u624B\u673A\u9065\u63A7\u5668\u5E94\u7528 \n\u8BF7\u626B\u63CF\u4E8C\u7EF4\u7801"
+    divide_line: '----------------------------------------------------------------------------'
+  - number: 34
+    korean: "\uB4A4\uB85C\uAC00\uAE30\uB97C \uB20C\uB7EC \uC885\uB8CC\uD574\uC8FC\uC138\uC694"
+    english: press back button to exit
+    chinese: "\u6309\u4E0B\u540E\u9000\u6309\u94AE\u6765\u9000\u51FA\u6E38\u620F"
+    divide_line: '----------------------------------------------------------------------------'

@@ -16,7 +16,9 @@ public class CommonLang : MonoBehaviour{
 	}
 	private static CommonLang _instance = null;
 
-	private LanguageType language;
+	//private LanguageType language;
+	private LanguageType language = LanguageType.CHI;
+
 	public LanguageType Language { 
 		get {
 			return language;
@@ -43,7 +45,9 @@ public class CommonLang : MonoBehaviour{
 	}
 
 	void Start(){
-		this.Language = GetSystemLanguage ();
+		//this.Language = GetSystemLanguage ();
+		this.Language = LanguageType.CHI;
+
 	}
 
 	private LanguageType GetSystemLanguage(){

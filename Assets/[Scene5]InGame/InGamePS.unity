@@ -1128,6 +1128,24 @@ MonoBehaviour:
   English: {fileID: 21300000, guid: 35ee42360d0357d4896644df67ad1e1f, type: 3}
   Korean: {fileID: 21300000, guid: 35ee42360d0357d4896644df67ad1e1f, type: 3}
   Chinese: {fileID: 21300000, guid: 56f639f38cd5e4e63bfd61b95341bd5d, type: 3}
+--- !u!1 &1068907900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 119376, guid: 0125ca27bfb29304db4a5104d4746ee9, type: 2}
+  m_PrefabInternal: {fileID: 1068907896}
+--- !u!114 &1068907901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1068907900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d933f46e8b44dcb8b4b55687919dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  English: {fileID: 21300000, guid: 948fa8e04e3ea794795519376b5783a9, type: 3}
+  Korean: {fileID: 21300000, guid: 948fa8e04e3ea794795519376b5783a9, type: 3}
+  Chinese: {fileID: 21300000, guid: 3527d877d75ec46089f5361d58a86723, type: 3}
 --- !u!1 &1145578093
 GameObject:
   m_ObjectHideFlags: 0

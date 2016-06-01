@@ -1453,7 +1453,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11405738, guid: fb408aa061bf1f247908ddf202d5a825, type: 2}
-  mSpriteName: btn_select_eng
+  mSpriteName: btn_select_chi
   mFillCenter: 1
 --- !u!65 &787102312
 BoxCollider:
@@ -1485,8 +1485,8 @@ MonoBehaviour:
   duration: 0.2
   dragHighlight: 0
   hoverSprite: 
-  pressedSprite: btn_select2_eng
-  disabledSprite: btn_wait_eng
+  pressedSprite: btn_select2_chi
+  disabledSprite: btn_wait_chi
   hoverSprite2D: {fileID: 0}
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 787102309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f685be004067442e82b693c0058748b, type: 3}
   m_Name: 

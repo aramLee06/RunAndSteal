@@ -56,7 +56,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: (result-p)_button-home-exit_v2
     x: 165
-    y: 475
+    y: 422
     width: 48
     height: 18
     borderLeft: 0
@@ -67,9 +67,22 @@ MonoBehaviour:
     paddingRight: 14
     paddingTop: 0
     paddingBottom: 0
+  - name: (result-p)_button-home-exit_v2-ch2
+    x: 165
+    y: 486
+    width: 53
+    height: 26
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 11
+    paddingTop: 1
+    paddingBottom: 0
   - name: (result-p)_button-home-replay_v2
     x: 165
-    y: 494
+    y: 467
     width: 76
     height: 18
     borderLeft: 0
@@ -78,6 +91,19 @@ MonoBehaviour:
     borderBottom: 0
     paddingLeft: 0
     paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: (result-p)_button-home-replay_v2-ch2
+    x: 165
+    y: 441
+    width: 53
+    height: 25
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 11
     paddingTop: 0
     paddingBottom: 0
   - name: (result-p)_button-replay_v2
@@ -108,4 +134,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144544}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

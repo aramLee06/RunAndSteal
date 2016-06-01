@@ -32,6 +32,7 @@ public class PopupManager_RaS : MonoBehaviour
     [SerializeField]
     private Text autoExitText;
 
+
     public static PopupManager_RaS Instance { get; private set; }
 
     void Awake()
@@ -93,9 +94,9 @@ public class PopupManager_RaS : MonoBehaviour
         popup[(int)popupType].SetActive(true);
         popupEventSystem.SetActive(true);
 
-        if (popupType == POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED)
-            StartCoroutine(AutoExitCoru());
-		
+		if (popupType == POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED) {
+			StartCoroutine (AutoExitCoru ());
+		} 
     }
 
 
@@ -183,4 +184,5 @@ public enum POPUP_TYPE_RaS
 {
 	POPUP_HOSTDISCONNECTED = 0,
 	POPUP_GAMESCLOSE = 1,
+	POPUP_ZEROUSER = 2,
 }

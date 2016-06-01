@@ -234,7 +234,7 @@ public class LobbyHost : MonoBehaviour
 			}
 		}
 
-		if (roomMasterCode == -1)// All Disconnected
+		if (roomMasterCode == -1)// All Disconnected //여기 올일이 없ㅇㅡㅁ
         {
             hostController.SendEndGame();
 			//TODO popup 
@@ -252,9 +252,8 @@ public class LobbyHost : MonoBehaviour
 		}
 
 		if (InGameUserCount() == 1) { //한명만 남은 거
-			//TODO popup
-			//PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_HOSTDISCONNECTED);
-			hostController.SendData("Replay");
+			PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_ZEROUSER);
+			StartCoroutine ("EndGame");
 		}
 
 		if (SceneManager.GetActiveScene ().name == "CharacterSelectLobbyBS") {
@@ -682,5 +681,10 @@ public class LobbyHost : MonoBehaviour
 				//QR_joinedOne.SetActive (true);
 			}	
 		}
+	}
+
+	IEnumerator EndGame(){
+		yield return new WaitForSeconds (2);
+		Application.Quit ();
 	}
 }

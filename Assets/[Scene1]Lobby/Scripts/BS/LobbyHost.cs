@@ -676,10 +676,10 @@ public class LobbyHost : MonoBehaviour
 		if (QR_noOne != null && QR_joinedOne != null) {
 			if (playerCount == 0) { 
 				QR_noOne.SetActive (true);
-				QR_joinedOne.SetActive (false);
+				//QR_joinedOne.SetActive (false);
 			} else {
 				QR_noOne.SetActive (false);
-				QR_joinedOne.SetActive (true);
+				//QR_joinedOne.SetActive (true);
 			}	
 		}
 	}

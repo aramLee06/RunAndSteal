@@ -26,14 +26,14 @@ Material:
         first:
           name: _Gradation
         second:
-          m_Texture: {fileID: 2800000, guid: fa28a800bb4fe4138a75f7db140a0c54, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Cutoff
-        second: 0.99453926
+        second: 0
       data:
         first:
           name: _Invert

@@ -676,8 +676,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 692532428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -234, y: -80, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -234, y: -90, z: 0}
+  m_LocalScale: {x: 1.2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1389039609}
   m_RootOrder: 3
@@ -729,7 +729,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11444544, guid: ceed0de0474155244bbc00a633302530, type: 2}
-  mSpriteName: (result-p)_button-home-replay_v2
+  mSpriteName: (result-p)_button-home-replay_v2-ch2
   mFillCenter: 1
 --- !u!1 &811760429
 GameObject:
@@ -957,8 +957,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1182031194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 234, y: -80, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 234, y: -90, z: 0}
+  m_LocalScale: {x: 1.2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1389039609}
   m_RootOrder: 2
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11444544, guid: ceed0de0474155244bbc00a633302530, type: 2}
-  mSpriteName: (result-p)_button-home-exit_v2
+  mSpriteName: (result-p)_button-home-exit_v2-ch2
   mFillCenter: 1
 --- !u!1 &1389039608
 GameObject:
@@ -1334,7 +1334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -632540807
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4ac4fe633ea745039af75ba7923cd4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23b86859820614541bb0fa25648c6ad8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

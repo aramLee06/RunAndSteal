@@ -22,6 +22,9 @@ public class LobbyHost : MonoBehaviour
 	public GameObject QR_noOne;
 	public GameObject QR_joinedOne;
 
+	[SerializeField]
+	LimitTimer timer;
+
     void Awake()
     {
 		Debug.Log ("AWAKE LOBBY HOST!");
@@ -110,6 +113,8 @@ public class LobbyHost : MonoBehaviour
         hostController.OnReceived += OnReceived;
         //==========================================
         hostController.OnHostDisconnected += hostController_OnHostDisconnected;
+
+		timer.OnLimitTimeOut += TimeOut;
 
 
         hostController.SetAutoStart(2, 1);
@@ -343,6 +348,10 @@ public class LobbyHost : MonoBehaviour
         }
 		CopyGameUserList ();
 
+		//timer.active = true;
+		timer.TimerStart ();
+
+
         Application.LoadLevel("CharacterSelectLobbyBS");
     }
 
@@ -547,6 +556,8 @@ public class LobbyHost : MonoBehaviour
             hostController.OnReceived -= OnReceived;
             //==========================================
             hostController.OnHostDisconnected -= hostController_OnHostDisconnected;
+
+			timer.OnLimitTimeOut += TimeOut;
         }
     }
     void OnGUI()
@@ -687,4 +698,17 @@ public class LobbyHost : MonoBehaviour
 		yield return new WaitForSeconds (2);
 		Application.Quit ();
 	}
+
+	public void TimeOut(){
+//		text.text = "End!";
+		PopupManager_RaS.Instance.OpenPopup(POPUP_TYPE_RaS.POPUP_NOMONEY);
+		StartCoroutine ("FreeTimeOut");
+	}
+
+	IEnumerator FreeTimeOut(){
+		yield return new WaitForSeconds (2);
+		PopupManager_RaS.Instance.ClosePopup ();
+		hostController.SendData ("Replay");
+	}
+
 }

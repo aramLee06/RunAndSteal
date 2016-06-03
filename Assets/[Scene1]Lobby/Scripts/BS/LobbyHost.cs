@@ -349,8 +349,9 @@ public class LobbyHost : MonoBehaviour
 		CopyGameUserList ();
 
 		//timer.active = true;
-		timer.TimerStart ();
-
+		if (PlayerPrefs.GetInt ("TimeLimit") == 0) {
+			timer.TimerStart ();
+		}
 
         Application.LoadLevel("CharacterSelectLobbyBS");
     }
@@ -437,6 +438,10 @@ public class LobbyHost : MonoBehaviour
 
         msg.Trim();
         words = msg.Split(splitchar.ToCharArray(), System.StringSplitOptions.None);
+
+		if (words [0] == "TimeLimitPurchase") {
+			WocheongSDK.getInstance ().buyItem ();
+		}
 
         if (words[0] == "Exit")
         {

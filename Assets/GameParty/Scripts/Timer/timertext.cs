@@ -16,6 +16,10 @@ public class timertext : MonoBehaviour {
 	void Start () {
 		timer.OnLimitTimeOut += TimeOut;
 		timer.OnTimeUpdate += TimeUpdate;
+
+		if (!timer.active) {
+			Destroy (gameObject);
+		}
 	}
 		
 	void OnDestroy ()

@@ -1,9 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unity3d.player" android:installLocation="preferExternal" android:theme="@android:style/Theme.NoTitleBar" android:versionCode="1" android:versionName="1.0">
-  <uses-permission android:name="com.android.vending.BILLING" />
-  <uses-permission android:name="android.permission.INTERNET" />
-  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
-  <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="true" android:name="com.soomla.SoomlaApp">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="tv.wocheng.u3ddemo" android:theme="@android:style/Theme.NoTitleBar"
+	android:versionName="1.0" android:versionCode="1"
+	android:installLocation="preferExternal">
+	<supports-screens android:smallScreens="true"
+		android:normalScreens="true" android:largeScreens="true"
+		android:xlargeScreens="true" android:anyDensity="true" />
+	<application android:icon="@drawable/app_icon"
+		android:label="@string/app_name" android:debuggable="true">
+		<activity android:name="tv.wocheng.u3ddemo.MainActivity"
+			android:label="@string/app_name" android:screenOrientation="portrait"
+			android:launchMode="singleTask"
+			android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<meta-data android:name="unityplayer.UnityActivity"
+				android:value="true" />
+			<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik"
+				android:value="true" />
+		</activity>
+		<activity android:name="com.ryg.dynamicload.DLProxyActivity"
+			android:label="@string/app_name" android:screenOrientation="landscape"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+			<intent-filter>
+				<action android:name="com.ryg.dynamicload.proxy.activity.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<meta-data android:name="TVPAY_CP_ID" android:value="30129" />
+		<meta-data android:name="TVPAY_APP_ID" android:value="117951478" />
+	</application>
+	<application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="true" android:name="com.soomla.SoomlaApp">
     <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -15,4 +44,11 @@
     <activity android:name="com.soomla.store.billing.google.GooglePlayIabService$IabActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
     <meta-data android:name="billing.service" android:value="google.GooglePlayIabService" />
   </application>
+	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23" />
+	<uses-feature android:glEsVersion="0x00020000" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.android.vending.BILLING" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
 </manifest>

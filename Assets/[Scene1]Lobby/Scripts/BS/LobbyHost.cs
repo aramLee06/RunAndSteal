@@ -350,6 +350,7 @@ public class LobbyHost : MonoBehaviour
 
 		//timer.active = true;
 		if (PlayerPrefs.GetInt ("TimeLimit") == 0) {
+			timer.TimerReset ();
 			timer.TimerStart ();
 		}
 

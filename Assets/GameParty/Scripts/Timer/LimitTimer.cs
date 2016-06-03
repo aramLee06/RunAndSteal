@@ -25,12 +25,20 @@ public class LimitTimer : MonoBehaviour {
 		} else {
 			Destroy (this.gameObject);
 		}
+		timeLeft = LimitTime;
 	}
 
 	public void TimerStart(){
 		active = true;
-		timeLeft = LimitTime;
 		StartCoroutine (updateCoroutine ());
+	}
+
+	public void TimerReset(){
+		timeLeft = LimitTime;
+	}
+
+	public void TimerStop(){
+		active = false;
 	}
 
 	// Use this for initialization
@@ -39,26 +47,24 @@ public class LimitTimer : MonoBehaviour {
 			TimerStart ();	
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (active) {
-			LimitTime -= Time.deltaTime;
+			timeLeft -= Time.deltaTime;
 
-			if (LimitTime < 0) {
+			if (timeLeft < 0) {
 				active = false;
-				if (OnLimitTimeOut != null) {
+				if(OnLimitTimeOut != null)
 					OnLimitTimeOut ();
-				}
 			}
 		}
 	}
 
 	private IEnumerator updateCoroutine(){
 		while(active){
-			if (OnTimeUpdate != null) {
-				OnTimeUpdate (Mathf.RoundToInt (LimitTime));
-			}
+			if(OnTimeUpdate != null)
+				OnTimeUpdate(Mathf.RoundToInt(timeLeft));
 			yield return new WaitForSeconds(0.5f);
 		}
 	}

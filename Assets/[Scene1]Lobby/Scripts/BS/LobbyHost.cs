@@ -643,6 +643,8 @@ public class LobbyHost : MonoBehaviour
 
             SendAll("StartTutorial");
 
+			timer.TimerStop ();
+
 #if UNITY_ANDROID && !UNITY_EDITOR
 			Application.LoadLevel("TutorialBS_Android");
 #else

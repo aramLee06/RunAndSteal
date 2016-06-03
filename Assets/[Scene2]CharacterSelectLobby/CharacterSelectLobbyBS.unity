@@ -885,19 +885,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22411300, guid: eaaf856d679dc4fef82c93fae699008d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 680
+      value: 780
       objectReference: {fileID: 0}
     - target: {fileID: 22411300, guid: eaaf856d679dc4fef82c93fae699008d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 492
+      value: 486
       objectReference: {fileID: 0}
     - target: {fileID: 22411300, guid: eaaf856d679dc4fef82c93fae699008d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 449
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 22411300, guid: eaaf856d679dc4fef82c93fae699008d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 108
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 22411300, guid: eaaf856d679dc4fef82c93fae699008d, type: 2}
       propertyPath: m_AnchorMin.x
